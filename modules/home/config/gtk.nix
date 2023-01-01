@@ -11,12 +11,6 @@
       };
     };
 
-    cursorTheme = {
-      name = "rose-pine-hyprcursor";
-      package = pkgs.rose-pine-hyprcursor;
-      size = 24;
-    };
-
     iconTheme = {
       name = "Adwaita";
       package = pkgs.adwaita-icon-theme;

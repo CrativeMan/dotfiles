@@ -18,6 +18,7 @@
     github-desktop
     scrcpy
     jetbrains.idea-community
+    godot
 
     # art
     inkscape
@@ -53,7 +54,6 @@
     setzer
     geogebra6
     # ladybird broken in unstable
-    siyuan
     obs-studio
     anki
 
