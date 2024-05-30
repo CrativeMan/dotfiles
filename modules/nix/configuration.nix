@@ -23,6 +23,11 @@
     enableCompletion = true;
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "nix-2.15.3"
+  ];
+
+
   networking.hostName = "nixos"; # Define your hostname.
 
   # Enable networking
