@@ -18,6 +18,7 @@ let
     n = "neofetch";
     hyprshot = "~/Coding/SideProjects/Hyprshot/hyprshot";
     ".." = "cd ..";
+    ll = "ls -l";
     # flake files copy
     cenv = "/home/crative/.config/flake-files/c.sh";
     cppenv = "/home/crative/.config/flake-files/cpp.sh";
