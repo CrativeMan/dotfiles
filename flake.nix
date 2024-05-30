@@ -24,7 +24,7 @@
        homeConfigurations = {
          crative = home-manager.lib.homeManagerConfiguration {
            inherit pkgs;
-           modules = [ ./home.nix ];
+           modules = [ ./modules/home/home.nix ];
          };
        };
     };
