@@ -18,6 +18,7 @@ in
     # System
     keepassxc
     pika-backup
+    swww
     zoxide
     # Dev
     curl
@@ -35,6 +36,7 @@ in
     # Games
     libremines
     prismlauncher
+    steam
     # Communication
     discord
     whatsapp-for-linux
