@@ -33,10 +33,6 @@ in
     rocmPackages.llvm.clang
     gccgo
     gradle
-    # Games
-    libremines
-    prismlauncher
-    steam
     # Communication
     discord
     whatsapp-for-linux
