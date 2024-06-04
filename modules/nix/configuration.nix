@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ./programs/default.nix
       ./services/default.nix
+      ./extensions/extensions.nix
     ];
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

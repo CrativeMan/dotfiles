@@ -4,7 +4,7 @@ let
   myAliases = {
     # Nix stuff
     nixconfig = "cd ~/.dotfiles";
-    rebuild = "sudo nixos-rebuild switch --flake ~/.dotfiles/";
+    rebuild = "sudo nixos-rebuild switch --flake ~/.dotfiles/ && hrebuild";
     hrebuild = "home-manager switch --flake ~/.dotfiles/";
     nixupdate = "cd ~/.dotfiles && sudo nix flake update";
     # Vim/Neovim
