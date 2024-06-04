@@ -73,7 +73,6 @@ in
     spotify
     gparted
     warp
-    syncthing
     speedtest-go
     ntfs3g
     cmatrix

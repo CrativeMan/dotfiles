@@ -5,6 +5,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./programs/default.nix
+      ./services/default.nix
     ];
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
