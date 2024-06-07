@@ -7,6 +7,7 @@ let
     rebuild = "sudo nixos-rebuild switch --flake ~/.dotfiles/ && hrebuild";
     hrebuild = "home-manager switch --flake ~/.dotfiles/";
     nixupdate = "cd ~/.dotfiles && sudo nix flake update";
+    nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
     # Vim/Neovim
     vim = "nvim";
     vimconfig = "cd ~/.config/nvim/"; 
@@ -19,6 +20,7 @@ let
     hyprshot = "~/Coding/SideProjects/Hyprshot/hyprshot";
     ".." = "cd ..";
     ll = "ls -l";
+    cat = "bat";
     # flake files copy
     cenv = "/home/crative/.config/flake-files/c.sh";
     cppenv = "/home/crative/.config/flake-files/cpp.sh";

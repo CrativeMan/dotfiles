@@ -4,5 +4,6 @@
   imports = [
     ./bat.nix
     ./nvim.nix
+    ./starship.nix
   ];
 }

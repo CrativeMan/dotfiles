@@ -15,7 +15,6 @@
   environment.systemPackages = with pkgs; [
     libremines
     prismlauncher
-    unstable.steam
     unstable.cartridges
     unstable.heroic
   ];

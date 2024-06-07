@@ -20,6 +20,7 @@ in
     pika-backup
     swww
     zoxide
+    btop
     # Dev
     curl
     neovim
@@ -68,6 +69,7 @@ in
     wifite2
 
     blender
+    darktable
     gimp
     pixelorama
     spotify
