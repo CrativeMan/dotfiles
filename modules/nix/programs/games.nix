@@ -17,5 +17,6 @@
     prismlauncher
     unstable.cartridges
     unstable.heroic
+    superTuxKart
   ];
 }

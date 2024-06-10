@@ -23,6 +23,11 @@ let
       devices = [ "Galaxy-A71" ];
       path = "/home/crative/Documents/keepass";
     };
+    Obsidian-DnD = {
+      id = "obsidian-dnd";
+      devices = [ "Galaxy-A71" ];
+      path = "/home/crative/Documents/Dungeons and Dragons";
+    };
   };
 in 
 {
