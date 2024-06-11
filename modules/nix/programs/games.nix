@@ -18,5 +18,6 @@
     unstable.cartridges
     unstable.heroic
     superTuxKart
+    lutris
   ];
 }

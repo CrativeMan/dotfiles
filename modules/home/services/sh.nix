@@ -21,6 +21,7 @@ let
     ".." = "cd ..";
     ll = "ls -l";
     cat = "bat";
+    cd = "z";
     # flake files copy
     cenv = "/home/crative/.config/flake-files/c.sh";
     cppenv = "/home/crative/.config/flake-files/cpp.sh";
@@ -39,6 +40,11 @@ in
       theme = "gozilla";
     };
     shellAliases = myAliases;
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
   };
   
 }

@@ -36,6 +36,7 @@ in
     gradle
     # Communication
     discord
+    vesktop
     whatsapp-for-linux
     teams-for-linux
     thunderbird
@@ -53,6 +54,7 @@ in
     zotero
     planify
     gnome-obfuscate
+    unstable.klog-time-tracker
     #GNOME
     gnome.gnome-tweaks
     adw-gtk3
