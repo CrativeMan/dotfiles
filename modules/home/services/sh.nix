@@ -8,6 +8,7 @@ let
     hrebuild = "home-manager switch --flake ~/.dotfiles/";
     nixupdate = "cd ~/.dotfiles && sudo nix flake update";
     nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
+    or = "omz reload";
     # Vim/Neovim
     vim = "nvim";
     vimconfig = "cd ~/.config/nvim/"; 

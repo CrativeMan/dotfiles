@@ -21,6 +21,7 @@ in
     swww
     zoxide
     btop
+    ncdu
     # Dev
     curl
     neovim
