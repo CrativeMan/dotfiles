@@ -114,8 +114,7 @@
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
+  services.gnome.gnome-browser-connector.enable
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
