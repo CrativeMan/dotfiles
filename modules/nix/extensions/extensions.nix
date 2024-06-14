@@ -7,5 +7,6 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.color-picker
     gnomeExtensions.rounded-window-corners
+    gnomeExtensions.launch-new-instance
   ];
 } 

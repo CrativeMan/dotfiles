@@ -25,6 +25,7 @@
         "color-picker@tuberry"
         "user-theme@gnome-shell-extensions.gcampex.github.com"
         "rounded-window-corners@fxgn"
+        "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
       ];
     };
   };
