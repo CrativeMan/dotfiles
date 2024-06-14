@@ -114,7 +114,7 @@
     ];
   };
 
-  services.gnome.gnome-browser-connector.enable
+  services.gnome.gnome-browser-connector.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
