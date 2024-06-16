@@ -45,6 +45,7 @@ in
     cava
     # Video
     libsForQt5.kdenlive
+    celluloid
     #Office
     unstable.obsidian
     libreoffice
