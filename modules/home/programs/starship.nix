@@ -33,8 +33,6 @@
      # "Music" = " ";
      # "Pictures" = " ";
      # };
-
-      palette = "gruvbox";
     };
   };
 }
