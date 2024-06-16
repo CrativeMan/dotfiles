@@ -5,5 +5,6 @@
     ./bat.nix
     ./nvim.nix
     ./starship.nix
+    ./browser.nix
   ];
 }

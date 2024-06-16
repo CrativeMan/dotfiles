@@ -81,6 +81,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    jack.enable = true;
   };
 
   environment.gnome.excludePackages =
@@ -115,6 +116,7 @@
   };
 
   services.gnome.gnome-browser-connector.enable = true;
+  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

@@ -14,7 +14,16 @@
     "org/gnome/settings-daemon/plugins/media-keys" = {
       home = ["<Super>f"];
       www = ["<Super>w"];
-      calculator = ["<Super>r"];
+
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+      ];
+    };
+
+    "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      binding = ["<Super>b"];
+      command = "/home/crative/.nix-profile/bin/firefox";
+      name = "Browser";
     };
     
     "org/gnome/shell" = {
