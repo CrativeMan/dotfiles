@@ -9,6 +9,7 @@ let
     nixupdate = "cd ~/.dotfiles && sudo nix flake update";
     nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
     or = "omz reload";
+    sdown = "~/.config/waybar/shutdown.sh";
     # Vim/Neovim
     vim = "nvim";
     vimconfig = "cd ~/.config/nvim/"; 
