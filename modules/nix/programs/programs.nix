@@ -15,6 +15,7 @@ in
     # Nix
     rnix-lsp
     nixpkgs-fmt
+    comma
     # System
     keepassxc
     pika-backup
