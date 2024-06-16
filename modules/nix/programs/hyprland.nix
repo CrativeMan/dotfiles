@@ -15,7 +15,7 @@
     libnotify
     swww # wallpaper deamon
     nwg-displays # monitor management
+    wlr-randr
     rofi-wayland # app launcher
-    wofi
   ];
 }
