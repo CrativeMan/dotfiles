@@ -32,9 +32,6 @@ in
     jdk
     jetbrains-toolbox
     exercism
-    rocmPackages.llvm.clang
-    gccgo
-    gradle
     # Communication
     discord
     vesktop
