@@ -24,9 +24,8 @@ let
     ll = "ls -l";
     cat = "bat";
     cd = "z";
-    # flake files copy
-    cenv = "/home/crative/.config/flake-files/c.sh";
-    cppenv = "/home/crative/.config/flake-files/cpp.sh";
+
+    cproj = "cd ~/dev/cproj/ && python main.py";
   };
 
 in

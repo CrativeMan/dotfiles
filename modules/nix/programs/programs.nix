@@ -34,6 +34,7 @@ in
     jetbrains-toolbox
     exercism
     direnv
+    python3
     # Communication
     discord
     vesktop
