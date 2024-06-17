@@ -33,6 +33,7 @@ in
     jdk
     jetbrains-toolbox
     exercism
+    direnv
     # Communication
     discord
     vesktop
