@@ -17,5 +17,7 @@
     nwg-displays # monitor management
     wlr-randr
     rofi-wayland # app launcher
+    grim
+    slurp
   ];
 }
