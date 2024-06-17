@@ -6,5 +6,6 @@
     ./games.nix
     ./steam.nix
     ./hyprland.nix
+    ./direnv.nix
   ];
 }
