@@ -24,8 +24,6 @@ let
     ll = "ls -l";
     cat = "bat";
     cd = "z";
-
-    cproj = "cd ~/dev/cproj/ && python main.py";
   };
 
 in
