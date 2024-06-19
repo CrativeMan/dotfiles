@@ -20,6 +20,7 @@
     cproj = {
       url = "/home/crative/dev/cproj";
     };
+    
   };
 
   outputs = {self, nixpkgs, home-manager, ...}@inputs:
