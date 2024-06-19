@@ -5,11 +5,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1718802923,
-        "narHash": "sha256-cNcBD+MAiCu91wQLpIQKWYr8QnABk0o6df6qCNK8UJs=",
+        "lastModified": 1718830028,
+        "narHash": "sha256-Paz7yoWzekUOC2QZloLz0wU3jwZAtgOpSqg5A9Gx4R0=",
         "ref": "refs/heads/master",
-        "rev": "e1b93ecf0a9a8cf9354c3ae019b5ae64bd6f8e69",
-        "revCount": 12,
+        "rev": "888df6709526c4ddfd72268bcba9f254f72811aa",
+        "revCount": 13,
         "type": "git",
         "url": "file:///home/crative/dev/cproj"
       },
@@ -27,11 +27,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1718745867,
-        "narHash": "sha256-MTm2mTWC7tyjU1P/47BxoLMJnk00EhhiZKcMRvW4tAk=",
+        "lastModified": 1718788631,
+        "narHash": "sha256-H+hAebjUl3tP6F/pv2h5RZzxrdsI+yoq4fbgG1KwzLU=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "9710b917f9f4e2d2889b2a06697473969397140b",
+        "rev": "16295f7d58065a9091eb16bbc3ce1dbc5cfccffc",
         "type": "gitlab"
       },
       "original": {

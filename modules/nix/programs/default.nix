@@ -7,5 +7,6 @@
     ./steam.nix
     ./hyprland.nix
     ./direnv.nix
+    ./docker.nix
   ];
 }
