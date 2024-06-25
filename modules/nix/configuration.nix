@@ -3,13 +3,12 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
       ./programs/default.nix
       ./services/default.nix
       ./extensions/extensions.nix
     ];
-  
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  syncthing.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -116,6 +115,39 @@
     ];
   };
 
+  nix = {
+    # Nix Package Manager Settings
+    settings = {
+      auto-optimise-store = true;
+    };
+    gc = {
+      # Garbage Collection
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 28d";
+    };
+    package = pkgs.nixVersions.unstable; # Enable Flakes
+    #registry.nixpkgs.flake = inputs.nixpkgs;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+      keep-outputs          = true
+      keep-derivations      = true
+    '';
+
+    settings = {
+
+      keep-outputs = true;
+      keep-derivations = true;
+      substituters = [
+        "https://nix-community.cachix.org"
+        "https://cache.nixos.org/"
+      ];
+      trusted-public-keys = [
+        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      ];
+    };
+  };
+  
   services.gnome.gnome-browser-connector.enable = true;
   programs.firefox.enable = true;
 

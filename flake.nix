@@ -32,14 +32,26 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      vars = {
+        user = "crative";
+        email = "hannig.sebi@gmail.com";
+        editor = "nvim";
+      };
     in {
        nixosConfigurations = {
          nixos = lib.nixosSystem {
           specialArgs = {
-            inherit inputs;
+            inherit inputs vars;
           };
           inherit system;
-          modules = [ ./modules/nix/configuration.nix ];
+          modules = [ ./modules/nix/configuration.nix ./hosts/nixos-desktop/default.nix];
+         };
+         surface = lib.nixosSystem {
+          specialArgs = {
+            inherit inputs vars;
+          };
+          inherit system;
+          modules = [ ./modules/nix/configuration.nix ./hosts/nixos-surface/default.nix];
          };
        };
 
@@ -47,7 +59,7 @@
          crative = home-manager.lib.homeManagerConfiguration {
            inherit pkgs;
 
-            extraSpecialArgs = { inherit inputs; };
+            extraSpecialArgs = { inherit inputs vars; };
 
            modules = [ ./modules/home/home.nix ];
          };
