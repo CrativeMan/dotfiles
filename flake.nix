@@ -17,6 +17,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixos-hardware = {
+      url = "github:nixos/nixos-hardware";
+    };
+
     cproj = {
       url = "/home/crative/dev/cproj";
     };
