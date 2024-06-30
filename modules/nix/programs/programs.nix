@@ -31,6 +31,7 @@ in
     kitty
     cloc
     jdk
+    gradle
     jetbrains-toolbox
     exercism
     direnv

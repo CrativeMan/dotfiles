@@ -8,7 +8,7 @@
 
   syncthing = {
     device = "Nixos-Surface";
-  }
+  };
 
   boot = {
     # Boot Options
