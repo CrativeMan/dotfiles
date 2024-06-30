@@ -45,7 +45,4 @@
 
   #Firmware updates
   services.fwupd.enable = true;
-
-  #hyprland.enable = true;
-  gnome.enable = true;
 }

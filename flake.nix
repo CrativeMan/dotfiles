@@ -27,7 +27,7 @@
     
   };
 
-  outputs = {self, nixpkgs, home-manager, ...}@inputs:
+  outputs = {self, nixpkgs, home-manager, nixos-hardware, ...}@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -42,13 +42,19 @@
          nixos = lib.nixosSystem {
           specialArgs = {
             inherit inputs vars;
+            host = {
+              hostName = "nixos";
+            };
           };
           inherit system;
           modules = [ ./modules/nix/configuration.nix ./hosts/nixos-desktop/default.nix];
          };
          surface = lib.nixosSystem {
           specialArgs = {
-            inherit inputs vars;
+            inherit inputs vars nixos-hardware;
+            host = {
+              hostName = "surface";
+            };
           };
           inherit system;
           modules = [ ./modules/nix/configuration.nix ./hosts/nixos-surface/default.nix];
