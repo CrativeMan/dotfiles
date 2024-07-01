@@ -3,7 +3,7 @@ let
   devices = {
     Nixos-Desktop = {
       addresses = ["tcp://192.168.195.83:22000"];
-      id = "NJ5GL7O-CNGNFLB-FAOJQPJ-JWN2QPY-R4EZSRY-525FWT5-AETHVDY-HYPJUQ6";
+      id = "YKR7CP2-JREOJC5-AZFG3VZ-EV7IAEV-63VWTBB-CV3U3LN-IX2CUCC-EAAEDQP";
     };
 
     Nixos-Surface = {
