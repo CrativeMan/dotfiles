@@ -36,7 +36,6 @@ in
     exercism
     direnv
     python3
-    inputs.cproj.packages.x86_64-linux.cproj
     gaphor
     # Communication
     discord
