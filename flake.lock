@@ -5,14 +5,17 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1719330575,
+        "lastModified": 1718871276,
         "narHash": "sha256-BqG0n63D1ulRp7wAdd7cOa2ng4XAFpd5b+lMBnF9VbY=",
-        "path": "/home/crative/dev/cproj",
-        "type": "path"
+        "ref": "refs/heads/master",
+        "rev": "ba653fc35b7610de6795e5576285622b4f389c80",
+        "revCount": 14,
+        "type": "git",
+        "url": "file:///home/crative/dev/cproj"
       },
       "original": {
-        "path": "/home/crative/dev/cproj",
-        "type": "path"
+        "type": "git",
+        "url": "file:///home/crative/dev/cproj"
       }
     },
     "firefox-addons": {
