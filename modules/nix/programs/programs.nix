@@ -75,6 +75,7 @@ in
     wifite2
 
     blender
+    freecad
     darktable
     gimp
     pixelorama
