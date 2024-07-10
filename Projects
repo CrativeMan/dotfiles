@@ -1,5 +1,7 @@
 * Tree Commandline tool
-  * Display folderstructure in a tree like fashion in the cl
-  * cl flags for folder only for example
+  * hidden depth
 * Book management system
   * simulated library or personal
+* Project Creator tool
+  * change order or created build and run log
+  * c++ und java integration
