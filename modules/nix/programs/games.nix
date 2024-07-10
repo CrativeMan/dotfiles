@@ -14,10 +14,7 @@
 
   environment.systemPackages = with pkgs; [
     libremines
-    prismlauncher
     unstable.cartridges
     unstable.heroic
-    superTuxKart
-    lutris
   ];
 }
