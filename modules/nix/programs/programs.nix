@@ -75,6 +75,9 @@ in
     wifite2
     virtualbox
     wirelesstools
+    tor
+    tor-browser
+    netcat-gnu
 
     blender
     freecad
