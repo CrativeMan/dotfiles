@@ -74,6 +74,7 @@ in
     whois
     wifite2
     virtualbox
+    wirelesstools
 
     blender
     freecad
