@@ -77,6 +77,7 @@ in
     wirelesstools
     tor
     tor-browser
+    netcat-gnu
 
     blender
     freecad
