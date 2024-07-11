@@ -68,16 +68,7 @@ in
     unstable.resources
     gnomeExtensions.gnome-clipboard
     #Pentesting
-    hashcat
-    crunch
-    aircrack-ng
-    whois
-    wifite2
-    virtualbox
-    wirelesstools
-    tor
-    tor-browser
-    netcat-gnu
+    
 
     blender
     freecad

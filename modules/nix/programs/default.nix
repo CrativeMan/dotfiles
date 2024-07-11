@@ -8,5 +8,6 @@
     ./hyprland.nix
     ./direnv.nix
     ./docker.nix
+    ./pentesting.nix
   ];
 }
