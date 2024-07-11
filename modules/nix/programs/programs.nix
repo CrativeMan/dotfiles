@@ -73,6 +73,7 @@ in
     aircrack-ng
     whois
     wifite2
+    virtualbox
 
     blender
     freecad
