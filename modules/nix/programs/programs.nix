@@ -51,6 +51,7 @@ in
     # Video
     libsForQt5.kdenlive
     celluloid
+    jellyfin
     #Office
     unstable.obsidian
     libreoffice
