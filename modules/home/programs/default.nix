@@ -6,5 +6,6 @@
     ./nvim.nix
     ./starship.nix
     ./browser.nix
+    ./kitty.nix
   ];
 }

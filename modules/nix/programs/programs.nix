@@ -28,7 +28,6 @@ in
     neovim
     vscode
     git
-    kitty
     cloc
     jdk
     gradle
@@ -43,10 +42,12 @@ in
     whatsapp-for-linux
     teams-for-linux
     thunderbird
+    unstable.protonvpn-gui
     # Fonts
     nerdfonts
     # Audio
     cava
+    blanket
     # Video
     libsForQt5.kdenlive
     celluloid
@@ -67,8 +68,6 @@ in
     gnome-frog
     unstable.resources
     gnomeExtensions.gnome-clipboard
-    #Pentesting
-    
 
     blender
     freecad
