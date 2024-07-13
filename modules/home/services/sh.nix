@@ -10,7 +10,7 @@ let
     nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
     or = "omz reload";
     sdown = "~/.config/waybar/shutdown.sh";
-    cava = "nix run --extra-experimental-features 'nix-command flakes' nixpkgs#cava";
+    cava = "nix run --extra-experimental-features 'nix-command flakes' nixpkgs#cava"; # TODO: FIX THIS PLEASE OMG
     # Vim/Neovim
     vim = "nvim";
     vimconfig = "cd ~/.config/nvim/"; 
