@@ -23,6 +23,7 @@ in
     zoxide
     btop
     ncdu
+    sl
     # Dev
     curl
     neovim
