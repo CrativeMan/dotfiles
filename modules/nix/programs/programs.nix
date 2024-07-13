@@ -24,6 +24,8 @@ in
     btop
     ncdu
     sl
+    pipes
+    cbonsai
     # Dev
     curl
     neovim
@@ -47,7 +49,6 @@ in
     # Fonts
     nerdfonts
     # Audio
-    cava
     blanket
     # Video
     libsForQt5.kdenlive
