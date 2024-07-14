@@ -48,6 +48,7 @@ in
     unstable.protonvpn-gui
     # Fonts
     nerdfonts
+    figlet
     # Audio
     blanket
     # Video
