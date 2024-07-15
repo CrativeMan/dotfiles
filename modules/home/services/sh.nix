@@ -19,7 +19,7 @@ let
     # misc
     c = "xclip -selection clipboard";
     ":q" = "exit";
-    n = "neofetch";
+    n = "fastfetch";
     hyprshot = "~/Coding/SideProjects/Hyprshot/hyprshot";
     ".." = "cd ..";
     ll = "ls -l";

@@ -26,6 +26,7 @@ in
     sl
     pipes
     cbonsai
+    fastfetch
     # Dev
     curl
     neovim
@@ -80,7 +81,6 @@ in
     cmatrix
     wget
     fzf
-    neofetch
     xclip
   ];
 }
