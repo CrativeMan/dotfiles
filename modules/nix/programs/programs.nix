@@ -38,23 +38,18 @@ in
     exercism
     direnv
     python3
-    gaphor
     # Communication
     discord
     vesktop
     whatsapp-for-linux
     teams-for-linux
     thunderbird
-    unstable.protonvpn-gui
     # Fonts
     nerdfonts
-    figlet
     # Audio
     blanket
     # Video
-    libsForQt5.kdenlive
     celluloid
-    jellyfin
     #Office
     unstable.obsidian
     libreoffice
@@ -77,7 +72,6 @@ in
     freecad
     darktable
     gimp
-    pixelorama
     spotify
     gparted
     warp
