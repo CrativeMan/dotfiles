@@ -10,7 +10,6 @@ let
     nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
     or = "omz reload";
     sdown = "~/.config/waybar/shutdown.sh";
-    cava = "nix run --extra-experimental-features 'nix-command flakes' nixpkgs#cava"; # TODO: FIX THIS PLEASE OMG
     # Vim/Neovim
     vim = "nvim";
     vimconfig = "cd ~/.config/nvim/"; 
@@ -25,6 +24,9 @@ let
     ll = "ls -l";
     cat = "bat";
     cd = "z";
+    # STUPID FIXES
+    lxappearance="GDK_BACKEND=x11 lxappearance";
+    cava = "nix run --extra-experimental-features 'nix-command flakes' nixpkgs#cava"; # TODO: FIX THIS PLEASE OMG
   };
 
 in

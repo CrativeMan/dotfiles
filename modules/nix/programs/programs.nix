@@ -17,6 +17,7 @@ in
     nixpkgs-fmt
     comma
     # System
+    lxappearance
     keepassxc
     pika-backup
     swww
