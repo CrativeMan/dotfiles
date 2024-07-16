@@ -50,6 +50,7 @@ in
     nerdfonts
     # Audio
     blanket
+    cli-visualizer
     # Video
     celluloid
     #Office

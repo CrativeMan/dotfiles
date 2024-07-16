@@ -26,7 +26,6 @@ let
     cd = "z";
     # STUPID FIXES
     lxappearance="GDK_BACKEND=x11 lxappearance";
-    cava = "nix run --extra-experimental-features 'nix-command flakes' nixpkgs#cava"; # TODO: FIX THIS PLEASE OMG
   };
 
 in
