@@ -16,5 +16,6 @@
     libremines
     unstable.cartridges
     unstable.heroic
+    prismlauncher
   ];
 }
