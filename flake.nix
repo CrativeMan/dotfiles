@@ -4,14 +4,14 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-23.11";
-    
+
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
-      inputs.nixpkgs.follows = "nixpkgs";  
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     nixpkgs-unstable.url = "github:/nixos/nixpkgs/nixos-unstable";
-    
+
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,10 +20,14 @@
     nixos-hardware = {
       url = "github:nixos/nixos-hardware";
     };
-    
+
+    createp = {
+      url = "github:CrativeMan/ProjectCreator";
+    };
+
   };
 
-  outputs = {self, nixpkgs, home-manager, nixos-hardware, ...}@inputs:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -33,9 +37,10 @@
         email = "hannig.sebi@gmail.com";
         editor = "nvim";
       };
-    in {
-       nixosConfigurations = {
-         nixos = lib.nixosSystem {
+    in
+    {
+      nixosConfigurations = {
+        nixos = lib.nixosSystem {
           specialArgs = {
             inherit inputs vars;
             host = {
@@ -43,9 +48,9 @@
             };
           };
           inherit system;
-          modules = [ ./modules/nix/configuration.nix ./hosts/nixos-desktop/default.nix];
-         };
-         surface = lib.nixosSystem {
+          modules = [ ./modules/nix/configuration.nix ./hosts/nixos-desktop/default.nix ];
+        };
+        surface = lib.nixosSystem {
           specialArgs = {
             inherit inputs vars nixos-hardware;
             host = {
@@ -53,19 +58,19 @@
             };
           };
           inherit system;
-          modules = [ ./modules/nix/configuration.nix ./hosts/nixos-surface/default.nix];
-         };
-       };
+          modules = [ ./modules/nix/configuration.nix ./hosts/nixos-surface/default.nix ];
+        };
+      };
 
-       homeConfigurations = {
-         crative = home-manager.lib.homeManagerConfiguration {
-           inherit pkgs;
+      homeConfigurations = {
+        crative = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
 
-            extraSpecialArgs = { inherit inputs vars; };
+          extraSpecialArgs = { inherit inputs vars; };
 
-           modules = [ ./modules/home/home.nix ];
-         };
-       };
+          modules = [ ./modules/home/home.nix ];
+        };
+      };
     };
 
 }

@@ -10,12 +10,17 @@ in
         config.allowUnfree = true;
       };
     })
-  ]; 
+  ];
   environment.systemPackages = with pkgs; [
     # Nix
     rnix-lsp
     nixpkgs-fmt
     comma
+    man-pages
+    man-pages-posix
+    clang-manpages
+    linux-manual
+    inputs.createp.packages.x86_64-linux.default
     # System
     lxappearance
     keepassxc
@@ -28,6 +33,7 @@ in
     pipes
     cbonsai
     fastfetch
+    unzip
     # Dev
     curl
     neovim
@@ -51,6 +57,7 @@ in
     # Audio
     blanket
     cli-visualizer
+    glava
     # Video
     celluloid
     #Office
