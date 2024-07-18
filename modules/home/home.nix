@@ -1,12 +1,13 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports = [
     ./services/default.nix
     ./programs/default.nix
     ./config/default.nix
+    inputs.nix-index-database.hmModules.nix-index
   ];
-  
+
   home.username = "crative";
   home.homeDirectory = "/home/crative";
 

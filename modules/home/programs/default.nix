@@ -7,5 +7,6 @@
     ./starship.nix
     ./browser.nix
     ./kitty.nix
+    ./comma.nix
   ];
 }

@@ -25,6 +25,12 @@
       url = "github:CrativeMan/ProjectCreator";
     };
 
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+
   };
 
   outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs:

@@ -15,7 +15,6 @@ in
     # Nix
     rnix-lsp
     nixpkgs-fmt
-    comma
     man-pages
     man-pages-posix
     clang-manpages
