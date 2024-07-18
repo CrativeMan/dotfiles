@@ -2,7 +2,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./programs/default.nix
       ./services/default.nix
       ./extensions/extensions.nix
@@ -88,24 +89,24 @@
 
   environment.gnome.excludePackages =
     (with pkgs; [
-     gnome-photos
-     gnome-tour
-     gedit
+      gnome-photos
+      gnome-tour
+      gedit
     ])
     ++ (with pkgs.gnome; [
-        cheese # webcam tool
-        gnome-music
-        gnome-terminal
-        epiphany # web browser
-        geary # email reader
-        gnome-characters
-        totem # video player
-        tali # poker game
-        iagno # go game
-        hitori # sudoku game
-        atomix # puzzle game
-        yelp # help viewer
-        file-roller
+      cheese # webcam tool
+      gnome-music
+      gnome-terminal
+      epiphany # web browser
+      geary # email reader
+      gnome-characters
+      totem # video player
+      tali # poker game
+      iagno # go game
+      hitori # sudoku game
+      atomix # puzzle game
+      yelp # help viewer
+      file-roller
     ]);
 
   users.users.crative = {
@@ -113,7 +114,7 @@
     description = "crative";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -149,7 +150,7 @@
       ];
     };
   };
-  
+
   services.gnome.gnome-browser-connector.enable = true;
   programs.firefox.enable = true;
 
