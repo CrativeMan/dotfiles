@@ -31,7 +31,6 @@ in
     sl
     pipes
     cbonsai
-    fastfetch
     unzip
     # Dev
     curl

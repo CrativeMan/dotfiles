@@ -8,5 +8,6 @@
     ./browser.nix
     ./kitty.nix
     ./comma.nix
+    #./fastfetch.nix
   ];
 }
