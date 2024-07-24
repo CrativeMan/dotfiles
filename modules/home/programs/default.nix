@@ -1,4 +1,4 @@
-{ pkgs, config, ...}:
+{ pkgs, config, ... }:
 
 {
   imports = [
@@ -8,6 +8,5 @@
     ./browser.nix
     ./kitty.nix
     ./comma.nix
-    #./fastfetch.nix
   ];
 }

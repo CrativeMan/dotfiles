@@ -33,6 +33,7 @@ in
     cbonsai
     unzip
     yazi
+    fastfetch
     # Dev
     curl
     neovim
