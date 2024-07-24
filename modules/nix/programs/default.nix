@@ -9,5 +9,6 @@
     ./direnv.nix
     ./docker.nix
     ./pentesting.nix
+    ./kanata.nix
   ];
 }

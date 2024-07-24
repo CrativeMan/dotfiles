@@ -7,11 +7,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1721589861,
-        "narHash": "sha256-qHr9A6hyUje41Aj3diU45r9d+y5c9OaaJLlXYWhjFVA=",
+        "lastModified": 1721662431,
+        "narHash": "sha256-1NVqLzdXupJQ0qwcSL5xAs/C/rnOlNe6Gn2ofRtzBso=",
         "owner": "CrativeMan",
         "repo": "ProjectCreator",
-        "rev": "8fffe556ad18d4a9fbb62c474d88e98f96a9f0d2",
+        "rev": "290c36640e76528850204c7b2a44fd27e6fec197",
         "type": "github"
       },
       "original": {

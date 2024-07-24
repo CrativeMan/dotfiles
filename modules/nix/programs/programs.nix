@@ -32,6 +32,7 @@ in
     pipes
     cbonsai
     unzip
+    yazi
     # Dev
     curl
     neovim
