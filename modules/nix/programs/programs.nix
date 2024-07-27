@@ -24,6 +24,7 @@ in
     lxappearance
     keepassxc
     pika-backup
+    gnupg
     swww
     zoxide
     btop
@@ -34,6 +35,7 @@ in
     unzip
     yazi
     fastfetch
+    qbittorrent
     # Dev
     curl
     neovim
