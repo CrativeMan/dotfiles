@@ -43,7 +43,7 @@ in
     git
     cloc
     jdk
-    gradle
+    unstable.gradle
     jetbrains-toolbox
     exercism
     direnv
