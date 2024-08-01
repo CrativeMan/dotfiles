@@ -7,6 +7,7 @@
       ./programs/default.nix
       ./services/default.nix
       ./extensions/extensions.nix
+      ./nix-report-changes.nix
     ];
 
   syncthing.enable = true;
