@@ -30,6 +30,7 @@ in
     btop
     ncdu
     sl
+    joycond
     pipes
     cbonsai
     unzip
