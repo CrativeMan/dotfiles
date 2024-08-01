@@ -35,6 +35,8 @@ in
     cbonsai
     unzip
     yazi
+    flatpak
+    gnome.gnome-software
     fastfetch
     qbittorrent
     # Dev

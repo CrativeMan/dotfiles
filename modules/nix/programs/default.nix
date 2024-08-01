@@ -10,5 +10,6 @@
     ./docker.nix
     ./pentesting.nix
     ./kanata.nix
+    ./flatpak.nix
   ];
 }
