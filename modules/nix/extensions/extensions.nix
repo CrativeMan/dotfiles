@@ -8,5 +8,6 @@
     gnomeExtensions.color-picker
     gnomeExtensions.rounded-window-corners
     gnomeExtensions.launch-new-instance
+    gnomeExtensions.gsconnect
   ];
-} 
+}

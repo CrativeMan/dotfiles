@@ -40,6 +40,7 @@ in
     fastfetch
     qbittorrent
     # Dev
+    unstable.zed-editor
     curl
     neovim
     vscode
