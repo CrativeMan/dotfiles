@@ -46,7 +46,7 @@ in
     vscode
     git
     cloc
-    jdk
+    jdk21_headless
     unstable.gradle
     jetbrains-toolbox
     exercism
@@ -75,6 +75,7 @@ in
     planify
     gnome-obfuscate
     unstable.klog-time-tracker
+    libresprite
     #GNOME
     gnome.gnome-tweaks
     adw-gtk3
