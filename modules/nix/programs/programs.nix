@@ -76,6 +76,7 @@ in
     gnome-obfuscate
     unstable.klog-time-tracker
     libresprite
+    setzer
     #GNOME
     gnome.gnome-tweaks
     adw-gtk3
