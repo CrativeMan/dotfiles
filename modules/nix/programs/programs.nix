@@ -48,8 +48,9 @@ in
     cloc
     jdk21_headless
     unstable.gradle
-    jetbrains-toolbox
-    exercism
+    jetbrains.goland
+    jetbrains.idea-ultimate
+    jetbrains.clion
     direnv
     python3
     # Communication
