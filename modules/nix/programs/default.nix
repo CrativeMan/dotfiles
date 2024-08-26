@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./programs.nix
+    ./categories/programs.nix
     ./games.nix
     ./steam.nix
     ./hyprland.nix

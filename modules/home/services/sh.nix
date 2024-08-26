@@ -1,9 +1,10 @@
 { config, pkgs, ... }:
 
-let 
+let
   myAliases = {
     # Nix stuff
     nixconfig = "cd ~/.dotfiles";
+    nixcode = "code ~/.dotfiles";
     rebuild = "ga . && sudo nixos-rebuild switch --flake ~/.dotfiles/ && hrebuild";
     rebuildh = "ga . && sudo nixos-rebuild switch --flake ~/.dotfiles/";
     hrebuild = "ga . && home-manager switch --flake ~/.dotfiles/";
@@ -13,7 +14,7 @@ let
     sdown = "~/.config/waybar/shutdown.sh";
     # Vim/Neovim
     vim = "nvim";
-    vimconfig = "cd ~/.config/nvim/"; 
+    vimconfig = "cd ~/.config/nvim/";
     # Gradle
     grun = "./gradlew run";
     # misc
@@ -26,7 +27,7 @@ let
     cat = "bat";
     cd = "z";
     # STUPID FIXES
-    lxappearance="GDK_BACKEND=x11 lxappearance";
+    lxappearance = "GDK_BACKEND=x11 lxappearance";
   };
 
 in
@@ -54,5 +55,5 @@ in
     enableZshIntegration = true;
     settings = builtins.fromTOML (builtins.readFile ./shell/omp.toml);
   };
-  
+
 }
