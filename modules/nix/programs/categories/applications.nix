@@ -15,13 +15,10 @@ in
   environment.systemPackages = with pkgs; [
     keepassxc
     pika-backup
-    gnome.gnome-software
     qbittorrent
     unstable.zed-editor
     vscode
-    jetbrains.goland
-    jetbrains.idea-ultimate
-    jetbrains.clion
+    jetbrains-toolbox
     discord
     unstable.vesktop
     whatsapp-for-linux
@@ -46,7 +43,6 @@ in
     gimp
     spotify
     warp
-
   ];
 
 }

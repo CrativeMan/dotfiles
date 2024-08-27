@@ -6,7 +6,7 @@
       # Include the results of the hardware scan.
       ./programs/default.nix
       ./services/default.nix
-      ./extensions/extensions.nix
+      ./gnome/gnome-apps.nix
       ./nix-report-changes.nix
     ];
 

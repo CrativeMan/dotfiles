@@ -1,4 +1,4 @@
-{ pkgs, config, ...}:
+{ pkgs, config, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -9,5 +9,12 @@
     gnomeExtensions.rounded-window-corners
     gnomeExtensions.launch-new-instance
     gnomeExtensions.gsconnect
+    gnomeExtensions.gnome-clipboard
+
+    gnome.gnome-tweaks
+    gnome.gnome-software
+    adw-gtk3
+    unstable.resources
+
   ];
 }

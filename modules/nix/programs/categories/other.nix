@@ -18,10 +18,7 @@ in
     jdk21_headless
     python3
     #GNOME
-    gnome.gnome-tweaks
-    adw-gtk3
-    unstable.resources
-    gnomeExtensions.gnome-clipboard
+ 
 
   ];
 
