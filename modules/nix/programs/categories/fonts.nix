@@ -3,8 +3,9 @@ let
 
 in
 {
-  environment.systemPackages = with pkgs; [
+  fonts.packages = with pkgs; [
     nerdfonts
+    noto-fonts
   ];
 }
 

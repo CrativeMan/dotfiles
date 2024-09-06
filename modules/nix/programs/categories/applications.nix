@@ -43,6 +43,8 @@ in
     gimp
     spotify
     warp
+    appflowy
+    veikk-linux-driver-gui
   ];
 
 }

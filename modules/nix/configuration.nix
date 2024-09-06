@@ -12,6 +12,8 @@
 
   syncthing.enable = true;
 
+
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -101,7 +103,6 @@
       gnome-terminal
       epiphany # web browser
       geary # email reader
-      gnome-characters
       totem # video player
       tali # poker game
       iagno # go game

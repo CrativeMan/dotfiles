@@ -23,7 +23,8 @@ in
     glava
     unstable.klog-time-tracker
     cmatrix
-
+    inputs.createp.packages.x86_64-linux.default
+    inputs.tasg.packages.x86_64-linux.default
   ];
 
 }

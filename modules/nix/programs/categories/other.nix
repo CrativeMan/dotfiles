@@ -17,8 +17,6 @@ in
     joycond
     jdk21_headless
     python3
-    #GNOME
- 
 
   ];
 

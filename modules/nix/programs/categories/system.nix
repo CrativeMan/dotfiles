@@ -19,7 +19,7 @@ in
     man-pages-posix
     clang-manpages
     linux-manual
-    inputs.createp.packages.x86_64-linux.default
+    linuxKernel.packages.linux_zen.veikk-linux-driver
     lxappearance
     ffmpeg
     gnupg

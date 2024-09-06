@@ -25,6 +25,10 @@
       url = "github:CrativeMan/ProjectCreator";
     };
 
+    tasg = {
+      url = "github:CrativeMan/jadeGo";
+    };
+
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
