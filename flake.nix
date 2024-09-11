@@ -70,6 +70,17 @@
           inherit system;
           modules = [ ./modules/nix/configuration.nix ./hosts/nixos-surface/default.nix ];
         };
+        framework = lib.nixosSystem {
+          specialArgs = {
+            inherit inputs vars nixos-hardware;
+            host = {
+              hostName = "framework";
+            };
+          };
+          inherit system;
+          modules = [ ./modules/nix/configuration.nix ./hosts/nixos-framework/default.nix ];
+        };
+
       };
 
       homeConfigurations = {
