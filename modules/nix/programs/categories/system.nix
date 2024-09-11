@@ -13,7 +13,6 @@ in
   ];
 
   environment.systemPackages = with pkgs; [
-    rnix-lsp
     nixpkgs-fmt
     man-pages
     man-pages-posix
