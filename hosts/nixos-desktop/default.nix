@@ -12,4 +12,5 @@
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICWZfbSoQfDulldTOdxrG4nTKH7GKjMX + EcbvIkjWWU2 hannig.sebi@gmail.com
 "
   ];
+  system.stateVersion = "23.11"; # Did you read the comment?
 }
