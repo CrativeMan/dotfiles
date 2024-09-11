@@ -8,8 +8,10 @@
     ];
 
   syncthing = {
-    device = "Nixos-Surface";
+    device = "Nixos-Framework";
   };
+
+  networking.hostName = "framework";
 
   security = {
     rtkit.enable = true;

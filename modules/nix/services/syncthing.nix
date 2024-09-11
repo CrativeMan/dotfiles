@@ -15,6 +15,11 @@ let
       addresses = [ "tcp://192.168.178.49:22000" ];
       id = "LQRPTG4-IB2RVEE-UY66I3S-4HNQRCA-TCAGZOG-7F5DNFB-6CEQMW4-DHWOQA3";
     };
+
+    Nixos-Framework = {
+      addresses = [ "tcp://192.168.178.49:22000" ];
+      id = "LQRPTG4-IB2RVEE-UY66I3S-4HNQRCA-TCAGZOG-7F5DNFB-6CEQMW4-DHWOQA3";
+    };
   };
 
   folders = {
