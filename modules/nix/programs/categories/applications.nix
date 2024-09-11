@@ -38,7 +38,6 @@ in
     eyedropper
     gnome-frog
     blender
-    freecad
     darktable
     gimp
     spotify
