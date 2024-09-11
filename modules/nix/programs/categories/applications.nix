@@ -45,6 +45,8 @@ in
     warp
     appflowy
     veikk-linux-driver-gui
+    telegram-desktop
+    godot_4
   ];
 
 }
