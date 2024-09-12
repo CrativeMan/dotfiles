@@ -6,11 +6,6 @@ let
       id = "YKR7CP2-JREOJC5-AZFG3VZ-EV7IAEV-63VWTBB-CV3U3LN-IX2CUCC-EAAEDQP";
     };
 
-    Nixos-Surface = {
-      addresses = [ "tcp://192.168.178.39:22000" ];
-      id = "HZIQQRH-AMNUJBW-Q6GHRW3-53EZV6G-LX2GU6B-44LZGNR-JVKHTON-CNYJIQN";
-    };
-
     Galaxy-A71 = {
       addresses = [ "tcp://192.168.178.49:22000" ];
       id = "LQRPTG4-IB2RVEE-UY66I3S-4HNQRCA-TCAGZOG-7F5DNFB-6CEQMW4-DHWOQA3";

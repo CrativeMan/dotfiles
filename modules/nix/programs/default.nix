@@ -8,7 +8,6 @@
     ./hyprland.nix
     ./direnv.nix
     ./docker.nix
-    ./pentesting.nix
     ./kanata.nix
     ./flatpak.nix
   ];
