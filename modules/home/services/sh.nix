@@ -12,9 +12,6 @@ let
     nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
     or = "omz reload";
     sdown = "~/.config/waybar/shutdown.sh";
-    # Vim/Neovim
-    vim = "nvim";
-    vimconfig = "cd ~/.config/nvim/";
     # Gradle
     grun = "./gradlew run";
     # misc
