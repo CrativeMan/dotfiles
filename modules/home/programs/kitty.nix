@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
   programs.kitty = {
@@ -6,7 +6,7 @@
     settings = {
       confirm_os_window_close = 0;
       #background = "#1c1b22";
-      background_opacity = "0.95";
+      background_opacity = "0.8";
       background_blur = 1;
     };
     #theme = "Duotone Dark";
