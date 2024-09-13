@@ -16,7 +16,7 @@ in
     # Dev
     joycond
     jdk21_headless
-    jdk8
+    jdk8_headless
     python3
 
   ];
