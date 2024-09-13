@@ -35,6 +35,7 @@ in
     libresprite
     setzer
     gradience
+    unstable.parabolic
     eyedropper
     gnome-frog
     blender

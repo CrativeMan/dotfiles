@@ -3,15 +3,12 @@
 let
   myAliases = {
     # Nix stuff
-    nixconfig = "cd ~/.dotfiles";
-    nixcode = "code ~/.dotfiles";
     rebuild = "ga . && sudo nixos-rebuild switch --flake ~/.dotfiles/ && hrebuild";
     rebuildh = "ga . && sudo nixos-rebuild switch --flake ~/.dotfiles/";
     hrebuild = "ga . && home-manager switch --flake ~/.dotfiles/";
     nixupdate = "cd ~/.dotfiles && sudo nix flake update";
     nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
     or = "omz reload";
-    sdown = "~/.config/waybar/shutdown.sh";
     # Gradle
     grun = "./gradlew run";
     # misc
@@ -53,5 +50,4 @@ in
     enableZshIntegration = true;
     settings = builtins.fromTOML (builtins.readFile ./shell/omp.toml);
   };
-
 }
