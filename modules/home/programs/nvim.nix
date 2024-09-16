@@ -1,9 +1,10 @@
-{ config, pkgs, ...}:
+{config, pkgs, ...}:
 
 {
-  programs.neovim = {
-    enable = true;
-    vimAlias = true;
-    defaultEditor = true;
-  };
+    programs.neovim = {
+        enable = true;
+        viAlias = true;
+        vimAlias = true;
+        defaultEditor = true;
+    };
 }
