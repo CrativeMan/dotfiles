@@ -33,11 +33,6 @@ let
       devices = lib.attrNames devices;
       path = "/home/crative/Documents/Dungeons and Dragons";
     };
-    SeminarFach = {
-      id = "seminar-fach";
-      devices = lib.attrNames devices;
-      path = "/home/crative/Documents/Seminarfach";
-    };
     JugendRotKreuz = {
       id = "jrk";
       devices = lib.attrNames devices;
