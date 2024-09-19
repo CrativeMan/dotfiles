@@ -17,6 +17,7 @@ in
     pika-backup
     qbittorrent
     unstable.zed-editor
+    umlet
     vscode
     jetbrains-toolbox
     discord
