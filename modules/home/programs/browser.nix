@@ -4,7 +4,7 @@
   config = {
     programs.firefox = {
       enable = true;
-      #nativeMessagingHosts = [pkgs.gnomeExtensions.gsconnect];
+      nativeMessagingHosts = [pkgs.gnomeExtensions.gsconnect];
       # profiles.default = {
       #   name = "Default";
       #   settings = {
