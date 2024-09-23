@@ -33,10 +33,16 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     firefox-gnome-theme = {
-        url = "github:rafaelmardojai/firefox-gnome-theme";
-        flake = false;
+      url = "github:rafaelmardojai/firefox-gnome-theme";
+      flake = false;
+    };
+
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
     };
   };
 
