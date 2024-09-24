@@ -18,6 +18,7 @@ in
     qbittorrent
     unstable.zed-editor
     umlet
+    rquickshare
     vscode
     jetbrains-toolbox
     discord
