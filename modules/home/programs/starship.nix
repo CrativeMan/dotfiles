@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ...}:
+{ config, pkgs, lib, ... }:
 
 {
   programs.starship = {
@@ -26,13 +26,13 @@
         style = "bg:none fg:#161821";
       };
 
-     # directory.substitutions = {
-     # "~" = "󰋞";
-     # "Documents" = " ";
-     # "Downloads" = " ";
-     # "Music" = " ";
-     # "Pictures" = " ";
-     # };
+      directory.substitutions = {
+        "~" = "󰋞";
+        "Documents" = " ";
+        "Downloads" = " ";
+        "Music" = " ";
+        "Pictures" = " ";
+      };
     };
   };
 }

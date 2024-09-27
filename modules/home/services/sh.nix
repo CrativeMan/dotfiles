@@ -44,10 +44,4 @@ in
     enable = true;
     enableZshIntegration = true;
   };
-
-  programs.oh-my-posh = {
-    enable = true;
-    enableZshIntegration = true;
-    settings = builtins.fromTOML (builtins.readFile ./shell/omp.toml);
-  };
 }
