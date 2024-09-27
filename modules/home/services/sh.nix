@@ -35,7 +35,7 @@ in
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" ];
-      theme = "gozilla";
+      theme = "geoffgarside";
     };
     shellAliases = myAliases;
   };

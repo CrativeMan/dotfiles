@@ -23,6 +23,12 @@
         key = "<C-n>";
         action = "<cmd> NvimTreeToggle <CR>";
       }
+      {
+        mode = "n";
+        key = "<C-c>";
+        action = "<cmd> %y+ <CR>";
+      }
+
       # navigation
       {
         mode = "n";
@@ -65,6 +71,7 @@
       };
 
       cmp = {
+        enable = true;
         autoEnableSources = true;
         settings.sources = [
           { name = "nvim_lsp"; }
@@ -72,7 +79,9 @@
           { name = "buffer"; }
         ];
       };
+      cmp-nvim-lsp.enable = true;
       friendly-snippets.enable = true;
+      luasnip.enable = true;
 
       telescope = {
         enable = true;
