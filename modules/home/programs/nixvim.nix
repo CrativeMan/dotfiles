@@ -50,6 +50,7 @@
     plugins = {
       lualine.enable = true;
       nvim-tree.enable = true;
+      transparent.enable = true;
 
       conform-nvim.enable = true;
 
