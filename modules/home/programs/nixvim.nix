@@ -28,6 +28,15 @@
         key = "<C-c>";
         action = "<cmd> %y+ <CR>";
       }
+      {
+      	key = "<Esc>";
+	action = "<cmd> noh <CR>";
+      }
+      {
+      	mode = "n";
+	key = "<leader>n";
+	action = "<cmd> enew <CR>";
+      }
 
       # navigation
       {
