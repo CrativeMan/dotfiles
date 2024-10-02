@@ -26,5 +26,10 @@ in
     inputs.tasg.packages.x86_64-linux.default
   ];
 
+  programs.thefuck = {
+    enable = true;
+    alias = "fuck";
+  };
+
 }
 

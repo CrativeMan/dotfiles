@@ -9,6 +9,6 @@ in
     ./applications.nix
     ./console-applications.nix
     ./other.nix
-    #./pentesting.nix
+    ./pentesting.nix
   ];
 }
