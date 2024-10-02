@@ -20,7 +20,8 @@ in
     umlet
     rquickshare
     vscode
-    jetbrains-toolbox
+    #jetbrains-toolbox
+    unstable.jetbrains.idea-ultimate
     discord
     unstable.vesktop
     whatsapp-for-linux
