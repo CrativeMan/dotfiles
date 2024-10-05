@@ -17,7 +17,6 @@
     };
 
     keymaps = [
-      # open nvim 
       {
         mode = "n";
         key = "<C-n>";
@@ -29,13 +28,13 @@
         action = "<cmd> %y+ <CR>";
       }
       {
-      	key = "<Esc>";
-	action = "<cmd> noh <CR>";
+        key = "<Esc>";
+        action = "<cmd> noh <CR>";
       }
       {
-      	mode = "n";
-	key = "<leader>n";
-	action = "<cmd> enew <CR>";
+        mode = "n";
+        key = "<leader>n";
+        action = "<cmd> enew <CR>";
       }
 
       # navigation
@@ -64,10 +63,66 @@
     # plugins
     plugins = {
       lualine.enable = true;
-      nvim-tree.enable = true;
       transparent.enable = true;
-
       conform-nvim.enable = true;
+
+      nvim-tree = {
+        enable = true;
+        disableNetrw = true;
+        hijackNetrw = true;
+        hijackCursor = true;
+        hijackUnnamedBufferWhenOpening = false;
+        syncRootWithCwd = true;
+        updateFocusedFile = {
+          enable = true;
+          updateRoot = false;
+        };
+        git = {
+          enable = false;
+          ignore = true;
+        };
+        view = {
+          side = "left";
+          width = 30;
+          preserveWindowProportions = true;
+        };
+        filesystemWatchers.enable = true;
+        actions.openFile.resizeWindow = true;
+        renderer = {
+          indentMarkers.enable = false;
+          icons = {
+            show = {
+              file = true;
+              folder = true;
+              folderArrow = true;
+              git = false;
+            };
+            glyphs = {
+              default = "󰈚";
+              symlink = "";
+              folder = {
+                default = "";
+                empty = "";
+                emptyOpen = "";
+                open = "";
+                symlink = "";
+                symlinkOpen = "";
+                arrowOpen = "";
+                arrowClosed = "";
+              };
+              git = {
+                unstaged = "✗";
+                staged = "✓";
+                unmerged = "";
+                renamed = "➜";
+                untracked = "★";
+                deleted = "";
+                ignored = "◌";
+              };
+            };
+          };
+        };
+      };
 
       lsp = {
         enable = true;
@@ -84,8 +139,10 @@
         autoEnableSources = true;
         settings.sources = [
           { name = "nvim_lsp"; }
-          { name = "path"; }
+          { name = "luasnip"; }
           { name = "buffer"; }
+          { name = "nvim_lua"; }
+          { name = "path"; }
         ];
       };
       cmp-nvim-lsp.enable = true;
@@ -94,7 +151,6 @@
 
       telescope = {
         enable = true;
-        # map = "<leader>ff" to run telescope find_files
         keymaps = {
           "<leader>ff" = "find_files";
         };
