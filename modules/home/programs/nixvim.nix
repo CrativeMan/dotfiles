@@ -182,6 +182,8 @@
       number = true;
       relativenumber = true;
       colorcolumn = "80";
+      tabstop = 2;
+      softtabstop = 2;
     };
   };
 }
