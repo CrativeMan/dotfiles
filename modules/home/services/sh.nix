@@ -22,6 +22,7 @@ let
     cd = "z";
     # STUPID FIXES
     lxappearance = "GDK_BACKEND=x11 lxappearance";
+    zed = "zeditor";
     rrip = "sudo docker run --rm -v $PWD:/app/ -u $(id -u):$(id -g) ghcr.io/mahesh-hegde/rrip:latest";
   };
 
