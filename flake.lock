@@ -381,11 +381,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1728142617,
-        "narHash": "sha256-ramJ6G9bKYuZshtYRc0olhtN89bP9i4BDhhTU0E0cLc=",
+        "lastModified": 1728223706,
+        "narHash": "sha256-MHaCoqWfcV7GsFAFGmLx2Ed0LFyC3vTasqKwtbpHG/w=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "0ec6072a290051a03ab66cfb9bc616b2f5540e64",
+        "rev": "4e41cda27ed4176005082436cb35878335e63fae",
         "type": "github"
       },
       "original": {
@@ -661,11 +661,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1728067476,
-        "narHash": "sha256-/uJcVXuBt+VFCPQIX+4YnYrHaubJSx4HoNsJVNRgANM=",
+        "lastModified": 1728193676,
+        "narHash": "sha256-PbDWAIjKJdlVg+qQRhzdSor04bAPApDqIv2DofTyynk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "6e6b3dd395c3b1eb9be9f2d096383a8d05add030",
+        "rev": "ecbc1ca8ffd6aea8372ad16be9ebbb39889e55b6",
         "type": "github"
       },
       "original": {
@@ -786,11 +786,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1724793579,
-        "narHash": "sha256-ofU0bHwKJWo6EXZPgSFSLiYUrkMKwpEzH+Rm8LRF2eY=",
+        "lastModified": 1728242714,
+        "narHash": "sha256-ewcLsrHpsF27aUsOv0M65Oq9PWqLPtuvOF2QKso+BlA=",
         "owner": "CrativeMan",
         "repo": "jadeGo",
-        "rev": "93cc62ecedbd1f0c6e59444469c0cfa7d552ea38",
+        "rev": "ae5de8ec38b6f7349be4f9c74350bce1c1b29c7b",
         "type": "github"
       },
       "original": {
