@@ -60,6 +60,16 @@
       }
     ];
 
+    opts = {
+      number = true;
+      relativenumber = true;
+      colorcolumn = "80";
+      tabstop = 2;
+      shiftwidth = 2;
+      softtabstop = 2;
+    };
+
+
     # plugins
     plugins = {
       lualine.enable = true;
@@ -177,13 +187,6 @@
         ];
       };
 
-    };
-    opts = {
-      number = true;
-      relativenumber = true;
-      colorcolumn = "80";
-      tabstop = 2;
-      softtabstop = 2;
     };
   };
 }
