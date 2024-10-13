@@ -21,6 +21,7 @@ in
     rquickshare
     vscode
     jetbrains-toolbox
+    signal-desktop
     #jetbrains.idea-ultimate
     discord
     unstable.vesktop
