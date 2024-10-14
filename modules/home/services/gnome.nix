@@ -65,14 +65,5 @@
         "gsconnect@andyholmes.github.io"
       ];
     };
-
-    # TODO: add a global config value
-    "org/gnome/desktop/background" = {
-      color-shading-type = "solid";
-      picture-options = "zoom";
-      #picture-uri = "file:///home/crative/.dotfiles/wallpapers/wallhaven-yx6e9l_3840x2160.png";
-      picture-uri = "file:///home/crative/.dotfiles/wallpapers/a_white_light_pole_with_a_jet_trail_in_the_sky.jpg";
-      picture-uri-dark = "file:///home/crative/.dotfiles/wallpapers/wallhaven-yx6e9l_3840x2160.png";
-    };
   };
 }
