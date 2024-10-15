@@ -23,9 +23,10 @@ in
     unstable.klog-time-tracker
     cmatrix
     alacritty
+    vim
     inputs.createp.packages.x86_64-linux.default
     inputs.tasg.packages.x86_64-linux.default
-    inputs.nixvim.packages.x86_64-linux.default
+    #inputs.nixvim.packages.x86_64-linux.default
   ];
 
   programs.thefuck = {

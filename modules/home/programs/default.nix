@@ -7,7 +7,7 @@
     ./browser.nix
     ./kitty.nix
     ./comma.nix
-    #./nvim.nix
+    ./nvim.nix
     #./nixvim.nix
   ];
 }
