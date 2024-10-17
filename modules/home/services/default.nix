@@ -10,7 +10,7 @@
 
   wallpaper = {
     enable = lib.mkDefault true;
-    path = lib.mkDefault ../../../wallpapers/nix-wallpaper-nineish-dark-gray.png;
+    path = lib.mkDefault ../../../wallpapers/wallhaven-yx6e9l_3840x2160.png;
   };
 
 }
