@@ -155,6 +155,8 @@
 
   services.gnome.gnome-browser-connector.enable = true;
 
+  nixpkgs.config.allowUnsupportedSystem = true; 
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 }
