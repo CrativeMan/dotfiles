@@ -14,9 +14,18 @@
 
 
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # Bootloader
+  boot.loader = {
+    grub = {
+      enable = false;
+    };
+    systemd-boot = {
+      enable = true;
+    };
+    efi = {
+      canTouchEfiVariables = true;
+    };
+  };
 
   # ZSH activation
   environment.shells = with pkgs; [ zsh ];
@@ -155,7 +164,7 @@
 
   services.gnome.gnome-browser-connector.enable = true;
 
-  nixpkgs.config.allowUnsupportedSystem = true; 
+  nixpkgs.config.allowUnsupportedSystem = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
