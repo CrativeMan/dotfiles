@@ -1,7 +1,7 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
-   programs.bat = {
+  programs.bat = {
     enable = true;
     config = {
       theme = "dracula";
@@ -17,5 +17,5 @@
         file = "Dracula.tmTheme";
       };
     };
-   };
+  };
 }

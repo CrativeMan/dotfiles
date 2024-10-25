@@ -17,6 +17,7 @@ in
     pika-backup
     qbittorrent
     unstable.zed-editor
+    hieroglyphic
     umlet
     arc-browser
     rquickshare

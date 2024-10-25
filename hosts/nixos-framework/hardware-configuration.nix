@@ -5,8 +5,9 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    nixos-hardware.nixosModules.framework-13-7040-amd
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
+      nixos-hardware.nixosModules.framework-13-7040-amd
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" ];
@@ -15,12 +16,14 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/02bab074-dee6-4654-8441-bffc82a318bc";
+    {
+      device = "/dev/disk/by-uuid/02bab074-dee6-4654-8441-bffc82a318bc";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/1726-7DD3";
+    {
+      device = "/dev/disk/by-uuid/1726-7DD3";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };

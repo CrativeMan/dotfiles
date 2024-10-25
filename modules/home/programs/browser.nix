@@ -1,10 +1,10 @@
-{ pkgs, lib, config, inputs, ...}:
+{ pkgs, lib, config, inputs, ... }:
 
 {
   config = {
     programs.firefox = {
       enable = true;
-      nativeMessagingHosts = [pkgs.gnomeExtensions.gsconnect];
+      nativeMessagingHosts = [ pkgs.gnomeExtensions.gsconnect ];
       # profiles.default = {
       #   name = "Default";
       #   settings = {
@@ -29,7 +29,7 @@
     programs.chromium = {
       enable = true;
 
-      commandLineArgs = ["--enable-features=TouchpadOverscrollHistoryNavigation"];
+      commandLineArgs = [ "--enable-features=TouchpadOverscrollHistoryNavigation" ];
       extensions = [
         # {id = "";}  // extension id, query from chrome web store
       ];
