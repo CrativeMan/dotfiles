@@ -50,6 +50,7 @@ in
     spotify
     warp
     appflowy
+    github-desktop
     veikk-linux-driver-gui
     telegram-desktop
     godot_4
