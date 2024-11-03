@@ -11,6 +11,11 @@ let
       id = "LQRPTG4-IB2RVEE-UY66I3S-4HNQRCA-TCAGZOG-7F5DNFB-6CEQMW4-DHWOQA3";
     };
 
+    Tablet = {
+      addresses = [ "tcp://192.168.178.70:22000" ];
+      id = "COH7MCE-Q442VEJ-LIZYSI5-RLLGPX5-QIV23AI-P3AXCZG-LKV6EFC-MOGQOAB";
+    };
+
     Nixos-Framework = {
       addresses = [ "tcp://192.168.178.146:22000" ];
       id = "YETSICG-QJOOUQJ-WTIP475-PAUDFJI-3KZJE35-IQO6V7K-WJP7CMP-G7EEKAW";
