@@ -33,6 +33,7 @@ in
     celluloid
     unstable.obsidian
     libreoffice
+    kdenlive
     texlive.combined.scheme-full
     newsflash
     zotero
