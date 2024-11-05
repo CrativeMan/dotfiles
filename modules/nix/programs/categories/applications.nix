@@ -19,6 +19,7 @@ in
     unstable.zed-editor
     hieroglyphic
     umlet
+    glaxnimate
     arc-browser
     rquickshare
     vscode
