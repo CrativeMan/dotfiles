@@ -25,6 +25,7 @@ in
     alacritty
     vim
     zbar
+    junction
     inputs.createp.packages.x86_64-linux.default
     inputs.tasg.packages.x86_64-linux.default
     #inputs.nixvim.packages.x86_64-linux.default
