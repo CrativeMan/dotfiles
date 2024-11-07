@@ -17,6 +17,7 @@ in
     joycond
     jdk21_headless
     corretto21
+    nodejs_18
     jdk8_headless
     python3
 
