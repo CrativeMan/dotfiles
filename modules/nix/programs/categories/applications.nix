@@ -33,6 +33,7 @@ in
     thunderbird
     celluloid
     unstable.obsidian
+    gnome-builder
     libreoffice
     kdenlive
     texlive.combined.scheme-full
@@ -51,6 +52,7 @@ in
     gimp
     spotify
     warp
+    drawio
     appflowy
     github-desktop
     veikk-linux-driver-gui

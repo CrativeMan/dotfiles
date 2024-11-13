@@ -21,6 +21,7 @@ let
     ll = "ls -l";
     cat = "bat";
     cd = "z";
+    ggraph = "git log --graph --oneline --decorate --color";
     # STUPID FIXES
     lxappearance = "GDK_BACKEND=x11 lxappearance";
     zed = "zeditor";
