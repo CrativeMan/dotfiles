@@ -18,6 +18,7 @@ in
     qbittorrent
     unstable.zed-editor
     hieroglyphic
+    inkscape
     umlet
     glaxnimate
     arc-browser

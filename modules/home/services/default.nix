@@ -10,7 +10,7 @@
 
   wallpaper = {
     enable = lib.mkDefault true;
-    path = lib.mkDefault ../../../wallpapers/wallhaven-yx6e9l_3840x2160.png;
+    path = lib.mkDefault ../../../wallpapers/a_motorcycle_parked_outside_a_restaurant.jpg;
   };
 
 }
