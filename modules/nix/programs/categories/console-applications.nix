@@ -18,6 +18,7 @@ in
     yazi
     cloc
     unstable.gradle
+    clipboard-jh
     blanket
     glava
     unstable.klog-time-tracker
@@ -37,4 +38,3 @@ in
   };
 
 }
-

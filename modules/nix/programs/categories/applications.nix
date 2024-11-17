@@ -20,6 +20,7 @@ in
     hieroglyphic
     inkscape
     umlet
+    icon-library
     glaxnimate
     arc-browser
     rquickshare
