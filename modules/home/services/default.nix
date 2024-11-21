@@ -10,7 +10,7 @@
 
   wallpaper = {
     enable = lib.mkDefault true;
-    path = lib.mkDefault ../../../wallpapers/a_motorcycle_parked_outside_a_restaurant.jpg;
+    path = lib.mkDefault ../../../wallpapers/F8F0sbPaYAAsMCk.jpg;
   };
 
 }
