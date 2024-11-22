@@ -8,35 +8,31 @@ in
 {
   wayland.windowManager.hyprland = {
     enable = true;
-    systemd.enable = true;
     xwayland.enable = true;
+    systemd = {
+      enable = true;
+      variables = ["--all"];
+    };
 
     settings = {
-      exec-once = [
-        #   "ags -b hypr"
-        "hyprctl setcursor Simp1e-Adw-Dark 22"
-      ];
-
       "$mod" = "SUPER";
-
-      bindm = [
-        # Custom bindings
-        "$mod, S, exec, rofi -show drun -show-icons"
-
-        # Example binds
-        "$mod, Q, exec, kitty"
-        "$mod, C, killactive"
-        "$mod, M, exit"
-        "$mod, F, exec, nautilus"
-        "$mod, V, togglefloating"
-
-        # Move focus with $mod + arrow keys
-        "$mod, left, movefocus, l"
-        "$mod, right, movefocus, r"
-        "$mod, up, movefocus, u"
-        "$mod, down, movefocus, d"
-      ];
-
+      bind =
+        [
+          "$mod, F, exec, firefox"
+          ", Print, exec, grimblast copy area"
+        ]
+        ++ (
+          # workspaces
+          # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
+          builtins.concatLists (builtins.genList (i:
+              let ws = i + 1;
+              in [
+                "$mod, code:1${toString i}, workspace, ${toString ws}"
+                "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+              ]
+            )
+            9)
+        );
     };
   };
 }
