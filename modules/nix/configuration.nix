@@ -12,8 +12,6 @@
 
   syncthing.enable = true;
 
-
-
   # Bootloader
   boot.loader = {
     grub = {
@@ -43,9 +41,6 @@
     "openssl-1.1.1w"
     "qbittorrent-4.6.4"
   ];
-
-
-  #networking.hostName = "nixos"; # Define your hostname.
 
   # Enable networking
   networking.networkmanager.enable = true;

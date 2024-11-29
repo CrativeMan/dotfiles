@@ -25,6 +25,11 @@
       url = "github:CrativeMan/ProjectCreator";
     };
 
+    gogo = {
+      url = "github:CrativeMan/gogoproj";
+    };
+
+
     tasg = {
       url = "github:CrativeMan/jadeGo";
     };
@@ -35,10 +40,8 @@
     };
 
     nixvim = {
-      #url = "github:nix-community/nixvim/nixos-24.05";
-      #inputs.nixpkgs.follows = "nixpkgs";
-      #url = "github:dc-tec/nixvim";
-      url = "github:redyf/Neve";
+      url = "github:nix-community/nixvim/nixos-24.05";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     firefox-gnome-theme = {
