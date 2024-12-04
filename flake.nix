@@ -29,9 +29,8 @@
       url = "github:CrativeMan/gogoproj";
     };
 
-
-    tasg = {
-      url = "github:CrativeMan/jadeGo";
+    clh = {
+      url = "github:CrativeMan/clh";
     };
 
     nix-index-database = {
