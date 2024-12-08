@@ -18,7 +18,7 @@
   environment.systemPackages = with pkgs; [
     libremines
     unstable.cartridges
-    unstable.heroic
+    heroic
     prismlauncher
     unstable.lutris
     gnome-2048
