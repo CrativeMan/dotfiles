@@ -9,7 +9,6 @@ let
     nixupdate = "cd ~/.dotfiles && sudo nix flake update";
     nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
     or = "omz reload";
-    tmake = "time make";
     # Gradle
     grun = "./gradlew run";
     # misc
@@ -22,6 +21,9 @@ let
     cat = "bat";
     cd = "z";
     ggraph = "git log --graph --oneline --decorate --color";
+    # make
+    make = "time make";
+    mclean = "make clean";
     # STUPID FIXES
     lxappearance = "GDK_BACKEND=x11 lxappearance";
     zed = "zeditor";
