@@ -57,6 +57,7 @@ in
     drawio
     appflowy
     github-desktop
+    sublime4
     veikk-linux-driver-gui
     telegram-desktop
     godot_4
