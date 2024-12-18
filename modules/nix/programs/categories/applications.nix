@@ -61,6 +61,8 @@ in
     veikk-linux-driver-gui
     telegram-desktop
     godot_4
+    vlc
+    unstable.sly
   ];
 
 }
