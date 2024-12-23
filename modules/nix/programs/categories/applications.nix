@@ -24,7 +24,7 @@ in
     glaxnimate
     arc-browser
     rquickshare
-    vscode
+    unstable.vscode
     jetbrains-toolbox
     signal-desktop
     #jetbrains.idea-ultimate

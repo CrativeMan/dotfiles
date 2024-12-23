@@ -42,6 +42,9 @@
     "qbittorrent-4.6.4"
   ];
 
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
+
   # Enable networking
   networking.networkmanager.enable = true;
 
