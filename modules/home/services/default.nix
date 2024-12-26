@@ -10,7 +10,7 @@
 
   wallpaper = {
     enable = lib.mkDefault true;
-    path = lib.mkDefault ../../../wallpapers/backpacker-7628303_1920.jpg;
+    path = lib.mkDefault /home/crative/.dotfiles/wallpapers/gith-creche-wallpaper.jpg;
   };
 
 }
