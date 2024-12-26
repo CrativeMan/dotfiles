@@ -9,7 +9,8 @@
       background_opacity = "1";
       background_blur = 1;
     };
-    theme = "Duotone Dark";
+    theme = "Gruvbox Dark";
+    #theme = "Duotone Dark";
     #theme = "Hybrid";
   };
 }
