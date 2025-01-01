@@ -20,7 +20,8 @@ in
     nodejs_18
     jdk8_headless
     python3
-
+    libaacs
+    libbluray
   ];
 
 }

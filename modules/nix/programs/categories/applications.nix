@@ -13,6 +13,7 @@ in
   ];
 
   environment.systemPackages = with pkgs; [
+    unstable.ghostty
     keepassxc
     pika-backup
     qbittorrent
@@ -64,5 +65,4 @@ in
     vlc
     unstable.sly
   ];
-
 }
