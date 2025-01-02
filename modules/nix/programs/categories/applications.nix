@@ -64,5 +64,6 @@ in
     godot_4
     vlc
     unstable.sly
+    rnote
   ];
 }
