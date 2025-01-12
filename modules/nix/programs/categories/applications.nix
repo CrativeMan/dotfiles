@@ -65,5 +65,6 @@ in
     vlc
     unstable.sly
     rnote
+    geogebra6
   ];
 }
