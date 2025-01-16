@@ -66,5 +66,6 @@ in
     unstable.sly
     rnote
     geogebra6
+    video-trimmer
   ];
 }
