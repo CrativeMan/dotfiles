@@ -10,7 +10,7 @@
 
   wallpaper = {
     enable = lib.mkDefault true;
-    path = lib.mkDefault /home/crative/.dotfiles/wallpapers/gith-creche-wallpaper.jpg;
+    path = lib.mkDefault /home/crative/.dotfiles/wallpapers/camille-villanueva-zsAPsRjzXRI-unsplash.jpg;
   };
 
 }
