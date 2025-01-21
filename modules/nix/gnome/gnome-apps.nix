@@ -2,7 +2,7 @@
 
 {
   # gnomeExtensions.rounded-window-corners
-   # gnomeExtensions.gnome-clipboard-indicator
+  # gnomeExtensions.gnome-clipboard-indicator
   environment.systemPackages = with pkgs; [
     gnomeExtensions.tiling-assistant
     gnomeExtensions.force-quit

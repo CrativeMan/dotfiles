@@ -117,9 +117,6 @@
       atomix # puzzle game
       yelp # help viewer
       file-roller
-    ])
-    ++ (with pkgs.gnome; [
-      
     ]);
 
   users.users.crative = {
