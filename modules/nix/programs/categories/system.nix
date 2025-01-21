@@ -11,6 +11,7 @@ in
       };
     })
   ];
+    #linuxKernel.packages.linux_zen.veikk-linux-driver
 
   environment.systemPackages = with pkgs; [
     nixpkgs-fmt
@@ -18,7 +19,6 @@ in
     man-pages-posix
     clang-manpages
     linux-manual
-    linuxKernel.packages.linux_zen.veikk-linux-driver
     lxappearance
     ffmpeg
     gnupg

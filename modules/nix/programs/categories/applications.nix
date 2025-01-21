@@ -59,7 +59,6 @@ in
     appflowy
     github-desktop
     sublime4
-    veikk-linux-driver-gui
     telegram-desktop
     godot_4
     vlc
@@ -68,4 +67,5 @@ in
     geogebra6
     video-trimmer
   ];
+    #veikk-linux-driver-gui
 }

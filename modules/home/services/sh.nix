@@ -6,8 +6,8 @@ let
     rebuild = "ga . && sudo nixos-rebuild switch --flake ~/.dotfiles/ && hrebuild";
     rebuildh = "ga . && sudo nixos-rebuild switch --flake ~/.dotfiles/";
     hrebuild = "ga . && home-manager switch --flake ~/.dotfiles/";
-    nixupdate = "cd ~/.dotfiles && sudo nix flake update";
-    nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
+    nixup = "cd ~/.dotfiles && sudo nix flake update";
+    nixclean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
     or = "omz reload";
     # Gradle
     grun = "./gradlew run";

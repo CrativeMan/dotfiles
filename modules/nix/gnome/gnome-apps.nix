@@ -1,14 +1,14 @@
 { pkgs, config, ... }:
 
 {
+  # gnomeExtensions.rounded-window-corners
+   # gnomeExtensions.gnome-clipboard-indicator
   environment.systemPackages = with pkgs; [
     gnomeExtensions.tiling-assistant
     gnomeExtensions.force-quit
     gnomeExtensions.blur-my-shell
     gnomeExtensions.color-picker
-    gnomeExtensions.rounded-window-corners
     gnomeExtensions.launch-new-instance
-    gnomeExtensions.gnome-clipboard
 
     gnome.gnome-tweaks
     gnome.gnome-software
