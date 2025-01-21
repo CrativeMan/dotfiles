@@ -90,7 +90,6 @@
   services.openssh.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -106,8 +105,6 @@
       gnome-photos
       gnome-tour
       gedit
-    ])
-    ++ (with pkgs.gnome; [
       cheese # webcam tool
       gnome-music
       gnome-terminal
@@ -120,6 +117,9 @@
       atomix # puzzle game
       yelp # help viewer
       file-roller
+    ])
+    ++ (with pkgs.gnome; [
+      
     ]);
 
   users.users.crative = {
