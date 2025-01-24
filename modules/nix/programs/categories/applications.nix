@@ -66,6 +66,7 @@ in
     rnote
     geogebra6
     video-trimmer
+    mysql-workbench
   ];
     #veikk-linux-driver-gui
 }
