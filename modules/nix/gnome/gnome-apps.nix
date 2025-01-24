@@ -10,8 +10,8 @@
     gnomeExtensions.color-picker
     gnomeExtensions.launch-new-instance
 
-    gnome.gnome-tweaks
-    gnome.gnome-software
+    gnome-tweaks
+    gnome-software
     adw-gtk3
     unstable.resources
   ];

@@ -5,7 +5,7 @@
     ./services/default.nix
     ./programs/default.nix
     ./config/default.nix
-    # ./home-report-changes.nix
+    ./home-report-changes.nix
     inputs.nix-index-database.hmModules.nix-index
   ];
 

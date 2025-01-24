@@ -37,6 +37,14 @@ in
     enableCompletion = true;
     history.size = 100000;
 
+    envExtra = ''
+    global_search() {
+        find . -type f | grep -v '.git\|node_modules' | xargs grep -Hn "$1" 2>/dev/null | fzf
+    }
+
+    alias gs='global_search'
+    '';
+
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" ];
