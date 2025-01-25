@@ -8,6 +8,11 @@
       conform-nvim.enable = true;
       direnv.enable = true;
       markdown-preview.enable = true;
+      web-devicons.enable = true;
+
+      typescript-tools = {
+        enable = true;
+      };
 
       nvim-tree = {
         enable = true;
@@ -71,10 +76,10 @@
         enable = true;
         servers = {
           clangd.enable = true;
-          java-language-server.enable = true;
+          java_language_server.enable = true;
           nixd.enable = true;
           gopls.enable = true;
-          rust-analyzer = {
+          rust_analyzer = {
             enable = true;
             installRustc = true;
             installCargo = true;
@@ -85,13 +90,15 @@
       cmp = {
         enable = true;
         autoEnableSources = true;
-        settings.sources = [
-          { name = "nvim_lsp"; }
-          { name = "luasnip"; }
-          { name = "buffer"; }
-          { name = "nvim_lua"; }
-          { name = "path"; }
-        ];
+        settings = {
+          sources = [
+            { name = "nvim_lsp"; }
+            { name = "luasnip"; }
+            { name = "buffer"; }
+            { name = "nvim_lua"; }
+            { name = "path"; }
+          ];
+        };
       };
       cmp-nvim-lsp.enable = true;
       friendly-snippets.enable = true;

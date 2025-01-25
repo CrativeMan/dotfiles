@@ -8,6 +8,6 @@
     ./kitty.nix
     ./comma.nix
     ./nvim.nix
-    ./nixvim.nix
+    ./nixvim/nixvim.nix
   ];
 }

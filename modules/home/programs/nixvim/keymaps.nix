@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{...}:
 
 {
   programs.nixvim = {
@@ -21,6 +21,13 @@
         mode = "n";
         key = "<leader>n";
         action = "<cmd> enew <CR>";
+      }
+      
+
+      {
+        mode = "i";
+        key = "<CR>";
+        action = ''require("cmp").mapping.confirm({ select = false })'';
       }
 
       # navigation
