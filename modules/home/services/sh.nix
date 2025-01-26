@@ -3,11 +3,11 @@
 let
   myAliases = {
     # Nix stuff
-    rebuild = "ga . && sudo nixos-rebuild switch --flake ~/.dotfiles/ && hrebuild";
-    rebuildh = "ga . && sudo nixos-rebuild switch --flake ~/.dotfiles/";
-    hrebuild = "ga . && home-manager switch --flake ~/.dotfiles/";
+    rebuild = "ga . && nixr && homer";
+    nixr = "ga . && sudo nixos-rebuild switch --flake ~/.dotfiles/";
+    homer = "ga . && home-manager switch --flake ~/.dotfiles/";
     nixup = "cd ~/.dotfiles && sudo nix flake update";
-    nixcl = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
+    nixgc = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
     or = "omz reload";
     # Gradle
     grun = "./gradlew run";
