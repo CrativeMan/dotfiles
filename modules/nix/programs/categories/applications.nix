@@ -67,6 +67,8 @@ in
     geogebra6
     video-trimmer
     mysql-workbench
+    unstable.aseprite
+    veikk-linux-driver-gui
   ];
     #veikk-linux-driver-gui
 }
