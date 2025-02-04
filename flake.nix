@@ -21,10 +21,6 @@
       url = "github:nixos/nixos-hardware";
     };
 
-    createp = {
-      url = "github:CrativeMan/ProjectCreator";
-    };
-
     gogo = {
       url = "github:CrativeMan/gogoproj";
     };

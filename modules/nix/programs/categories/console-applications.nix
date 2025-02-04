@@ -28,7 +28,6 @@ in
     zbar
     junction
     bc
-    inputs.createp.packages.x86_64-linux.default
     inputs.gogo.packages.x86_64-linux.default
     inputs.clh.packages.x86_64-linux.default
   ];
