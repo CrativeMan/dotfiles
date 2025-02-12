@@ -31,5 +31,6 @@ in
     imagemagick
     inputs.gogo.packages.x86_64-linux.default
     inputs.clh.packages.x86_64-linux.default
+    inputs.cmk.packages.x86_64-linux.default
   ];
 }

@@ -29,6 +29,10 @@
       url = "github:CrativeMan/clh";
     };
 
+    cmk = {
+      url = "github:CrativeMan/cpp\-helper";
+    };
+
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -28,7 +28,6 @@ in
     unstable.vscode
     jetbrains-toolbox
     signal-desktop
-    #jetbrains.idea-ultimate
     discord
     unstable.vesktop
     whatsapp-for-linux
