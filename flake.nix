@@ -29,6 +29,10 @@
       url = "github:CrativeMan/clh";
     };
 
+    peb = {
+      url = "github:CrativeMan/peb";
+    };
+
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
