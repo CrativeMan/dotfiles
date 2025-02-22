@@ -19,11 +19,7 @@ in
     cloc
     unstable.gradle
     clipboard-jh
-    blanket
-    glava
     unstable.klog-time-tracker
-    cmatrix
-    alacritty
     vim
     zbar
     junction
@@ -31,5 +27,6 @@ in
     imagemagick
     inputs.gogo.packages.x86_64-linux.default
     inputs.clh.packages.x86_64-linux.default
+    inputs..packages.x86_64-linux.default
   ];
 }

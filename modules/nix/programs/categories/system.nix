@@ -37,7 +37,7 @@ in
     wget
     fzf
     xclip
-
+    nil
   ];
 
 }

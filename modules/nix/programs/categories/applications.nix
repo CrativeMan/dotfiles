@@ -13,61 +13,63 @@ in
   ];
 
   environment.systemPackages = with pkgs; [
+    # terminals
     unstable.ghostty
-    keepassxc
-    pika-backup
-    qbittorrent
+    alacritty
+
+    # coding
     unstable.zed-editor
-    hieroglyphic
-    inkscape
-    umlet
-    icon-library
-    glaxnimate
-    arc-browser
-    rquickshare
     unstable.vscode
     jetbrains-toolbox
+    github-desktop
+    sublime4
+    godot_4
+    mysql-workbench
+
+    # art
+    glaxnimate
+    inkscape
+    libresprite
+    blender
+    darktable
+    gimp
+    video-trimmer
+    unstable.aseprite
+    gnome-obfuscate
+    unstable.sly
+    rnote
+
+    # communication
     signal-desktop
     discord
     unstable.vesktop
     whatsapp-for-linux
     teams-for-linux
     thunderbird
-    celluloid
+    telegram-desktop
+
+    # work
+    hieroglyphic
     unstable.obsidian
-    gnome-builder
     libreoffice
-    kdenlive
     texlive.combined.scheme-full
-    newsflash
     zotero
     planify
-    gnome-obfuscate
-    libresprite
     setzer
+    geogebra6
+
+    #sonst
+    keepassxc
+    pika-backup
+    qbittorrent
+    kdenlive
+    newsflash
     gradience
     unstable.parabolic
     eyedropper
     gnome-frog
-    blender
-    darktable
-    gimp
     spotify
     warp
-    drawio
-    appflowy
-    github-desktop
-    sublime4
-    telegram-desktop
-    godot_4
     vlc
-    unstable.sly
-    rnote
-    geogebra6
-    video-trimmer
-    mysql-workbench
-    unstable.aseprite
-    veikk-linux-driver-gui
   ];
-    #veikk-linux-driver-gui
 }
