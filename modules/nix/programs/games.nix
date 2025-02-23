@@ -20,7 +20,6 @@
     unstable.cartridges
     heroic
     prismlauncher
-    unstable.lutris
     gnome-2048
   ];
 }

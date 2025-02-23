@@ -18,7 +18,6 @@ in
     alacritty
 
     # coding
-    unstable.zed-editor
     unstable.vscode
     jetbrains-toolbox
     github-desktop

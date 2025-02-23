@@ -12,11 +12,6 @@
 
     nixpkgs-unstable.url = "github:/nixos/nixpkgs/nixos-unstable";
 
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixos-hardware = {
       url = "github:nixos/nixos-hardware";
     };
@@ -27,10 +22,6 @@
 
     clh = {
       url = "github:CrativeMan/clh";
-    };
-
-    peb = {
-      url = "github:CrativeMan/peb";
     };
 
     nix-index-database = {
@@ -77,16 +68,6 @@
           };
           inherit system;
           modules = [ ./modules/nix/configuration.nix ./hosts/nixos-desktop/default.nix ];
-        };
-        surface = lib.nixosSystem {
-          specialArgs = {
-            inherit inputs vars nixos-hardware;
-            host = {
-              hostName = "surface";
-            };
-          };
-          inherit system;
-          modules = [ ./modules/nix/configuration.nix ./hosts/nixos-surface/default.nix ];
         };
         framework = lib.nixosSystem {
           specialArgs = {
