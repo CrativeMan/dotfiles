@@ -35,7 +35,11 @@ in
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    history.size = 100000;
+    history.size = 20000;
+
+    sessionVariables = {
+      MANPAGER = "sh -c 'col -bx | bat --theme gruvbox-dark -l man -p'";
+    };
 
     envExtra = ''
     global_search() {
