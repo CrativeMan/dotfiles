@@ -21,6 +21,7 @@ let
     cat = "bat";
     cd = "z";
     ggraph = "git log --graph --oneline --decorate --color";
+    envrc = "echo \"use flake\" > .envrc && direnv allow";
     # make
     make = "time make";
     mclean = "make clean";

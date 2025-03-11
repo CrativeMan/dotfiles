@@ -19,11 +19,13 @@ in
 
     # coding
     unstable.vscode
-    jetbrains-toolbox
     github-desktop
     sublime4
     godot_4
     mysql-workbench
+    jetbrains.idea-ultimate
+    android-studio
+    
     # art
     glaxnimate
     inkscape
@@ -55,6 +57,7 @@ in
     planify
     setzer
     geogebra6
+    ladybird
 
     #sonst
     keepassxc
