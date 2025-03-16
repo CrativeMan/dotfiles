@@ -23,7 +23,7 @@ in
     sublime4
     godot_4
     mysql-workbench
-    jetbrains.idea-ultimate
+    jetbrains-toolbox
     android-studio
     
     # art
@@ -42,7 +42,6 @@ in
     # communication
     signal-desktop
     discord
-    unstable.vesktop
     whatsapp-for-linux
     teams-for-linux
     thunderbird
