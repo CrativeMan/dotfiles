@@ -55,6 +55,7 @@
 
     "org/gnome/shell" = {
       enabled-extensions = [
+        "status-icons@fmuellner"
         "blur-my-shell@aunetx"
         "tiling-assistant@leleat-on-github"
         "fq@megh"
