@@ -25,7 +25,7 @@
     };
 
     kmark = {
-      url = "github:CrativeMan/kmark";
+      url = "github:CrativeMan/kmark?rev=df762582b1cf78c2a04804e324d636b256e071e6";
     };
 
     nix-index-database = {

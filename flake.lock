@@ -610,16 +610,17 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1740496781,
-        "narHash": "sha256-Rqb4A3N5ow85nhmpBplJ9T556LBq1C/ZGPCKl8UwV+o=",
+        "lastModified": 1740478226,
+        "narHash": "sha256-d0HyZ0bLkshj6W2Gc2GrrKd0GmxhKbOyMQ5IvY6d8ag=",
         "owner": "CrativeMan",
         "repo": "kmark",
-        "rev": "fa07f774c9a3b9d2f85ec55add99732965ea2f31",
+        "rev": "df762582b1cf78c2a04804e324d636b256e071e6",
         "type": "github"
       },
       "original": {
         "owner": "CrativeMan",
         "repo": "kmark",
+        "rev": "df762582b1cf78c2a04804e324d636b256e071e6",
         "type": "github"
       }
     },
