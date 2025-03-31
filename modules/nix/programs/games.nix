@@ -21,5 +21,6 @@
     heroic
     prismlauncher
     gnome-2048
+    raylib-games
   ];
 }

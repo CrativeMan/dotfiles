@@ -38,10 +38,6 @@ in
     enableCompletion = true;
     history.size = 20000;
 
-    sessionVariables = {
-      MANPAGER = "sh -c 'col -bx | bat --theme gruvbox-dark -l man -p'";
-    };
-
     envExtra = ''
     global_search() {
         find . -type f | grep -v '.git\|node_modules' | xargs grep -Hn "$1" 2>/dev/null | fzf
