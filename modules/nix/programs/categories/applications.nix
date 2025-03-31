@@ -25,6 +25,7 @@ in
     mysql-workbench
     jetbrains-toolbox
     android-studio
+    zed-editor
     
     # art
     glaxnimate
