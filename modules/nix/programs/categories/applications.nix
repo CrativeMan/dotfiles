@@ -58,6 +58,7 @@ in
     setzer
     geogebra6
     ladybird
+    siyuan
 
     #sonst
     keepassxc
