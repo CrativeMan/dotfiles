@@ -21,6 +21,7 @@ let
     cat = "bat";
     cd = "z";
     ggraph = "git log --graph --oneline --decorate --color";
+    gi = "git add . && git commit -m \"initial commit\" ";
     envrc = "echo \"use flake\" > .envrc && direnv allow";
     # make
     make = "time make";
