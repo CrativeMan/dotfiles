@@ -1,7 +1,4 @@
-{ config, pkgs, inputs, ... }:
-let
-
-in
+{ pkgs, inputs, ... }:
 {
   nixpkgs.overlays = [
     (final: prev: {
@@ -13,7 +10,6 @@ in
   ];
 
   environment.systemPackages = with pkgs; [
-    # Dev
     joycond
     jdk21_headless
     corretto21
@@ -25,4 +21,3 @@ in
   ];
 
 }
-

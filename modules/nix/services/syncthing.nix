@@ -1,4 +1,4 @@
-{ config, pkgs, lib, vars, ... }:
+{ config, lib, vars, ... }:
 let
   devices = {
     Nixos-Desktop = {

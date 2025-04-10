@@ -1,7 +1,4 @@
-{ config, pkgs, inputs, ... }:
-let
-
-in
+{ pkgs, inputs, ... }:
 {
   nixpkgs.overlays = [
     (final: prev: {
@@ -11,7 +8,7 @@ in
       };
     })
   ];
-  
+
   environment.systemPackages = with pkgs; [
     pipes
     cbonsai
@@ -21,8 +18,6 @@ in
     clipboard-jh
     unstable.klog-time-tracker
     vim
-    zbar
-    junction
     bc
     imagemagick
     inputs.gogo.packages.x86_64-linux.default

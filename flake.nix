@@ -59,6 +59,7 @@
         user = "crative";
         email = "hannig.sebi@gmail.com";
         editor = "nvim";
+        self = self;
       };
     in
     {

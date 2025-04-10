@@ -1,7 +1,4 @@
-{ config, pkgs, inputs, ... }:
-let
-
-in
+{ pkgs, inputs, ... }:
 {
   nixpkgs.overlays = [
     (final: prev: {

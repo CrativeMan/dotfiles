@@ -1,10 +1,9 @@
-{ pkgs, config, ... }:
+{ ... }:
 
 {
   imports = [
-    ./hyprland.nix
+    #./hyprland.nix
     #./waybar.nix
-    ./cli-visualizer.nix
     ./fastfetch.nix
   ];
 }

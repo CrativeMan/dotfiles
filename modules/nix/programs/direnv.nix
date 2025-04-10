@@ -1,11 +1,3 @@
-#
-#  Direnv
-#
-#  Create shell.nix
-#  Create .envrc and add "use nix"
-#  Add 'eval "$(direnv hook zsh)"' to .zshrc
-#
-
 { config, lib, pkgs, ... }:
 
 {
@@ -19,7 +11,6 @@
 
   environment = {
     systemPackages = with pkgs; [ direnv ];
-    #systemPackages = with pkgs; [ direnv nix-direnv ];
     pathsToLink = [
       "/share/nix-direnv"
     ];

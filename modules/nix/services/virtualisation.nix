@@ -1,10 +1,10 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   virtualisation.podman = {
     enable = true;
   };
 
-  environment.systemPackages = [ 
+  environment.systemPackages = [
     pkgs.distrobox
    ];
 }

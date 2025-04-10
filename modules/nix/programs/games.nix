@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   nixpkgs.overlays = [
@@ -9,11 +9,6 @@
       };
     })
   ];
-
-  programs.steam = {
-    enable = true;
-    extraCompatPackages = [ pkgs.proton-ge-bin ];
-  };
 
   environment.systemPackages = with pkgs; [
     libremines

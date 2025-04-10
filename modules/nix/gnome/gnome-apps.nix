@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   # gnomeExtensions.rounded-window-corners
@@ -9,6 +9,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.color-picker
     gnomeExtensions.launch-new-instance
+    gnomeExtensions.status-icons
 
     gnome-tweaks
     gnome-software

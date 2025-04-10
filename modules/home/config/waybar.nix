@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   home.file.".config/waybar/config.jsonc".text = ''
@@ -60,7 +60,7 @@
           "format": "shutdown",
           "on-click": "kitty -e sleep 5 && ~/.config/waybar/shutdown.sh"
         }
-    
+
     }
   '';
 

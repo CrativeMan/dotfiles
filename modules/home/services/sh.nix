@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 let
   myAliases = {
@@ -9,13 +9,9 @@ let
     nixup = "cd ~/.dotfiles && sudo nix flake update";
     nixgc = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
     or = "omz reload";
-    # Gradle
-    grun = "./gradlew run";
     # misc
     c = "xclip -selection clipboard";
     ":q" = "exit";
-    n = "fastfetch";
-    hyprshot = "~/Coding/SideProjects/Hyprshot/hyprshot";
     ".." = "cd ..";
     ll = "ls -l";
     cat = "bat";
@@ -25,9 +21,7 @@ let
     envrc = "echo \"use flake\" > .envrc && direnv allow";
     # make
     make = "time make";
-    mclean = "make clean";
     # STUPID FIXES
-    lxappearance = "GDK_BACKEND=x11 lxappearance";
     zed = "zeditor";
     rrip = "sudo docker run --rm -v $PWD:/app/ -u $(id -u):$(id -g) ghcr.io/mahesh-hegde/rrip:latest";
   };

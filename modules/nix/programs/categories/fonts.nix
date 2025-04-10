@@ -1,7 +1,4 @@
-{ config, pkgs, inputs, ... }:
-let
-
-in
+{ pkgs, ... }:
 {
   fonts.packages = with pkgs; [
     nerdfonts
@@ -9,4 +6,3 @@ in
     quicksand
   ];
 }
-

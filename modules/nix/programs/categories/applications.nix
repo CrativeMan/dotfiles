@@ -10,21 +10,14 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # terminals
-    unstable.ghostty
-    alacritty
-
     # coding
     unstable.vscode
     github-desktop
-    sublime4
     godot_4
-    mysql-workbench
     jetbrains-toolbox
     android-studio
 
     # art
-    glaxnimate
     inkscape
     libresprite
     blender
@@ -57,12 +50,12 @@
     siyuan
 
     #sonst
+    junction
     keepassxc
     pika-backup
-    kdenlive
     newsflash
     gradience
-    unstable.parabolic
+    parabolic
     eyedropper
     gnome-frog
     spotify

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   home.file.".config/hypr/hyprland.conf".text = ''
@@ -26,7 +26,7 @@
         gaps_in = 3
         gaps_out = 4
         border_size = 3
-        col.active_border = rgba(aa5526ff) 
+        col.active_border = rgba(aa5526ff)
         col.inactive_border = rgba(4f4f4fff)
 
         layout = master
@@ -36,7 +36,7 @@
 
     decoration {
         rounding = 5
-    
+
         blur {
             enabled = true
             size = 3
@@ -87,7 +87,7 @@
 
     $mainMod = SUPER
 
-    # custom bindings 
+    # custom bindings
     bind = $mainMod, S, exec, rofi -show drun -show-icons
 
     # Moving windows
@@ -103,14 +103,14 @@
     bind = $mainMod CTRL, down, resizeactive,   0  60
 
     # Screenshot
-    bind = $mainMod, P, exec, grim -g "$(slurp)" 
+    bind = $mainMod, P, exec, grim -g "$(slurp)"
 
     # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
     bind = $mainMod, Q, exec, kitty
-    bind = $mainMod, C, killactive, 
-    bind = $mainMod, M, exit, 
+    bind = $mainMod, C, killactive,
+    bind = $mainMod, M, exit,
     bind = $mainMod, F, exec, nautilus
-    bind = $mainMod, V, togglefloating, 
+    bind = $mainMod, V, togglefloating,
     # bind = $mainMod, P, pseudo, # dwindle
     # bind = $mainMod, J, togglesplit, # dwindle
 

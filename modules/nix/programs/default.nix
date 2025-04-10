@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   imports = [
@@ -10,5 +10,7 @@
     ./docker.nix
     ./kanata.nix
     ./flatpak.nix
-  ];  
+  ];
+
+  gaming.enable = true;
 }

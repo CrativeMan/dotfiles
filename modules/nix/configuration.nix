@@ -1,9 +1,8 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports =
     [
-      # Include the results of the hardware scan.
       ./programs/default.nix
       ./services/default.nix
       ./gnome/gnome-apps.nix

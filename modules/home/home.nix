@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ vars, ... }:
 
 {
   imports = [
@@ -6,7 +6,7 @@
     ./programs/default.nix
     ./config/default.nix
     ./home-report-changes.nix
-    inputs.nix-index-database.hmModules.nix-index
+    ./gnome/wallpaper.nix
   ];
 
   home.username = "crative";
@@ -16,4 +16,9 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  wallpaper = {
+      enable = true;
+      path = "${vars.self}/assets/wallpapers/wp12329537-nixos-wallpapers.png";
+  };
 }
