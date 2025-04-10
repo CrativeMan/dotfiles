@@ -2,7 +2,7 @@
 
 {
     services.kdeconnect = {
-        enable = true;
+        enable = false;
         package = pkgs.gnomeExtensions.gsconnect;
     };
 }
