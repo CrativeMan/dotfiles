@@ -56,6 +56,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
       vars = {
         user = "crative";
+        gitUser = "CrativeMan";
         email = "hannig.sebi@gmail.com";
         editor = "nvim";
         flakeDir = "/home/${vars.user}/.dotfiles";

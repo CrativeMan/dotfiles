@@ -12,7 +12,7 @@
 
   programs.zed-editor = {
     enable = true;
-    package = pkgs.unstable.zed-editor-fhs;
+    package = pkgs.zed-editor;
 
     extensions = [
       "csv"
@@ -28,13 +28,13 @@
         enable_vim_sneak = true;
       };
       theme = "Rosé Pine";
-      icon_theme = {
-          mode = "system";
-          dark = "Catppuccin Frappé";
-          light = "Catppuccin Latte";
-      };
-      ui_font_size = lib.mkForce 18;
-      buffer_font_size = lib.mkForce 18;
+      # icon_theme = {
+      #     mode = "system";
+      #     dark = "Catppuccin Frappé";
+      #     light = "Catppuccin Latte";
+      # };
+      ui_font_size = lib.mkForce 14;
+      buffer_font_size = lib.mkForce 14;
       relative_line_numbers = true;
       file_finder = {
         modal_width = "medium";

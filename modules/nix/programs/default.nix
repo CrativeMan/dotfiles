@@ -8,7 +8,7 @@
         ./hyprland.nix
         ./direnv.nix
         ./docker.nix
-        ./kanata.nix
+        #./kanata.nix
         ./flatpak.nix
     ];
 
