@@ -59,6 +59,7 @@
         user = "crative";
         email = "hannig.sebi@gmail.com";
         editor = "nvim";
+        flakeDir = "/home/${vars.user}/.dotfiles";
         self = self;
       };
     in
