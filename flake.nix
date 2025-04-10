@@ -1,6 +1,5 @@
 {
-
-  description = "My first flake!";
+  description = "Crative Dotfiles";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.11";
@@ -85,7 +84,6 @@
           inherit system;
           modules = [ ./modules/nix/configuration.nix ./hosts/nixos-framework/default.nix ];
         };
-
       };
 
       homeConfigurations = {
