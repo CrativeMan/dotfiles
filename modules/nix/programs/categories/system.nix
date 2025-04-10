@@ -29,6 +29,7 @@
     git
     direnv
     gparted
+    nixd
     speedtest-go
     ntfs3g
     wget

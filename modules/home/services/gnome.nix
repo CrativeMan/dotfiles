@@ -17,6 +17,10 @@
       current-workspace-only = true;
     };
 
+    "org/gnome/desktop/interface" = {
+        accent-color = "pink";
+    };
+
     "org/gnome/desktop/wm/preferences" = {
       focus-new-windows = true;
       auto-raise = true;

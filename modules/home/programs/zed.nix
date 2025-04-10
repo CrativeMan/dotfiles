@@ -33,8 +33,8 @@
       #     dark = "Catppuccin Frappé";
       #     light = "Catppuccin Latte";
       # };
-      ui_font_size = lib.mkForce 18;
-      buffer_font_size = lib.mkForce 18;
+      ui_font_size = lib.mkForce 14;
+      buffer_font_size = lib.mkForce 14;
       relative_line_numbers = true;
       file_finder = {
         modal_width = "medium";
