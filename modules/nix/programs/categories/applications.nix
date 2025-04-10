@@ -1,7 +1,4 @@
-{ config, pkgs, inputs, ... }:
-let
-
-in
+{ pkgs, inputs, ... }:
 {
   nixpkgs.overlays = [
     (final: prev: {
@@ -25,7 +22,7 @@ in
     mysql-workbench
     jetbrains-toolbox
     android-studio
-    
+
     # art
     glaxnimate
     inkscape

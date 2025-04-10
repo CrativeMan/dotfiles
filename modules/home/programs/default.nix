@@ -9,5 +9,6 @@
     ./comma.nix
     ./nvim.nix
     ./nixvim/nixvim.nix
+    ./zed.nix
   ];
 }

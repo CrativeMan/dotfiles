@@ -10,7 +10,5 @@
     ./docker.nix
     ./kanata.nix
     ./flatpak.nix
-  ];
-
-  
+  ];  
 }
