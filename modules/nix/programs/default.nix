@@ -1,16 +1,21 @@
 { ... }:
 
 {
-  imports = [
-    ./categories/programs.nix
-    ./games.nix
-    ./steam.nix
-    ./hyprland.nix
-    ./direnv.nix
-    ./docker.nix
-    ./kanata.nix
-    ./flatpak.nix
-  ];
+    imports = [
+        ./categories/programs.nix
+        ./games.nix
+        ./steam.nix
+        ./hyprland.nix
+        ./direnv.nix
+        ./docker.nix
+        ./kanata.nix
+        ./flatpak.nix
+    ];
 
-  gaming.enable = true;
+    programs.nautilus-open-any-terminal = {
+        enable = true;
+        terminal = "kitty";
+    };
+
+    gaming.enable = true;
 }

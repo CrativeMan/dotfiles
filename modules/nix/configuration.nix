@@ -5,7 +5,7 @@
     [
       ./programs/default.nix
       ./services/default.nix
-      ./gnome/gnome-apps.nix
+      ./gnome/gnome.nix
       ./nix-report-changes.nix
     ];
 
@@ -121,9 +121,6 @@
     isNormalUser = true;
     description = "crative";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      #  thunderbird
-    ];
   };
 
   nix = {
