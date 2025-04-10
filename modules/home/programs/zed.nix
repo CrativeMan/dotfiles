@@ -28,7 +28,12 @@
         enable_vim_sneak = true;
       };
       theme = "Rosé Pine";
-      ui_font_size = lib.mkForce 15;
+      icon_theme = {
+          mode = "system";
+          dark = "Catppuccin Frappé";
+          light = "Catppuccin Latte";
+      };
+      ui_font_size = lib.mkForce 18;
       buffer_font_size = lib.mkForce 18;
       relative_line_numbers = true;
       file_finder = {
