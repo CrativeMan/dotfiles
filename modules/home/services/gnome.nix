@@ -60,6 +60,7 @@
     "org/gnome/shell" = {
       enabled-extensions = [
         "status-icons@fmuellner"
+        "status-icons@gnome-shell-extensions.gcampax.github.com"
         "blur-my-shell@aunetx"
         "tiling-assistant@leleat-on-github"
         "fq@megh"
