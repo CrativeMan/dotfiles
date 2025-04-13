@@ -33,11 +33,6 @@ let
       devices = lib.attrNames devices;
       path = "/home/crative/Documents/keepass";
     };
-    Obsidian-DnD = {
-      id = "obsidian-dnd";
-      devices = lib.attrNames devices;
-      path = "/home/crative/Documents/Dungeons and Dragons";
-    };
     JugendRotKreuz = {
       id = "jrk";
       devices = lib.attrNames devices;
