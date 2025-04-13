@@ -2,8 +2,8 @@
 let
   devices = {
     Nixos-Desktop = {
-      addresses = [ "tcp://192.168.195.83:22000" ];
-      id = "YKR7CP2-JREOJC5-AZFG3VZ-EV7IAEV-63VWTBB-CV3U3LN-IX2CUCC-EAAEDQP";
+      addresses = [ "tcp://192.168.178.112:22000" ];
+      id = "2R3LY2W-4J6CBKC-H6AMP4U-S3A75OA-3Q22EI3-HVDV72P-LXLSFG7-L57C4QJ";
     };
 
     Galaxy-A71 = {
