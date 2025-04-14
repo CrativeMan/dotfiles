@@ -9,5 +9,6 @@
     ./nvim.nix
     ./nixvim/nixvim.nix
     ./zed.nix
+    ./direnv.nix
   ];
 }

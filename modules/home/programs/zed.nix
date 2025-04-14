@@ -19,7 +19,6 @@
       "env"
       "make"
       "nix"
-      "severance"
     ];
 
     userSettings = {
