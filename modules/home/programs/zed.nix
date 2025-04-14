@@ -10,6 +10,8 @@
             "env"
             "make"
             "nix"
+            "catppuccin-icons"
+            "rose-pine-theme"
         ];
         userSettings.auto_install_extensions = true;
 
@@ -17,13 +19,14 @@
             tab_size = 4;
             autosave = "off";
             confirm_quit = true;
+            relative_line_numbers = true;
+            load_direnv = "shell_hook";
 
             indent_guides = {
               enabled = true;
               coloring = "indent_aware";
             };
 
-            format_on_save = true;
             formatter = "language_server";
 
             # Styling
@@ -59,9 +62,23 @@
                 };
             };
 
-            nix = {
-                binary = {
-                    path_lookup = true;
+            lsp = {
+                nix = {
+                    binary = {
+                        path_lookup = true;
+                    };
+                };
+            };
+
+            languages = {
+                Markdown = {
+                    formatter = "prettier";
+                };
+                JSON = {
+                    formatter = "prettier";
+                };
+                TOML = {
+                    formatter = "taplo";
                 };
             };
         };
