@@ -10,6 +10,8 @@
             "env"
             "make"
             "nix"
+            "git-firefly"
+            "log"
             "catppuccin-icons"
             "rose-pine-theme"
         ];
