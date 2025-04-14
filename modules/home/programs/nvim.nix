@@ -2,7 +2,7 @@
 
 {
   programs.neovim = {
-    enable = false;
-    defaultEditor = false;
+    enable = true;
+    defaultEditor = true;
   };
 }

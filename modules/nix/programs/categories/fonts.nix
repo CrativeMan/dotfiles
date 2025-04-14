@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
   fonts.packages = with pkgs; [
-    nerdfonts
-    noto-fonts
+    nerd-fonts.zed-mono
+    nerd-fonts.ubuntu
     quicksand
   ];
 }

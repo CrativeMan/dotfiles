@@ -30,7 +30,7 @@
     rnote
 
     # communication
-    signal-desktop
+    signal-desktop-bin
     discord
     whatsapp-for-linux
     teams-for-linux
