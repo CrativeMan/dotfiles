@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
     programs.zed-editor = {
@@ -24,6 +24,7 @@
             confirm_quit = true;
             relative_line_numbers = true;
             load_direnv = "shell_hook";
+            ui_font_size = lib.mkForce 15;
 
             indent_guides = {
               enabled = true;
