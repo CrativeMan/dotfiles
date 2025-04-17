@@ -18,7 +18,8 @@
         userSettings.auto_install_extensions = true;
 
         userSettings = {
-            tab_size = 4;
+            #tab_size = 4; maybe this fixes that zed ignores hard tab options
+            hard_tabs = true;
             autosave = "off";
             confirm_quit = true;
             relative_line_numbers = true;
