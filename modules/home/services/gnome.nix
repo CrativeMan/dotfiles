@@ -1,16 +1,7 @@
-{ ... }:
-
-{
-  gtk = {
-    enable = true;
-    gtk3 = {
-      extraConfig.gtk-application-prefer-dark-theme = true;
-    };
-  };
-
+{...}: {
   dconf.settings = {
     "org/gnome/mutter" = {
-      experimental-features = [ "scale-monitor-framebuffer" ];
+      experimental-features = ["scale-monitor-framebuffer"];
     };
 
     "org/gnome/shell/app-switcher" = {
@@ -18,7 +9,7 @@
     };
 
     "org/gnome/desktop/interface" = {
-        accent-color = "pink";
+      accent-color = "pink";
     };
 
     "org/gnome/desktop/wm/preferences" = {
@@ -28,23 +19,23 @@
     };
 
     "org/gnome/desktop/wm/keybindings" = {
-      switch-to-workspace-1 = [ "<Super>1" ];
-      switch-to-workspace-2 = [ "<Super>2" ];
-      switch-to-workspace-3 = [ "<Super>3" ];
-      switch-to-workspace-left = [ "<Control><Alt>Left" ];
-      switch-to-workspace-right = [ "<Control><Alt>Right" ];
+      switch-to-workspace-1 = ["<Super>1"];
+      switch-to-workspace-2 = ["<Super>2"];
+      switch-to-workspace-3 = ["<Super>3"];
+      switch-to-workspace-left = ["<Control><Alt>Left"];
+      switch-to-workspace-right = ["<Control><Alt>Right"];
 
-      move-to-workspace-1 = [ "<Super><Shift>1" ];
-      move-to-workspace-2 = [ "<Super><Shift>2" ];
-      move-to-workspace-3 = [ "<Super><Shift>3" ];
-      move-to-monitor-left = [ "<Super><Shift>Left" ];
-      move-to-monitor-right = [ "<Super><Shift>Right" ];
-      close = [ "<Super>Q" ];
+      move-to-workspace-1 = ["<Super><Shift>1"];
+      move-to-workspace-2 = ["<Super><Shift>2"];
+      move-to-workspace-3 = ["<Super><Shift>3"];
+      move-to-monitor-left = ["<Super><Shift>Left"];
+      move-to-monitor-right = ["<Super><Shift>Right"];
+      close = ["<Super>Q"];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      home = [ "<Super>f" ];
-      www = [ "<Super>w" ];
+      home = ["<Super>f"];
+      www = ["<Super>w"];
 
       custom-keybindings = [
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
@@ -52,7 +43,7 @@
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      binding = [ "<Super>b" ];
+      binding = ["<Super>b"];
       command = "/home/crative/.nix-profile/bin/firefox";
       name = "Browser";
     };

@@ -1,165 +1,143 @@
-{ ... }:
-
 {
-  home.file.".config/hypr/hyprland.conf".text = ''
-    monitor=,highres,auto, 1
+  pkgs,
+  config,
+  ...
+}: {
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      ipc = "on";
+      splash = false;
 
-    env = XCURSOR_SIZE,24
+      preload = [
+        config.wallpaper.path
+        config.wallpaper.path
+      ];
 
-    input {
-        kb_layout = de
-        kb_variant =
-        kb_model =
-        kb_options =
-        kb_rules =
+      wallpaper = [
+        "DP-1,${config.wallpaper.path}"
+        "HDMI-A-1,${config.wallpaper.path}"
+      ];
+    };
+  };
 
-        follow_mouse = 1
+  programs.rofi = {
+    enable = true;
+  };
 
-        touchpad {
-            natural_scroll = no
-        }
+  programs.waybar = {
+    enable = true;
+    settings = {
+      mainBar = {
+        layer = "top";
+        position = "top";
+        modules-left = ["hyprland/workspaces" "hyprland/window"];
+        modules-center = ["clock"];
+        modules-right = ["pulseaudio" "pulseaudio/slider" "network" "battery" "tray"];
+      };
+    };
+    style = ''
+      * {
+        font-family: "JetBrainsMono Nerd Font";
+        font-size: 12px;
+        background-color: #1e1e2e;
+        color: #cdd6f4;
+      }
 
-        sensitivity = -0.5 # -1.0 - 1.0, 0 means no modification.
-    }
+      #clock {
+        color: #89b4fa;
+      }
 
-    general {
-        gaps_in = 3
-        gaps_out = 4
-        border_size = 3
-        col.active_border = rgba(aa5526ff)
-        col.inactive_border = rgba(4f4f4fff)
+      #pulseaudio-slider slider {
+        min-height: 0px;
+        min-width: 0px;
+        opacity: 0;
+        background-image: none;
+        border: none;
+        box-shadow: none;
+      }
 
-        layout = master
+      #pulseaudio-slider trough {
+        min-height: 10px;
+        min-width: 80px;
+        border-radius: 5px;
+        background-color: #313244;
+      }
 
-        allow_tearing = false
-    }
+      #pulseaudio-slider highlight {
+        min-width: 10px;
+        border-radius: 5px;
+        background-color: #a6e3a1;
+      }
+    '';
+  };
 
-    decoration {
-        rounding = 5
+  wayland.windowManager.hyprland = {
+    enable = true;
+    # xwayland.enable = true; # Optional, if you need XWayland support
 
-        blur {
-            enabled = true
-            size = 3
-            passes = 1
-        }
+    settings = {
+      exec-once = ["${pkgs.waybar}/bin/waybar"];
 
-        active_opacity = 0.96f
-        inactive_opacity = 0.85f
-        fullscreen_opacity = 1f
+      "$mod" = "SUPER";
 
-        drop_shadow = yes
-        shadow_range = 5
-        shadow_render_power = 3
-        col.shadow = rgba(1a1a1aee)
-    }
+      bind = [
+        "$mod, Q, exec, kitty"
+        "$mod, C, killactive,"
+        "$mod, M, exit,"
+        "$mod, D, exec, rofi -show drun"
+        "$mod, V, togglefloating,"
+        "$mod, F, fullscreen,"
+        "$mod, P, pseudo,"
+        "$mod, S, togglesplit,"
+        "$mod, left, movefocus, l"
+        "$mod, right, movefocus, r"
+        "$mod, up, movefocus, u"
+        "$mod, down, movefocus, d"
+      ];
 
-    animations {
-        enabled = yes
+      bindm = [
+        "$mod, mouse:272, movewindow"
+        "$mod, mouse:273, resizewindow"
+      ];
 
-        bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+      # monitor = "eDP-1,1920x1080@60,0x0,1"; # Adjust according to your monitor setup
 
-        animation = windows, 1, 7, myBezier
-        animation = windowsOut, 1, 7, default, popin 80%
-        animation = border, 1, 10, default
-        animation = borderangle, 1, 8, default
-        animation = fade, 1, 7, default
-        animation = workspaces, 1, 6, default
-    }
+      input = {
+        kb_layout = "de"; # Sets keyboard layout to German
+      };
 
-    dwindle {
-        pseudotile = yes # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-        preserve_split = yes # you probably want this
-    }
+      general = {
+        gaps_in = 5;
+        gaps_out = 10;
+        border_size = 2;
+        "col.active_border" = "rgba(89b4faee)"; # Catppuccin Blue
+        "col.inactive_border" = "rgba(313244aa)"; # Catppuccin Surface0
+      };
 
-    master {
-        # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-    }
+      decoration = {
+        rounding = 10;
+        blur = {
+          enabled = true;
+          size = 5;
+          passes = 2;
+        };
+      };
 
-    gestures {
-        # See https://wiki.hyprland.org/Configuring/Variables/ for more
-        workspace_swipe = off
-    }
-
-    misc {
-        # See https://wiki.hyprland.org/Configuring/Variables/ for more
-        force_default_wallpaper = -1 # Set to 0 to disable the anime mascot wallpapers
-    }
-
-    $mainMod = SUPER
-
-    # custom bindings
-    bind = $mainMod, S, exec, rofi -show drun -show-icons
-
-    # Moving windows
-    bind = $mainMod SHIFT, left, swapwindow, l
-    bind = $mainMod SHIFT, right, swapwindow, r
-    bind = $mainMod SHIFT, up, swapwindow, u
-    bind = $mainMod SHIFT, down, swapwindow, d
-
-    # Window Resizing 			                   X   Y
-    bind = $mainMod CTRL, left, resizeactive,  -60 0
-    bind = $mainMod CTRL, right, resizeactive,  60 0
-    bind = $mainMod CTRL, up, resizeactive,     0 -60
-    bind = $mainMod CTRL, down, resizeactive,   0  60
-
-    # Screenshot
-    bind = $mainMod, P, exec, grim -g "$(slurp)"
-
-    # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-    bind = $mainMod, Q, exec, kitty
-    bind = $mainMod, C, killactive,
-    bind = $mainMod, M, exit,
-    bind = $mainMod, F, exec, nautilus
-    bind = $mainMod, V, togglefloating,
-    # bind = $mainMod, P, pseudo, # dwindle
-    # bind = $mainMod, J, togglesplit, # dwindle
-
-    # Move focus with mainMod + arrow keys
-    bind = $mainMod, left, movefocus, l
-    bind = $mainMod, right, movefocus, r
-    bind = $mainMod, up, movefocus, u
-    bind = $mainMod, down, movefocus, d
-
-    # Switch workspaces with mainMod + [0-9]
-    bind = $mainMod, 1, workspace, 1
-    bind = $mainMod, 2, workspace, 2
-    bind = $mainMod, 3, workspace, 3
-    bind = $mainMod, 4, workspace, 4
-    bind = $mainMod, 5, workspace, 5
-    bind = $mainMod, 6, workspace, 6
-    bind = $mainMod, 7, workspace, 7
-    bind = $mainMod, 8, workspace, 8
-    bind = $mainMod, 9, workspace, 9
-    bind = $mainMod, 0, workspace, 10
-
-    # Move active window to a workspace with mainMod + SHIFT + [0-9]
-    bind = $mainMod SHIFT, 1, movetoworkspace, 1
-    bind = $mainMod SHIFT, 2, movetoworkspace, 2
-    bind = $mainMod SHIFT, 3, movetoworkspace, 3
-    bind = $mainMod SHIFT, 4, movetoworkspace, 4
-    bind = $mainMod SHIFT, 5, movetoworkspace, 5
-    bind = $mainMod SHIFT, 6, movetoworkspace, 6
-    bind = $mainMod SHIFT, 7, movetoworkspace, 7
-    bind = $mainMod SHIFT, 8, movetoworkspace, 8
-    bind = $mainMod SHIFT, 9, movetoworkspace, 9
-    bind = $mainMod SHIFT, 0, movetoworkspace, 10
-
-    # Example special workspace (scratchpad)
-    bind = $mainMod, S, togglespecialworkspace, magic
-    bind = $mainMod SHIFT, S, movetoworkspace, special:magic
-
-    # Scroll through existing workspaces with mainMod + scroll
-    bind = $mainMod, mouse_down, workspace, e+1
-    bind = $mainMod, mouse_up, workspace, e-1
-
-    # Move/resize windows with mainMod + LMB/RMB and dragging
-    bindm = $mainMod, mouse:272, movewindow
-    bindm = $mainMod, mouse:273, resizewindow
-
-    windowrulev2 = opacity 0.5 override 0.5 override 0.5 override, class:(kitty), title:(kitty)
-
-    exec-once = bash ~/.config/hypr/start.sh
-    source = ~/.config/hypr/monitors.conf
-    source = ~/.config/hypr/workspaces.conf
-  '';
+      animations = {
+        enabled = true;
+        bezier = [
+          "myBezier, 0.05, 0.9, 0.1, 1.0"
+        ];
+        animation = [
+          "windows, 1, 7, myBezier"
+          "windowsOut, 1, 7, myBezier"
+          "border, 1, 10, default"
+          "borderangle, 1, 8, default"
+          "fade, 1, 7, default"
+          "workspaces, 1, 6, default"
+        ];
+      };
+    };
+  };
 }

@@ -1,9 +1,8 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    (waybar.overrideAttrs (oldAttrs: {
-      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+    (
+      waybar.overrideAttrs (oldAttrs: {
+        mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
       })
     )
     waybar # bar (or try eww)
@@ -12,10 +11,8 @@
     swww # wallpaper deamon
     nwg-displays # monitor management
     wlr-randr
-    rofi-wayland # app launcher
+    #rofi-wayland # app launcher
     grim
     slurp
   ];
-
-  programs.hyprland.enable = true;
 }

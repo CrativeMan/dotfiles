@@ -5,7 +5,7 @@
         ./categories/programs.nix
         ./games.nix
         ./steam.nix
-        ./hyprland.nix
+        ./hyprland-programs.nix
         ./docker.nix
         #./kanata.nix
         ./flatpak.nix
