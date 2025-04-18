@@ -77,7 +77,10 @@
     # xwayland.enable = true; # Optional, if you need XWayland support
 
     settings = {
-      exec-once = ["${pkgs.waybar}/bin/waybar"];
+      exec-once = [
+        "${pkgs.waybar}/bin/waybar"
+        "mkdir -p ~/Pictures/Screenshots/hypr"
+      ];
 
       "$mod" = "SUPER";
 
@@ -88,7 +91,11 @@
         "$mod, D, exec, rofi -show drun"
         "$mod, V, togglefloating,"
         "$mod, F, fullscreen,"
-        "$mod, P, pseudo,"
+
+        # Screenshot
+        "$mod, P, exec, ${pkgs.grim}/bin/grim ~/Pictures/Screenshots/hypr/screenshot_$(date +%s).png"
+        "$mod+SHIFT, P, exec, ${pkgs.grim}/bin/grim -g \"$(slurp)\" ~/Pictures/Screenshots/hypr/screenshot_$(date +%s).png"
+        "$mod+CTRL, P, exec, bash -c '${pkgs.grim}/bin/grim -g \"$(slurp)\" - | ${pkgs.swappy}/bin/swappy -f -'"
         "$mod, S, togglesplit,"
         "$mod, left, movefocus, l"
         "$mod, right, movefocus, r"

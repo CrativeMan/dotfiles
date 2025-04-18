@@ -5,14 +5,14 @@
         mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
       })
     )
-    waybar # bar (or try eww)
-    dunst # notification deamon
+    dunst
     libnotify
-    swww # wallpaper deamon
-    nwg-displays # monitor management
+    swww
+    nwg-displays
     wlr-randr
-    #rofi-wayland # app launcher
     grim
     slurp
+    swappy
+    wl-clipboard
   ];
 }
