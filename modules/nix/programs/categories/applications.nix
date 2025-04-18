@@ -1,5 +1,8 @@
-{ pkgs, inputs, ... }:
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   nixpkgs.overlays = [
     (final: prev: {
       unstable = import inputs.nixpkgs-unstable {
@@ -13,7 +16,6 @@
     # coding
     unstable.vscode
     github-desktop
-    godot_4
     jetbrains-toolbox
     android-studio
 

@@ -1,13 +1,10 @@
-{ pkgs, ... }:
-
-{
-  imports =
-    [
-      ./programs/default.nix
-      ./services/default.nix
-      ./gnome/gnome.nix
-      ./nix-report-changes.nix
-    ];
+{pkgs, ...}: {
+  imports = [
+    ./programs/default.nix
+    ./services/default.nix
+    ./gnome/gnome.nix
+    ./nix-report-changes.nix
+  ];
 
   syncthing.enable = true;
 
@@ -25,7 +22,7 @@
   };
 
   # ZSH activation
-  environment.shells = with pkgs; [ zsh ];
+  environment.shells = with pkgs; [zsh];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh = {
     enable = true;
@@ -90,39 +87,38 @@
   # Enable sound with pipewire.
   security.rtkit.enable = true;
   services = {
-      pulseaudio.enable = false;
-      pipewire = {
-          enable = true;
-          alsa.enable = true;
-          alsa.support32Bit = true;
-          pulse.enable = true;
-          jack.enable = true;
-      };
+    pulseaudio.enable = false;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      jack.enable = true;
+    };
   };
 
-  environment.gnome.excludePackages =
-    (with pkgs; [
-      gnome-photos
-      gnome-tour
-      gedit
-      cheese # webcam tool
-      gnome-music
-      gnome-terminal
-      epiphany # web browser
-      geary # email reader
-      totem # video player
-      tali # poker game
-      iagno # go game
-      hitori # sudoku game
-      atomix # puzzle game
-      yelp # help viewer
-      file-roller
-    ]);
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-photos
+    gnome-tour
+    gedit
+    cheese # webcam tool
+    gnome-music
+    gnome-terminal
+    epiphany # web browser
+    geary # email reader
+    totem # video player
+    tali # poker game
+    iagno # go game
+    hitori # sudoku game
+    atomix # puzzle game
+    yelp # help viewer
+    file-roller
+  ];
 
   users.users.crative = {
     isNormalUser = true;
     description = "crative";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
   };
 
   nix = {
@@ -144,7 +140,6 @@
     '';
 
     settings = {
-
       keep-outputs = true;
       keep-derivations = true;
       substituters = [
