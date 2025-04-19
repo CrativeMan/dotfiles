@@ -3,14 +3,23 @@
     enable = true;
   };
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-gtk
+    ];
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
-    # xwayland.enable = true; # Optional, if you need XWayland support
+    xwayland.enable = true; # Optional, if you need XWayland support
 
     settings = {
       exec-once = [
-        "${pkgs.waybar}/bin/waybar"
         "mkdir -p ~/Pictures/Screenshots/hypr"
+        "waybar"
+        "hyprpaper"
       ];
 
       "$mod" = "SUPER";
@@ -39,7 +48,12 @@
         "$mod, mouse:273, resizewindow"
       ];
 
-      # monitor = "eDP-1,1920x1080@60,0x0,1"; # Adjust according to your monitor setup
+      # Add your monitor configs - this is important
+      monitor = [
+        "DP-1,preferred,0x0,1"
+        "HDMI-A-1,preferred,auto,1"
+        ",preferred,auto,1" # Fallback for any connected monitor
+      ];
 
       input = {
         kb_layout = "de"; # Sets keyboard layout to German

@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   dconf.settings = {
     "org/gnome/mutter" = {
       experimental-features = ["scale-monitor-framebuffer"];
@@ -30,22 +30,29 @@
       move-to-workspace-3 = ["<Super><Shift>3"];
       move-to-monitor-left = ["<Super><Shift>Left"];
       move-to-monitor-right = ["<Super><Shift>Right"];
-      close = ["<Super>Q"];
+      close = ["<Super>C"];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      home = ["<Super>f"];
-      www = ["<Super>w"];
+      home = "<Super>f";
+      www = "<Super>w";
 
       custom-keybindings = [
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
       ];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      binding = ["<Super>b"];
+      binding = "<Super>b";
       command = "/home/crative/.nix-profile/bin/firefox";
       name = "Browser";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+      binding = "<Super>q";
+      command = "${pkgs.kitty}/bin/kitty";
+      name = "Terminal";
     };
 
     "org/gnome/shell" = {

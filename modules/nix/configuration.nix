@@ -21,6 +21,18 @@
     };
   };
 
+  #Hyprland
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+  services.displayManager.defaultSession = "hyprland";
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  };
+
   # ZSH activation
   environment.shells = with pkgs; [zsh];
   users.defaultUserShell = pkgs.zsh;
