@@ -14,5 +14,9 @@
     slurp
     swappy
     wl-clipboard
+    pulseaudio
+    networkmanager
+    libappindicator
+    pavucontrol
   ];
 }
