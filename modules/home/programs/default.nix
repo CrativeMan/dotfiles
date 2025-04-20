@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   imports = [
     ./bat.nix
     ./starship.nix
@@ -10,5 +8,6 @@
     ./nixvim/nixvim.nix
     ./zed.nix
     ./direnv.nix
+    ./hyfetch.nix
   ];
 }

@@ -18,7 +18,6 @@
     settings = {
       exec-once = [
         "mkdir -p ~/Pictures/Screenshots/hypr"
-        "${pkgs.waybar}/bin/waybar"
       ];
 
       "$mod" = "SUPER";

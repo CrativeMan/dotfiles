@@ -20,11 +20,18 @@
         output = ["*"]; # Run on all monitors
 
         # Make modules more reliable
-        modules-left = ["hyprland/workspaces" "hyprland/window"];
+        modules-left = ["custom/launcher" "hyprland/workspaces" "hyprland/window"];
         modules-center = ["clock"];
-        modules-right = ["pulseaudio" "network" "battery" "tray"];
+        modules-right = ["cpu" "memory" "disk" "pulseaudio" "network" "battery" "tray"];
 
         # Configure each module properly
+        "custom/launcher" = {
+          format = "  ";
+          on-click = "rofi -show drun";
+          on-click-right = "killall rofi";
+          tooltip = false;
+        };
+
         "hyprland/workspaces" = {
           format = "{name}";
           all-outputs = true;
@@ -36,6 +43,25 @@
           format = "{:%H:%M %d/%m/%Y}";
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           interval = 60;
+        };
+
+        "cpu" = {
+          interval = 5;
+          format = "  {usage}%";
+          max-length = 10;
+        };
+
+        "disk" = {
+          format = "💾 {used}/{total}";
+          interval = 30;
+          unit = "GB";
+          path = "/";
+        };
+
+        "memory" = {
+          interval = 5;
+          format = "  {}%";
+          max-length = 10;
         };
 
         "pulseaudio" = {
@@ -79,6 +105,7 @@
         border-radius: 0;
         margin: 0;
         padding: 0;
+        color: #89b4fa;
       }
 
       window#waybar {
