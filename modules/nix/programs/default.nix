@@ -1,10 +1,8 @@
 {...}: {
   imports = [
     ./categories/programs.nix
-    ./games.nix
     ./steam.nix
     ./docker.nix
-    #./kanata.nix
     ./flatpak.nix
   ];
 
