@@ -9,5 +9,12 @@
     ./zed.nix
     ./direnv.nix
     ./hyfetch.nix
+    ./hyprland.nix
+    ./waybar.nix
+    ./hyprpaper.nix
+    ./fastfetch.nix
+    ./rofi.nix
+    ./git.nix
+    ./nix-index.nix
   ];
 }

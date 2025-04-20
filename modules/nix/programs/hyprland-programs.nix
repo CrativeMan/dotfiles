@@ -18,5 +18,6 @@
     networkmanager
     libappindicator
     pavucontrol
+    playerctl
   ];
 }
