@@ -7,6 +7,23 @@
     ];
   };
 
+  home.packages = with pkgs; [
+    dunst
+    libnotify
+    swww
+    nwg-displays
+    wlr-randr
+    grim
+    slurp
+    swappy
+    wl-clipboard
+    pulseaudio
+    networkmanager
+    libappindicator
+    pavucontrol
+    playerctl
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;

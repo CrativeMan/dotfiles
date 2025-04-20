@@ -3,7 +3,6 @@
     ./programs/default.nix
     ./config/default.nix
     ./home-report-changes.nix
-    ./gnome/wallpaper.nix
   ];
 
   home.username = "crative";
