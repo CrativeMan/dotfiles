@@ -1,8 +1,5 @@
-{ vars, ... }:
-
-{
+{vars, ...}: {
   imports = [
-    ./services/default.nix
     ./programs/default.nix
     ./config/default.nix
     ./home-report-changes.nix
@@ -18,7 +15,7 @@
   programs.home-manager.enable = true;
 
   wallpaper = {
-      enable = true;
-      path = "${vars.self}/assets/wallpapers/wp12329537-nixos-wallpapers.png";
+    enable = true;
+    path = "${vars.self}/assets/wallpapers/wp12329537-nixos-wallpapers.png";
   };
 }
