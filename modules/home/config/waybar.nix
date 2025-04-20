@@ -3,7 +3,6 @@
     enable = true;
     package = pkgs.waybar;
 
-    # Add systemd service to ensure proper startup
     systemd = {
       enable = true;
       target = "hyprland-session.target";
@@ -13,18 +12,15 @@
       mainBar = {
         layer = "top";
         position = "top";
-        height = 30; # Set a fixed height
-        spacing = 4; # Add spacing between modules
+        height = 30;
+        spacing = 7;
 
-        # Monitor configuration
-        output = ["*"]; # Run on all monitors
+        output = ["*"];
 
-        # Make modules more reliable
         modules-left = ["custom/launcher" "hyprland/workspaces" "hyprland/window"];
         modules-center = ["clock"];
         modules-right = ["cpu" "memory" "disk" "pulseaudio" "network" "battery" "tray"];
 
-        # Configure each module properly
         "custom/launcher" = {
           format = "  ";
           on-click = "rofi -show drun";
@@ -158,11 +154,10 @@
     '';
   };
 
-  # Add dependencies for waybar
   home.packages = with pkgs; [
-    pulseaudio # For volume control
-    networkmanager # For network module
-    libappindicator # For tray icons
-    libnotify # For notifications
+    pulseaudio
+    networkmanager
+    libappindicator
+    libnotify
   ];
 }

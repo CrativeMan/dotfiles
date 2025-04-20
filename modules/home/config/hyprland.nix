@@ -13,7 +13,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    xwayland.enable = true; # Optional, if you need XWayland support
+    xwayland.enable = true;
 
     settings = {
       exec-once = [
@@ -46,23 +46,22 @@
         "$mod, mouse:273, resizewindow"
       ];
 
-      # Add your monitor configs - this is important
       monitor = [
         "DP-1,preferred,0x0,1"
         "HDMI-A-1,preferred,auto,1"
-        ",preferred,auto,1" # Fallback for any connected monitor
+        ",preferred,auto,1"
       ];
 
       input = {
-        kb_layout = "de"; # Sets keyboard layout to German
+        kb_layout = "de";
       };
 
       general = {
         gaps_in = 5;
         gaps_out = 10;
         border_size = 2;
-        "col.active_border" = "rgba(89b4faee)"; # Catppuccin Blue
-        "col.inactive_border" = "rgba(313244aa)"; # Catppuccin Surface0
+        "col.active_border" = "rgba(89b4faee)";
+        "col.inactive_border" = "rgba(313244aa)";
       };
 
       decoration = {
