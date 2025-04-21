@@ -48,10 +48,6 @@
         "$mod+SHIFT, P, exec, ${pkgs.grim}/bin/grim -g \"$(slurp)\" ~/Pictures/Screenshots/hypr/screenshot_$(date +%s).png"
         "$mod+CTRL, P, exec, bash -c '${pkgs.grim}/bin/grim -g \"$(slurp)\" - | ${pkgs.swappy}/bin/swappy -f -'"
         "$mod, S, togglesplit,"
-        "$mod, left, movefocus, l"
-        "$mod, right, movefocus, r"
-        "$mod, up, movefocus, u"
-        "$mod, down, movefocus, d"
 
         "$mod, h, movefocus, l"
         "$mod, l, movefocus, r"

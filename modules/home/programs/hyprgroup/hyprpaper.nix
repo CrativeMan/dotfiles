@@ -13,6 +13,7 @@
       wallpaper = [
         "DP-1,${config.wallpaper.path}"
         "HDMI-A-1,${config.wallpaper.path}"
+        ",${config.wallpaper.path}"
       ];
     };
   };
