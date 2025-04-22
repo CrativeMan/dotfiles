@@ -42,7 +42,7 @@
         "$mod, D, exec, rofi -show drun"
         "$mod, V, togglefloating,"
         "$mod, F, fullscreen,"
-        "$mod, L, exec, hyprlock"
+        "$mod, ß, exec, hyprlock"
 
         # Screenshot
         "$mod, P, exec, ${pkgs.grim}/bin/grim ~/Pictures/Screenshots/hypr/screenshot_$(date +%s).png"

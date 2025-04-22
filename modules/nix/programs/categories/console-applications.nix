@@ -1,5 +1,8 @@
-{ pkgs, inputs, ... }:
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   nixpkgs.overlays = [
     (final: prev: {
       unstable = import inputs.nixpkgs-unstable {
@@ -21,7 +24,7 @@
     bc
     imagemagick
     home-manager
-    wakatime-cli
+    spotify-player
     inputs.gogo.packages.x86_64-linux.default
     inputs.clh.packages.x86_64-linux.default
     inputs.kmark.packages.x86_64-linux.default
