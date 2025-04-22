@@ -15,6 +15,6 @@
 
   wallpaper = {
     enable = true;
-    path = "${vars.self}/assets/wallpapers/wp12329537-nixos-wallpapers.png";
+    path = "${vars.self}/assets/wallpapers/a_motorcycle_parked_outside_a_restaurant.jpg";
   };
 }

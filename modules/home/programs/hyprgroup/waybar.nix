@@ -93,63 +93,58 @@
     };
 
     style = ''
+
+      @define-color background-darker rgba(30, 31, 41, 230);
+      @define-color background #282a36;
+      @define-color selection #44475a;
+      @define-color foreground #f8f8f2;
+      @define-color comment #6272a4;
+      @define-color cyan #8be9fd;
+      @define-color green #50fa7b;
+      @define-color orange #ffb86c;
+      @define-color pink #ff79c6;
+      @define-color purple #bd93f9;
+      @define-color red #ff5555;
+      @define-color yellow #f1fa8c;
+
       * {
-        font-family: "JetBrainsMono Nerd Font";
-        font-size: 13px;
-        min-height: 0;
-        border: none;
-        border-radius: 0;
-        margin: 0;
-        padding: 0;
-        color: #89b4fa;
+          border: none;
+          border-radius: 0;
+          font-family: Iosevka;
+          font-size: 11pt;
+          min-height: 0;
       }
 
       window#waybar {
-        background-color: rgba(30, 30, 46, 0.9);
-        color: #cdd6f4;
-        transition-property: background-color;
-        transition-duration: 0.5s;
+          opacity: 0.9;
+          background: @background-darker;
+          color: @foreground;
+          border-bottom: 2px solid @background;
       }
 
       #workspaces button {
-        padding: 0 5px;
-        background-color: transparent;
-        color: #cdd6f4;
-        border-bottom: 3px solid transparent;
+          padding: 0 10px;
+          background: @background;
+          color: @foreground;
+      }
+
+      #workspaces button:hover {
+          box-shadow: inherit;
+          text-shadow: inherit;
+          background-image: linear-gradient(0deg, @selection, @background-darker);
       }
 
       #workspaces button.active {
-        background-color: #313244;
-        border-bottom: 3px solid #89b4fa;
+          background-image: linear-gradient(0deg, @purple, @selection);
+      }
+
+      #taskbar button.active {
+          background-image: linear-gradient(0deg, @selection, @background-darker);
       }
 
       #clock {
-        padding: 0 10px;
-        color: #89b4fa;
-      }
-
-      #battery,
-      #network,
-      #pulseaudio,
-      #tray {
-        padding: 0 10px;
-      }
-
-      #battery.critical {
-        background-color: #f38ba8;
-        color: #1e1e2e;
-        animation-name: blink;
-        animation-duration: 0.5s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-      }
-
-      @keyframes blink {
-        to {
-          background-color: #1e1e2e;
-          color: #f38ba8;
-        }
+          padding: 0 4px;
+          background: @background;
       }
     '';
   };

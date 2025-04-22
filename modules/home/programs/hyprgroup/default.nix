@@ -5,5 +5,6 @@
     ./hyprpaper.nix
     ./rofi.nix
     ./waybar.nix
+    ./hyprlock.nix
   ];
 }
