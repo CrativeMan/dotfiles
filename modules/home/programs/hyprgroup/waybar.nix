@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  vars,
+  ...
+}: {
   programs.waybar = {
     enable = true;
     package = pkgs.waybar;
@@ -19,7 +23,7 @@
 
         modules-left = ["custom/launcher" "hyprland/workspaces" "hyprland/window"];
         modules-center = ["clock"];
-        modules-right = ["cpu" "memory" "disk" "pulseaudio" "network" "battery" "tray"];
+        modules-right = ["cpu" "memory" "disk" "pulseaudio" "network" "battery" "tray" "custom/shutdown"];
 
         "custom/launcher" = {
           format = "  ";
@@ -89,11 +93,17 @@
           icon-size = 21;
           spacing = 10;
         };
+
+        "custom/shutdown" = {
+          format = "⏻";
+          tooltip = "Shutdown";
+          on-click = "/home/${vars.user}/.config/waybar/scripts/shutdown_prompt.sh";
+          interval = 86400;
+        };
       };
     };
 
     style = ''
-
       @define-color background-darker rgba(30, 31, 41, 230);
       @define-color background #282a36;
       @define-color selection #44475a;
@@ -146,6 +156,12 @@
           padding: 0 4px;
           background: @background;
       }
+
+      #custom-shutdown {
+          padding-right: 10px;
+          background: @background;
+          color: @foreground;
+      }
     '';
   };
 
@@ -155,4 +171,17 @@
     libappindicator
     libnotify
   ];
+
+  home.file."/home/${vars.user}/.config/waybar/scripts/shutdown_prompt.sh" = {
+    executable = true;
+    text = ''
+      #!/usr/bin/env bash
+
+      choice=$(echo -e "No\nYes" | rofi -dmenu -p "Shutdown?")
+
+      if [[ "$choice" == "Yes" ]]; then
+        systemctl poweroff
+      fi
+    '';
+  };
 }
