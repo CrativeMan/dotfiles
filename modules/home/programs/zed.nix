@@ -28,7 +28,7 @@
       hard_tabs = true;
       autosave = "off";
       confirm_quit = true;
-      relative_line_numbers = true;
+      relative_line_numbers = false;
       load_direnv = "shell_hook";
       ui_font_size = lib.mkForce 15;
 

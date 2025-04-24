@@ -50,6 +50,7 @@
     geogebra6
     ladybird
     siyuan
+    inputs.zen-browser.packages."${pkgs.system}".default
 
     #sonst
     junction

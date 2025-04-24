@@ -5,7 +5,7 @@
         name = "NixOs Zed";
         genericName = "NixOs Editor";
         type = "Application";
-        exec = "zeditor ${vars.self}";
+        exec = "zeditor ${vars.flakeDir}";
         icon = "${vars.self}/assets/icons/nixos-zed.svg";
         terminal = false;
         categories = ["Development" "IDE" "X-Custom"];
