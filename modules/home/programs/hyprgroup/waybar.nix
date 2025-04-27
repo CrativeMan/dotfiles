@@ -23,7 +23,7 @@
 
         modules-left = ["custom/launcher" "hyprland/workspaces" "hyprland/window"];
         modules-center = ["clock"];
-        modules-right = ["cpu" "memory" "disk" "pulseaudio" "network" "battery" "tray" "custom/shutdown"];
+        modules-right = ["cpu" "memory" "disk" "bluetooth" "pulseaudio" "network" "battery" "tray" "custom/shutdown"];
 
         "custom/launcher" = {
           format = "  ";
@@ -62,6 +62,17 @@
           interval = 5;
           format = "  {}%";
           max-length = 10;
+        };
+
+        "bluetooth" = {
+          format = "{icon} {status}";
+          format-connected = " {device_alias}";
+          format-connected-battery = " {device_alias} ({device_battery_percentage}%)";
+          format-off = " Off";
+          format-disabled = " Disabled";
+          tooltip-format = "{device_alias} - {device_address}";
+          tooltip-format-connected = "{device_alias} - {device_address}\nBattery: {device_battery_percentage}%";
+          on-click-right = "blueman-manager";
         };
 
         "pulseaudio" = {

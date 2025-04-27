@@ -22,6 +22,7 @@
     libappindicator
     pavucontrol
     playerctl
+    blueman
   ];
 
   wayland.windowManager.hyprland = {
@@ -31,12 +32,14 @@
     settings = {
       exec-once = [
         "mkdir -p ~/Pictures/Screenshots/hypr"
+        "blueman-applet"
       ];
 
       "$mod" = "SUPER";
 
       bind = [
         "$mod, Q, exec, kitty"
+        "$mod, B, exec, zen"
         "$mod, C, killactive,"
         "$mod, M, exit,"
         "$mod, D, exec, rofi -show drun"
