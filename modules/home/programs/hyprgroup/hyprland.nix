@@ -58,6 +58,11 @@
         "$mod, k, movefocus, u"
         "$mod, j, movefocus, d"
 
+        "$mod SHIFT, h, movewindow, l"
+        "$mod SHIFT, l, movewindow, r"
+        "$mod SHIFT, j, movewindow, d"
+        "$mod SHIFT, k, movewindow, u"
+
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
         "$mod, 3, workspace, 3"
@@ -105,6 +110,9 @@
 
       input = {
         kb_layout = "de";
+        touchpad = {
+          natural_scroll = true;
+        };
       };
 
       general = {
