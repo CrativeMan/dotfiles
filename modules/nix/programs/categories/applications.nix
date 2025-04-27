@@ -41,7 +41,8 @@
 
     # work
     hieroglyphic
-    unstable.obsidian
+    obsidian
+    logseq
     libreoffice
     texlive.combined.scheme-full
     zotero
