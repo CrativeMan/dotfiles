@@ -72,7 +72,7 @@
           format-disabled = " Disabled";
           tooltip-format = "{device_alias} - {device_address}";
           tooltip-format-connected = "{device_alias} - {device_address}\nBattery: {device_battery_percentage}%";
-          on-click-right = "blueman-manager";
+          on-click = "blueman-manager";
         };
 
         "pulseaudio" = {
