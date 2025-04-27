@@ -8,7 +8,6 @@
   };
 
   home.packages = with pkgs; [
-    dunst
     libnotify
     swww
     nwg-displays
