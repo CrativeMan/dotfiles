@@ -8,8 +8,8 @@
     };
 
     cursorTheme = {
-      name = "Adwaita";
-      package = pkgs.adwaita-icon-theme;
+      name = "rose-pine-hyprcursor";
+      package = pkgs.rose-pine-hyprcursor;
       size = 24;
     };
 

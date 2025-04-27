@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  vars,
+  ...
+}: {
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
@@ -23,7 +27,38 @@
     playerctl
     blueman
     kdePackages.polkit-kde-agent-1
+    xfce.thunar
   ];
+
+  home.file."/home/${vars.user}/.config/hypr/scripts/screenshot_full.sh" = {
+    executable = true;
+    text = ''
+      #!/usr/bin/env bash
+      mkdir -p ~/Pictures/Screenshots/hypr
+      filename=~/Pictures/Screenshots/hypr/screenshot_$(date +%s).png
+      ${pkgs.grim}/bin/grim "$filename"
+      notify-send --app-name=Hyprland --icon="$filename" "Screenshot saved!"
+    '';
+  };
+
+  home.file."/home/${vars.user}/.config/hypr/scripts/screenshot_area.sh" = {
+    executable = true;
+    text = ''
+      #!/usr/bin/env bash
+      mkdir -p ~/Pictures/Screenshots/hypr
+      filename=~/Pictures/Screenshots/hypr/screenshot_$(date +%s).png
+      ${pkgs.grim}/bin/grim -g "$(slurp)" "$filename"
+      notify-send --app-name=Hyprland --icon="$filename" "Area Screenshot saved!"
+    '';
+  };
+
+  home.file."/home/${vars.user}/.config/hypr/scripts/screenshot_edit.sh" = {
+    executable = true;
+    text = ''
+      #!/usr/bin/env bash
+      ${pkgs.grim}/bin/grim -g "$(slurp)" - | ${pkgs.swappy}/bin/swappy -f -
+    '';
+  };
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -49,9 +84,9 @@
         "$mod, ß, exec, hyprlock"
 
         # Screenshot
-        "$mod, P, exec, ${pkgs.grim}/bin/grim ~/Pictures/Screenshots/hypr/screenshot_$(date +%s).png"
-        "$mod+SHIFT, P, exec, ${pkgs.grim}/bin/grim -g \"$(slurp)\" ~/Pictures/Screenshots/hypr/screenshot_$(date +%s).png"
-        "$mod+CTRL, P, exec, bash -c '${pkgs.grim}/bin/grim -g \"$(slurp)\" - | ${pkgs.swappy}/bin/swappy -f -'"
+        "$mod, P, exec, ~/.config/hypr/scripts/screenshot_full.sh"
+        "$mod SHIFT, P, exec, ~/.config/hypr/scripts/screenshot_area.sh"
+        "$mod CTRL, P, exec, ~/.config/hypr/scripts/screenshot_edit.sh"
         "$mod, S, togglesplit,"
 
         "$mod, h, movefocus, l"

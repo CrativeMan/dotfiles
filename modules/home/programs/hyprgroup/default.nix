@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./hyprcursor.nix
     ./hyfetch.nix
     ./hyprland.nix
     ./hyprpaper.nix
