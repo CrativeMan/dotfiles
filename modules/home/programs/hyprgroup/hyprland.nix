@@ -23,6 +23,7 @@
     pavucontrol
     playerctl
     blueman
+    kdePackages.polkit-kde-agent-1
   ];
 
   wayland.windowManager.hyprland = {
@@ -33,6 +34,7 @@
       exec-once = [
         "mkdir -p ~/Pictures/Screenshots/hypr"
         "blueman-applet"
+        "polkit-kde-authentication-agent-1"
       ];
 
       "$mod" = "SUPER";
@@ -102,6 +104,13 @@
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
       ];
 
+      workspace = [
+        "1, persistent=true"
+        "2, persistent=true"
+        "3, persistent=true"
+        "4, persistent=true"
+      ];
+
       monitor = [
         "DP-1,preferred,0x0,1"
         "HDMI-A-1,preferred,auto,1"
@@ -119,7 +128,7 @@
         gaps_in = 2;
         gaps_out = 2;
         border_size = 3;
-        "col.active_border" = "rgba(504945aa) rgba(504945ee) 45deg";
+        "col.active_border" = "rgba(fab38766)";
         "col.inactive_border" = "rgba(282828aa)";
       };
 

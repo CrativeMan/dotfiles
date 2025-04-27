@@ -21,12 +21,12 @@
 
         output = ["*"];
 
-        modules-left = ["custom/launcher" "hyprland/workspaces"];
+        modules-left = ["custom/launcher" "hyprland/workspaces" "cpu" "memory" "network"];
         modules-center = ["clock"];
-        modules-right = ["tray" "cpu" "memory" "battery" "network" "bluetooth" "pulseaudio" "custom/shutdown"];
+        modules-right = ["tray" "battery" "bluetooth" "pulseaudio" "custom/shutdown"];
 
         "custom/launcher" = {
-          format = "  ";
+          format = "[  ]";
           on-click = "rofi -show drun";
           on-click-right = "killall rofi";
           tooltip = false;
@@ -35,8 +35,8 @@
         "hyprland/workspaces" = {
           format = "{name}";
           all-outputs = true;
-          disable-scroll = false;
           on-click = "activate";
+          disable-scroll = false;
         };
 
         "clock" = {
@@ -47,7 +47,7 @@
 
         "cpu" = {
           interval = 5;
-          format = "CPU:{usage}%";
+          format = "[CPU:{usage}%]";
           states = {
             critical = 90;
           };
@@ -55,18 +55,18 @@
 
         "memory" = {
           interval = 5;
-          format = "MEM:{used}%";
+          format = "[MEM:{used}%]";
           states = {
             critical = 80;
           };
         };
 
         "bluetooth" = {
-          format = "BL:{status}";
-          format-connected = "BL:{device_alias}";
-          format-connected-battery = "BL:{device_alias} ({device_battery_percentage}%)";
-          format-off = "BL:Off";
-          format-disabled = "BL:Disabled";
+          format = "[BL:{status}]";
+          format-connected = "[BL:{device_alias}]";
+          format-connected-battery = "[BL:{device_alias} ({device_battery_percentage}%)]";
+          format-off = "[BL:Off]";
+          format-disabled = "[BL:Disabled]";
           tooltip-format = "{device_alias} - {device_address}";
           tooltip-format-connected = "{device_alias} - {device_address}\nBattery: {device_battery_percentage}%";
           on-click = "blueman-manager";
@@ -75,19 +75,19 @@
         "pulseaudio" = {
           scroll-step = 5;
           max-volume = 150;
-          format = "VOL:{volume}%";
+          format = "[VOL:{volume}%]";
           on-click = "pavucontrol";
         };
 
         "network" = {
-          format-wifi = "WIFI {bandwidthDownBits}";
-          format-ethernet = "ETHN {bandwidthDownBits}";
-          format-disconnected = "⚠NONE⚠";
+          format-wifi = "[WIFI {bandwidthDownBits}]";
+          format-ethernet = "[ETHN {bandwidthDownBits}]";
+          format-disconnected = "[⚠NONE⚠]";
           tooltip-format = "{ifname}: {ipaddr}/{cidr}";
         };
 
         "battery" = {
-          format = "BAT:{capacity}%";
+          format = "[BAT:{capacity}%]";
           interval = 5;
           states = {
             warning = 30;
@@ -103,7 +103,7 @@
         };
 
         "custom/shutdown" = {
-          format = "⏻";
+          format = "[⏻ ]";
           tooltip = "Shutdown";
           on-click = "/home/${vars.user}/.config/waybar/scripts/shutdown_prompt.sh";
           interval = 86400;
@@ -169,25 +169,44 @@
           border-radius: 1rem;
       }
 
-      #tray,
       #cpu,
       #memory,
       #network,
       #bluetooth,
-      #clock,
       #battery,
       #pulseaudio,
+      #clock,
       #custom-launcher,
       #custom-shutdown {
-          background-color: @surface0;
-          padding: 0.5rem 1rem;
-          margin: 5px 0;
+        background-color: @surface0;
+        border: 1px solid @overlay0;
+        border-radius: 0.2rem;
+        padding: 0.2rem 0.5rem;
+        margin: 4px 6px;
+        transition: background-color 0.2s, border-color 0.2s;
+      }
+
+      #workspaces button:hover {
+        background-color: @surface1;
+        color: @text;
+      }
+
+      #tray:hover,
+      #cpu:hover,
+      #memory:hover,
+      #network:hover,
+      #bluetooth:hover,
+      #battery:hover,
+      #pulseaudio:hover,
+      #clock:hover,
+      #custom-launcher:hover,
+      #custom-shutdown:hover {
+        background-color: @surface1;
+        border-color: @overlay1;
       }
 
       #clock {
           color: @blue;
-          border-radius: 0px 1rem 1rem 0px;
-          margin-right: 1rem;
       }
 
       #battery {
@@ -202,21 +221,8 @@
           color: @red;
       }
 
-      #pulseaudio {
-          color: @maroon;
-          border-radius: 1rem 0px 0px 1rem;
-          margin-left: 1rem;
-      }
-
       #custom-shutdown {
-          margin-right: 1rem;
-          border-radius: 0px 1rem 1rem 0px;
           color: @red;
-      }
-
-      #tray {
-          margin-right: 1rem;
-          border-radius: 1rem;
       }
     '';
   };

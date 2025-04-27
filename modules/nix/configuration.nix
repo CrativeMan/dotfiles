@@ -33,6 +33,8 @@
     extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 
+  security.polkit.enable = true;
+
   # ZSH activation
   environment.shells = with pkgs; [zsh];
   users.defaultUserShell = pkgs.zsh;
