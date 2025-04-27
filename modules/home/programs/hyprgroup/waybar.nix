@@ -46,6 +46,7 @@
         };
 
         "cpu" = {
+          on-click = "${pkgs.btop}/bin/btop";
           interval = 5;
           format = "[CPU:{usage}%]";
           states = {
@@ -54,6 +55,7 @@
         };
 
         "memory" = {
+          on-click = "${pkgs.btop}/bin/btop";
           interval = 5;
           format = "[MEM:{used}%]";
           states = {
