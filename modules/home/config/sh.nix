@@ -1,4 +1,8 @@
-{...}: let
+{
+  pkgs,
+  vars,
+  ...
+}: let
   myAliases = {
     # Nix stuff
     rebuild = "cd ~/.dotfiles && ga . && nixr && homer";
@@ -7,7 +11,7 @@
     nixup = "cd ~/.dotfiles && sudo nix flake update";
     nixgc = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
     # misc
-    blahaj = "nix run nixpkgs#display3d ~/Documents/blahaj/blahaj.obj";
+    blahaj = "${pkgs.display3d}/bin/display3d ${vars.flakeDir}/assets/blahaj/blahaj.obj";
     c = "xclip -selection clipboard";
     ":q" = "exit";
     ".." = "cd ..";

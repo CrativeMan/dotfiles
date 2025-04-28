@@ -1,6 +1,4 @@
-{ config, ... }:
-
-{
+{vars, ...}: {
   home.file.".config/fastfetch/config.jsonc".text = ''
     // ~/.config/fastfetch/config.jsonc
     // See https://github.com/fastfetch-cli/fastfetch/wiki/Configuration for more details
@@ -8,9 +6,12 @@
     {
       "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
       "logo": {
-        "source": "/home/crative/Pictures/profilePic.png",
+        "source": "${vars.flakeDir}/assets/icons/black_cat_pp.jpg",
+        "width": 32,           // Width in characters (for image logos)
+        "height": 17,          // Height in characters (for image logos)
         "padding": {
-          "top": 2
+          "top": 2,
+          "left": 2
         }
       },
       "modules": [
