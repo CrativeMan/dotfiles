@@ -1,8 +1,4 @@
-{
-  pkgs,
-  vars,
-  ...
-}: {
+{pkgs, ...}: {
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
@@ -28,36 +24,6 @@
     blueman
     kdePackages.polkit-kde-agent-1
   ];
-
-  home.file."/home/${vars.user}/.config/hypr/scripts/screenshot_full.sh" = {
-    executable = true;
-    text = ''
-      #!/usr/bin/env bash
-      mkdir -p ~/Pictures/Screenshots/hypr
-      filename=~/Pictures/Screenshots/hypr/screenshot_$(date +%s).png
-      ${pkgs.grim}/bin/grim "$filename"
-      notify-send --app-name=Hyprland --icon="$filename" "Screenshot saved!"
-    '';
-  };
-
-  home.file."/home/${vars.user}/.config/hypr/scripts/screenshot_area.sh" = {
-    executable = true;
-    text = ''
-      #!/usr/bin/env bash
-      mkdir -p ~/Pictures/Screenshots/hypr
-      filename=~/Pictures/Screenshots/hypr/screenshot_$(date +%s).png
-      ${pkgs.grim}/bin/grim -g "$(slurp)" "$filename"
-      notify-send --app-name=Hyprland --icon="$filename" "Area Screenshot saved!"
-    '';
-  };
-
-  home.file."/home/${vars.user}/.config/hypr/scripts/screenshot_edit.sh" = {
-    executable = true;
-    text = ''
-      #!/usr/bin/env bash
-      ${pkgs.grim}/bin/grim -g "$(slurp)" - | ${pkgs.swappy}/bin/swappy -f -
-    '';
-  };
 
   wayland.windowManager.hyprland = {
     enable = true;

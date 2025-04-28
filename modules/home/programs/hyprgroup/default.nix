@@ -9,5 +9,6 @@
     ./hyprlock.nix
     ./dunst.nix
     ./thunar.nix
+    ./scripts.nix
   ];
 }
