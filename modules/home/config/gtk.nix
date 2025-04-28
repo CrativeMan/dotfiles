@@ -3,8 +3,12 @@
     enable = true;
 
     theme = {
-      name = "Adwaita-dark";
-      package = pkgs.adwaita-icon-theme;
+      name = "Catppuccin-Mocha-Compact-Blue";
+      package = pkgs.catppuccin-gtk.override {
+        accents = ["blue"];
+        variant = "mocha";
+        size = "compact";
+      };
     };
 
     cursorTheme = {

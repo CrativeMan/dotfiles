@@ -27,7 +27,6 @@
     playerctl
     blueman
     kdePackages.polkit-kde-agent-1
-    xfce.thunar
   ];
 
   home.file."/home/${vars.user}/.config/hypr/scripts/screenshot_full.sh" = {
