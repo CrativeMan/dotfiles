@@ -33,9 +33,9 @@ in
     enableCompletion = true;
     history.size = 20000;
 
-    initContent = ''
-      hyfetch
-    '';
+    #initContent = ''
+    #  hyfetch
+    #'';
 
     envExtra = ''
     global_search() {
