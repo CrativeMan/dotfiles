@@ -138,10 +138,10 @@
       ];
 
       workspace = [
-        "1, persistent=true"
-        "2, persistent=true"
-        "3, persistent=true"
-        "4, persistent=true"
+        "name:1, persistent:true"
+        "name:2, persistent:true"
+        "name:3, persistent:true"
+        "name:4, persistent:true"
       ];
 
       monitor = [

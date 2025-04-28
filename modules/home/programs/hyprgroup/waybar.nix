@@ -3,6 +3,14 @@
   vars,
   ...
 }: {
+  home.packages = with pkgs; [
+    pulseaudio
+    networkmanager
+    libappindicator
+    libnotify
+    jq
+  ];
+
   programs.waybar = {
     enable = true;
     package = pkgs.waybar;
@@ -21,8 +29,8 @@
 
         output = ["*"];
 
-        modules-left = ["custom/launcher" "hyprland/workspaces" "cpu" "memory" "network"];
-        modules-center = ["clock"];
+        modules-left = ["custom/launcher" "cpu" "memory" "network"];
+        modules-center = ["custom/workspaces-left" "clock" "custom/workspaces-right"];
         modules-right = ["tray" "battery" "bluetooth" "pulseaudio" "custom/shutdown"];
 
         "custom/launcher" = {
@@ -32,11 +40,20 @@
           tooltip = false;
         };
 
-        "hyprland/workspaces" = {
-          format = "{name}";
-          all-outputs = true;
+        "custom/workspaces-left" = {
+          format = "{}";
+          exec = "/home/${vars.user}/.config/waybar/scripts/workspaces_left.sh";
           on-click = "activate";
-          disable-scroll = false;
+          interval = 5;
+          return-type = "json";
+        };
+
+        "custom/workspaces-right" = {
+          format = "{}";
+          exec = "/home/${vars.user}/.config/waybar/scripts/workspaces_right.sh";
+          on-click = "activate";
+          interval = 5;
+          return-type = "json";
         };
 
         "clock" = {
@@ -48,7 +65,7 @@
 
         "cpu" = {
           on-click = "kitty -e ${pkgs.btop}/bin/btop";
-          interval = 5;
+          interval = 10;
           format = "[CPU:{usage}%]";
           states = {
             critical = 90;
@@ -57,7 +74,7 @@
 
         "memory" = {
           on-click = "kitty -e ${pkgs.btop}/bin/btop";
-          interval = 5;
+          interval = 10;
           format = "[MEM:{used}%]";
           states = {
             critical = 80;
@@ -91,7 +108,7 @@
 
         "battery" = {
           format = "[BAT:{capacity}%]";
-          interval = 5;
+          interval = 60;
           states = {
             warning = 30;
             critical = 15;
@@ -230,13 +247,6 @@
     '';
   };
 
-  home.packages = with pkgs; [
-    pulseaudio
-    networkmanager
-    libappindicator
-    libnotify
-  ];
-
   home.file."/home/${vars.user}/.config/waybar/scripts/shutdown_prompt.sh" = {
     executable = true;
     text = ''
@@ -247,6 +257,66 @@
       if [[ "$choice" == "Yes" ]]; then
         systemctl poweroff
       fi
+    '';
+  };
+
+  home.file."/home/${vars.user}/.config/waybar/scripts/workspaces_left.sh" = {
+    executable = true;
+    text = ''
+      #!/usr/bin/env bash
+
+      workspaces=$(hyprctl workspaces -j)
+      active_id=$(hyprctl activeworkspace -j | jq -r ".id")
+      output=""
+
+      for id in 1 2; do
+        ws=$(echo "$workspaces" | jq ".[] | select(.id == $id)")
+
+        if [ -n "$ws" ]; then
+          name=$(echo "$ws" | jq -r '.name')
+          id=$(echo "$ws" | jq -r '.id')
+
+          if [ "$id" == "$active_id" ]; then
+            color="#89b4fa"
+          else
+            color="#cdd6f4"
+          fi
+
+          output+="<span color='$color'>$name</span> "
+        fi
+      done
+
+      echo "{\"text\":\"''${output% }\"}"
+    '';
+  };
+
+  home.file."/home/${vars.user}/.config/waybar/scripts/workspaces_right.sh" = {
+    executable = true;
+    text = ''
+      #!/usr/bin/env bash
+
+      workspaces=$(hyprctl workspaces -j)
+      active_id=$(hyprctl activeworkspace -j | jq -r ".id")
+      output=""
+
+      for id in 3 4; do
+        ws=$(echo "$workspaces" | jq ".[] | select(.id == $id)")
+
+        if [ -n "$ws" ]; then
+          name=$(echo "$ws" | jq -r '.name')
+          id=$(echo "$ws" | jq -r '.id')
+
+          if [ "$id" == "$active_id" ]; then
+            color="#89b4fa"
+          else
+            color="#cdd6f4"
+          fi
+
+          output+="<span color='$color'>$name</span> "
+        fi
+      done
+
+      echo "{\"text\":\"''${output% }\"}"
     '';
   };
 }
