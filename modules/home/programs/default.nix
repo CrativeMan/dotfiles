@@ -12,5 +12,7 @@
     ./git.nix
     ./nix-index.nix
     ./hyprgroup/default.nix
+    ./vesktop.nix
+    ./btop.nix
   ];
 }

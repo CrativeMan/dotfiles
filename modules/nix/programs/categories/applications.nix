@@ -34,6 +34,7 @@
     # communication
     signal-desktop-bin
     discord
+    vesktop
     whatsapp-for-linux
     teams-for-linux
     thunderbird

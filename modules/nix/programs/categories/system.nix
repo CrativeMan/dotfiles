@@ -1,5 +1,8 @@
-{ pkgs, inputs, ... }:
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   nixpkgs.overlays = [
     (final: prev: {
       unstable = import inputs.nixpkgs-unstable {
@@ -8,7 +11,7 @@
       };
     })
   ];
-    #linuxKernel.packages.linux_zen.veikk-linux-driver
+  #linuxKernel.packages.linux_zen.veikk-linux-driver
 
   environment.systemPackages = with pkgs; [
     nixpkgs-fmt
@@ -19,7 +22,6 @@
     lxappearance
     ffmpeg
     gnupg
-    btop
     ncdu
     sl
     unzip
@@ -37,5 +39,4 @@
     xclip
     nil
   ];
-
 }

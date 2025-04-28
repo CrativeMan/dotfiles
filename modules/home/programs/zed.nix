@@ -31,6 +31,7 @@
       relative_line_numbers = false;
       load_direnv = "shell_hook";
       ui_font_size = lib.mkForce 15;
+      font_size = lib.mkForce 14;
 
       indent_guides = {
         enabled = true;
