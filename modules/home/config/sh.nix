@@ -48,7 +48,7 @@ in {
     oh-my-zsh = {
       enable = true;
       plugins = ["git"];
-      theme = "geoffgarside";
+      theme = "awesomepanda";
     };
     shellAliases = myAliases;
   };
