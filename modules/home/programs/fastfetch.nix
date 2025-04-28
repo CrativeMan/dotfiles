@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
   home.file.".config/fastfetch/config.jsonc".text = ''
@@ -8,7 +8,7 @@
     {
       "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
       "logo": {
-        "source": "nix_old",
+        "source": "/home/crative/Pictures/profilePic.png",
         "padding": {
           "top": 2
         }
@@ -19,12 +19,10 @@
         "os",
         "host",
         "kernel",
-        "separator",
         "uptime",
         "packages",
         "shell",
-        "separator",
-        //"display",
+        "display",
         "de",
         "wm",
         "wmtheme",
@@ -34,15 +32,13 @@
         "cursor",
         "terminal",
         "terminalfont",
-        "separator",
         "cpu",
         "gpu",
         "memory",
+        "swap",
         "disk",
-        //"localip",
         "battery",
         "poweradapter",
-        "locale",
         "break",
         "colors"
       ]

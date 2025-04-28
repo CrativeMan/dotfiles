@@ -1,15 +1,13 @@
-{ ... }:
-
-let
+{...}: let
   myAliases = {
     # Nix stuff
-    rebuild = "ga . && nixr && homer";
-    nixr = "ga . && sudo nixos-rebuild switch --flake ~/.dotfiles/";
-    homer = "ga . && home-manager switch --flake ~/.dotfiles/";
+    rebuild = "cd ~/.dotfiles && ga . && nixr && homer";
+    nixr = "cd ~/.dotfiles && ga . && sudo nixos-rebuild switch --flake ~/.dotfiles/";
+    homer = "cd ~/.dotfiles && ga . && home-manager switch --flake ~/.dotfiles/";
     nixup = "cd ~/.dotfiles && sudo nix flake update";
     nixgc = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
-    or = "omz reload";
     # misc
+    blahaj = "nix run nixpkgs#display3d ~/Documents/blahaj/blahaj.obj";
     c = "xclip -selection clipboard";
     ":q" = "exit";
     ".." = "cd ..";
@@ -25,9 +23,7 @@ let
     zed = "zeditor";
     rrip = "sudo docker run --rm -v $PWD:/app/ -u $(id -u):$(id -g) ghcr.io/mahesh-hegde/rrip:latest";
   };
-
-in
-{
+in {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -38,16 +34,16 @@ in
     #'';
 
     envExtra = ''
-    global_search() {
-        find . -type f | grep -v '.git\|node_modules' | xargs grep -Hn "$1" 2>/dev/null | fzf
-    }
+      global_search() {
+          find . -type f | grep -v '.git\|node_modules' | xargs grep -Hn "$1" 2>/dev/null | fzf
+      }
 
-    alias gs='global_search'
+      alias gs='global_search'
     '';
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" ];
+      plugins = ["git"];
       theme = "geoffgarside";
     };
     shellAliases = myAliases;
