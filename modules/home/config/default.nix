@@ -5,5 +5,6 @@
     ./gtk.nix
     ./sh.nix
     ./wallpaper.nix
+    ./eww.nix
   ];
 }

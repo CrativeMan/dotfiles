@@ -16,6 +16,7 @@
       "log"
       "catppuccin-icons"
       "rose-pine-theme"
+      "scss"
     ];
     extraPackages = with pkgs; [
       nil
