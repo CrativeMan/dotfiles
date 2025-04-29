@@ -58,7 +58,6 @@
     nixpkgs,
     home-manager,
     nixos-hardware,
-    templates,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -73,7 +72,12 @@
       self = self;
     };
   in {
-    templates = ./templates;
+    templates = {
+      basic = {
+        path = ./templates/basic;
+        description = "A basic flake based on flake-parts";
+      };
+    };
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         specialArgs = {
