@@ -38,5 +38,6 @@
     fzf
     xclip
     nil
+    tlp
   ];
 }

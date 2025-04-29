@@ -29,8 +29,8 @@
 
         output = ["*"];
 
-        modules-left = ["custom/launcher" "cpu" "memory" "network"];
-        modules-center = ["custom/workspaces-left" "clock" "custom/workspaces-right"];
+        modules-left = ["custom/launcher" "clock" "cpu" "memory" "network"];
+        modules-center = ["custom/workspaces-left" "custom/power" "custom/workspaces-right"];
         modules-right = ["tray" "battery" "bluetooth" "pulseaudio" "custom/shutdown"];
 
         "custom/launcher" = {
@@ -46,6 +46,14 @@
           on-click = "activate";
           interval = 3;
           return-type = "json";
+        };
+
+        "custom/power" = {
+          format = "[PWR]";
+          tooltip = false;
+          interval = 10;
+          exec = "powerprofilesctl | awk '/\\* / {print \"[PWR: \"$2\"]\"}'";
+          on-click = "/home/${vars.user}/.config/waybar/scripts/powermode.sh";
         };
 
         "custom/workspaces-right" = {
@@ -197,6 +205,7 @@
       #pulseaudio,
       #clock,
       #custom-launcher,
+      #custom-power,
       #custom-shutdown {
         background-color: @surface0;
         border: 1px solid @overlay0;
@@ -220,6 +229,7 @@
       #pulseaudio:hover,
       #clock:hover,
       #custom-launcher:hover,
+      #custom-power:hover,
       #custom-shutdown:hover {
         background-color: @surface1;
         border-color: @overlay1;

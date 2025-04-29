@@ -58,7 +58,6 @@
     self,
     nixpkgs,
     home-manager,
-    flake-parts,
     nixos-hardware,
     ...
   } @ inputs: let
@@ -86,36 +85,24 @@
         inherit system;
         modules = [./modules/nix/configuration.nix ./hosts/nixos-desktop/default.nix];
       };
-      nixosConfigurations = {
-        nixos = lib.nixosSystem {
-          specialArgs = {
-            inherit inputs vars;
-            host = {
-              hostName = "nixos";
-            };
+      framework = lib.nixosSystem {
+        specialArgs = {
+          inherit inputs vars nixos-hardware;
+          host = {
+            hostName = "framework";
           };
-          inherit system;
-          modules = [./modules/nix/configuration.nix ./hosts/nixos-desktop/default.nix];
         };
-        framework = lib.nixosSystem {
-          specialArgs = {
-            inherit inputs vars nixos-hardware;
-            host = {
-              hostName = "framework";
-            };
-          };
-          inherit system;
-          modules = [./modules/nix/configuration.nix ./hosts/nixos-framework/default.nix];
-        };
+        inherit system;
+        modules = [./modules/nix/configuration.nix ./hosts/nixos-framework/default.nix];
       };
-      homeConfigurations = {
-        crative = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+    };
+    homeConfigurations = {
+      crative = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
 
-          extraSpecialArgs = {inherit inputs vars;};
+        extraSpecialArgs = {inherit inputs vars;};
 
-          modules = [./modules/home/home.nix];
-        };
+        modules = [./modules/home/home.nix];
       };
     };
   };
