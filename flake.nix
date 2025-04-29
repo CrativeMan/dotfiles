@@ -72,9 +72,6 @@
       self = self;
     };
   in {
-    templates = {
-      basic = import ./templates/basic;
-    };
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         specialArgs = {
@@ -107,5 +104,7 @@
         modules = [./modules/home/home.nix];
       };
     };
+
+    templates = ./templates;
   };
 }
