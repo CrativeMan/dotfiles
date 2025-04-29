@@ -51,7 +51,7 @@
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
       binding = "<Super>q";
-      command = "${pkgs.kitty}/bin/kitty";
+      command = "${pkgs.ghostty}/bin/ghostty";
       name = "Terminal";
     };
 

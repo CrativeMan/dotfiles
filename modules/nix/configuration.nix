@@ -4,6 +4,7 @@
     ./services/default.nix
     ./gnome/gnome.nix
     ./nix-report-changes.nix
+    ./scripts/scripts.nix
   ];
 
   syncthing.enable = true;

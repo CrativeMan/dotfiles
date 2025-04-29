@@ -69,7 +69,7 @@
         copy_on_select = false;
         dock = "bottom";
         env = {
-          TERM = "kitty";
+          TERM = "ghostty";
         };
       };
 

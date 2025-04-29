@@ -72,7 +72,7 @@
         };
 
         "cpu" = {
-          on-click = "kitty -e ${pkgs.btop}/bin/btop";
+          on-click = "${pkgs.ghostty}/bin/ghostty -e ${pkgs.btop}/bin/btop";
           interval = 10;
           format = "[CPU:{usage}%]";
           states = {
@@ -81,7 +81,7 @@
         };
 
         "memory" = {
-          on-click = "kitty -e ${pkgs.btop}/bin/btop";
+          on-click = "${pkgs.ghostty}/bin/ghostty -e ${pkgs.btop}/bin/btop";
           interval = 10;
           format = "[MEM:{used}%]";
           states = {

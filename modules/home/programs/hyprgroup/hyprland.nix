@@ -39,7 +39,7 @@
       "$mod" = "SUPER";
 
       bind = [
-        "$mod, Q, exec, kitty"
+        "$mod, Q, exec, ${pkgs.ghostty}/bin/ghostty"
         "$mod, B, exec, zen"
         "$mod, C, killactive,"
         "$mod, M, exit,"

@@ -3,7 +3,7 @@
     ./bat.nix
     ./starship.nix
     ./browser.nix
-    ./kitty.nix
+    ./ghostty.nix
     ./nvim.nix
     ./nixvim/nixvim.nix
     ./zed.nix
