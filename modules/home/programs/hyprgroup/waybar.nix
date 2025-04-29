@@ -44,7 +44,7 @@
           format = "{}";
           exec = "/home/${vars.user}/.config/waybar/scripts/workspaces_left.sh";
           on-click = "activate";
-          interval = 3;
+          interval = 2;
           return-type = "json";
         };
 
@@ -60,7 +60,7 @@
           format = "{}";
           exec = "/home/${vars.user}/.config/waybar/scripts/workspaces_right.sh";
           on-click = "activate";
-          interval = 3;
+          interval = 2;
           return-type = "json";
         };
 
