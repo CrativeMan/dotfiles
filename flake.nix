@@ -73,9 +73,9 @@
       flakeDir = "/home/${vars.user}/.dotfiles";
       self = self;
     };
-    flake =
-      flake-parts.lib.mkFlake {inherit inputs;} {
-      };
+    flake = flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = ["x86_64-linux"];
+    };
   in
     flake
     // {
