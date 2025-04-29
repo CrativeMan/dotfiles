@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -73,6 +72,7 @@
       self = self;
     };
   in {
+    templates = import ./templates;
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         specialArgs = {
