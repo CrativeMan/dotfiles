@@ -58,10 +58,10 @@
     self,
     nixpkgs,
     home-manager,
+    flake-parts,
     nixos-hardware,
     ...
   } @ inputs: let
-
     lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -73,40 +73,42 @@
       flakeDir = "/home/${vars.user}/.dotfiles";
       self = self;
     };
-  in {
-    flake-parts.lib.mkFlake { inherit inputs; } {
-        templates = import ./templates;
+    flake = flake-parts.lib.mkFlake {inherit inputs;} {
+      templates = import ./templates;
     };
-    nixosConfigurations = {
-      nixos = lib.nixosSystem {
-        specialArgs = {
-          inherit inputs vars;
-          host = {
-            hostName = "nixos";
+  in
+    flake
+    // {
+      nixosConfigurations = {
+        nixos = lib.nixosSystem {
+          specialArgs = {
+            inherit inputs vars;
+            host = {
+              hostName = "nixos";
+            };
           };
+          inherit system;
+          modules = [./modules/nix/configuration.nix ./hosts/nixos-desktop/default.nix];
         };
-        inherit system;
-        modules = [./modules/nix/configuration.nix ./hosts/nixos-desktop/default.nix];
-      };
-      framework = lib.nixosSystem {
-        specialArgs = {
-          inherit inputs vars nixos-hardware;
-          host = {
-            hostName = "framework";
+        framework = lib.nixosSystem {
+          specialArgs = {
+            inherit inputs vars nixos-hardware;
+            host = {
+              hostName = "framework";
+            };
           };
+          inherit system;
+          modules = [./modules/nix/configuration.nix ./hosts/nixos-framework/default.nix];
         };
-        inherit system;
-        modules = [./modules/nix/configuration.nix ./hosts/nixos-framework/default.nix];
+      };
+      homeConfigurations = {
+        crative = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+
+          extraSpecialArgs = {inherit inputs vars;};
+
+          modules = [./modules/home/home.nix];
+        };
       };
     };
-    homeConfigurations = {
-      crative = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        extraSpecialArgs = {inherit inputs vars;};
-
-        modules = [./modules/home/home.nix];
-      };
-    };
-  };
 }
