@@ -72,7 +72,7 @@
       self = self;
     };
   in {
-    templates = import ./templates;
+    templates = import ./templates/default.nix;
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         specialArgs = {
