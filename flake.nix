@@ -58,6 +58,7 @@
     nixpkgs,
     home-manager,
     nixos-hardware,
+    templates,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
