@@ -60,6 +60,7 @@
     pika-backup
     newsflash
     gradience
+    eww
     parabolic
     eyedropper
     gnome-frog
