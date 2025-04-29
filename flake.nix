@@ -4,7 +4,11 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
 <<<<<<< HEAD
+<<<<<<< HEAD
     flake-parts.url = "github:hercules-ci/flake-parts";
+=======
+
+>>>>>>> parent of e7808ad (templates)
 =======
 
 >>>>>>> parent of e7808ad (templates)
