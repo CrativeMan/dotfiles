@@ -61,6 +61,7 @@
     nixos-hardware,
     ...
   } @ inputs: let
+
     lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -73,8 +74,8 @@
       self = self;
     };
   in {
-    flake-parts.lib.mkFlake = {
-      templates = ./templates;
+    flake-parts.lib.mkFlake { inherit inputs; } {
+        templates = import ./templates;
     };
     nixosConfigurations = {
       nixos = lib.nixosSystem {
