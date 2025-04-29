@@ -73,12 +73,13 @@
       flakeDir = "/home/${vars.user}/.dotfiles";
       self = self;
     };
-    flake = flake-parts.lib.mkFlake {inherit inputs;} {
-      templates = import ./templates;
-    };
+    flake =
+      flake-parts.lib.mkFlake {inherit inputs;} {
+      };
   in
     flake
     // {
+      templates = import ./templates;
       nixosConfigurations = {
         nixos = lib.nixosSystem {
           specialArgs = {
