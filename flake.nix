@@ -73,6 +73,7 @@
       self = self;
     };
   in {
+    templates = ./templates;
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         specialArgs = {
@@ -95,7 +96,6 @@
         modules = [./modules/nix/configuration.nix ./hosts/nixos-framework/default.nix];
       };
     };
-
     homeConfigurations = {
       crative = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
@@ -105,7 +105,5 @@
         modules = [./modules/home/home.nix];
       };
     };
-
-    templates = ./templates;
   };
 }
