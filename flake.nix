@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    flake-parts.url = "github:hercules-ci/flake-parts";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -72,11 +73,8 @@
       self = self;
     };
   in {
-    templates = {
-      basic = {
-        path = ./templates/basic;
-        description = "A basic flake based on flake-parts";
-      };
+    flake-parts.lib.mkFlake = {
+      templates = ./templates;
     };
     nixosConfigurations = {
       nixos = lib.nixosSystem {
