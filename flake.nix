@@ -3,15 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-<<<<<<< HEAD
-<<<<<<< HEAD
     flake-parts.url = "github:hercules-ci/flake-parts";
-=======
-
->>>>>>> parent of e7808ad (templates)
-=======
-
->>>>>>> parent of e7808ad (templates)
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -81,11 +73,8 @@
       flakeDir = "/home/${vars.user}/.dotfiles";
       self = self;
     };
-<<<<<<< HEAD
-    flake =
-      flake-parts.lib.mkFlake {inherit inputs;} {
-=======
   in {
+    templates = import ./templates;
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         specialArgs = {
@@ -96,12 +85,7 @@
         };
         inherit system;
         modules = [./modules/nix/configuration.nix ./hosts/nixos-desktop/default.nix];
->>>>>>> parent of e7808ad (templates)
       };
-  in
-    flake
-    // {
-      templates = import ./templates;
       nixosConfigurations = {
         nixos = lib.nixosSystem {
           specialArgs = {
@@ -134,4 +118,5 @@
         };
       };
     };
+  };
 }
