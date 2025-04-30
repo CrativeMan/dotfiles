@@ -28,7 +28,6 @@
           src = ./.;
 
           buildInputs = with pkgs; [
-            cmake
             clang-tools
           ];
 

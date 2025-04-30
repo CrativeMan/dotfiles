@@ -10,30 +10,43 @@
 
   proj = pkgs.writeShellApplication {
     name = "proj";
-    runtimeInputs = [pkgs.gum];
+    runtimeInputs = [pkgs.gum pkgs.jq];
     text = ''
+      set +o nounset
       url=$1
-
       if [ -z "$url" ]; then
-          echo "Usage: $0 <url>"
-          exit 1
+        echo "Usage: $0 <flake-url>"
+        exit 1
       fi
 
-      types=$(nix flake show $url --json | jq -r '.templates | keys[]')
-
-      if [ -z "$types" ]; then
-          echo "No templates found for $url"
-          exit 1
+      if ! command -v gum >/dev/null 2>&1; then
+        echo "gum is not installed. Please install it and ensure it's in your PATH."
+        exit 1
       fi
 
-      chosen_type=$(gum choose $types)
-
-      if [ -z "$chosen_type" ]; then
-          echo "No template selected"
-          exit 1
+      if command -v jq >/dev/null 2>&1; then
+        jq_cmd="jq"
+      else
+        echo "jq is not available in the environment, using nix-shell"
+        jq_cmd="nix run nixpkgs#jq"
       fi
 
-      nix flake init --template $url#$chosen_type
+      options=$($jq_cmd -r '.templates | keys[]' <(nix flake show "$url" --json))
+
+      if [ -z "$options" ]; then
+        echo "No options found.  Either the flake is empty, or doesn't have any templates."
+        exit 1
+      fi
+
+      selected_option=$(echo "$options" | gum choose)
+
+      if [ -n "$selected_option" ]; then
+        echo "Selected option: $selected_option"
+        nix flake init --template "$url#$selected_option"
+      else
+        echo "No option was selected."
+        exit 1
+      fi
     '';
   };
 in {
