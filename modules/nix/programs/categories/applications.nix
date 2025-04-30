@@ -16,7 +16,7 @@
     # coding
     unstable.vscode
     github-desktop
-    jetbrains-toolbox
+    jetbrains.idea-ultimate
     android-studio
 
     # art
