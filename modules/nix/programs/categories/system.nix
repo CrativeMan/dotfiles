@@ -26,7 +26,6 @@
     sl
     unzip
     flatpak
-    fastfetch
     curl
     git
     direnv

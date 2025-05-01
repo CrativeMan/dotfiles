@@ -24,7 +24,6 @@
     bc
     imagemagick
     home-manager
-    spotify-player
     display3d
     inputs.gogo.packages.x86_64-linux.default
     inputs.clh.packages.x86_64-linux.default

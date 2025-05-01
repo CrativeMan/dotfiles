@@ -14,5 +14,6 @@
     ./hyprgroup/default.nix
     ./vesktop.nix
     ./btop.nix
+    ./spotify-player.nix
   ];
 }

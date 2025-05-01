@@ -10,7 +10,7 @@
         mode = "horizontal";
         fore_back = null;
       };
-      backend = "fastfetch";
+      backend = "neofetch";
     };
   };
 }
