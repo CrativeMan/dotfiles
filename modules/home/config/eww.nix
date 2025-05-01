@@ -7,19 +7,6 @@
     eww
   ];
 
-  systemd.user.services.eww-startup = {
-    Install = {
-      WantedBy = ["default.target"];
-    };
-    Service = {
-      Type = "simple";
-      ExecStart = "${pkgs.eww}/bin/eww daemon";
-      ExecStartPost = "${pkgs.eww}/bin/eww open time_bg_window";
-      Restart = "always";
-      RestartSec = 5;
-    };
-  };
-
   home.file."/home/${vars.user}/.config/eww/eww.yuck" = {
     text = ''
       (defpoll weekday_poll :interval "60s" "date +%A")
