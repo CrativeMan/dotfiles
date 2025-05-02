@@ -12,6 +12,7 @@
       mkdir -p ~/Pictures/Screenshots/hypr
       filename=~/Pictures/Screenshots/hypr/screenshot_$(date +%s).png
       ${pkgs.grim}/bin/grim "$filename"
+      ${pkgs.xclip}/bin/xclip -selection clipboard -t image/png "$filename"
       notify-send --app-name=Hyprland --icon="$filename" "Screenshot saved!"
     '';
   };
@@ -23,6 +24,7 @@
       mkdir -p ~/Pictures/Screenshots/hypr
       filename=~/Pictures/Screenshots/hypr/screenshot_$(date +%s).png
       ${pkgs.grim}/bin/grim -g "$(slurp)" "$filename"
+      ${pkgs.xclip}/bin/xclip -selection clipboard -t image/png "$filename"
       notify-send --app-name=Hyprland --icon="$filename" "Area Screenshot saved!"
     '';
   };
