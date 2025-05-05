@@ -48,6 +48,12 @@
           on-click = "/home/${vars.user}/.config/waybar/scripts/powermode.sh";
         };
 
+        "hyprland/workspaces" = {
+          format = "{icon}";
+          on-scroll-up = "hyprctl dispatch workspace e+1";
+          on-scroll-down = "hyprctl dispatch workspace e-1";
+        };
+
         "clock" = {
           format = "[{:%H:%M %d/%m/%Y}]";
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";

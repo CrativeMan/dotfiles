@@ -107,13 +107,6 @@
         ", XF86MonBrightnessUp, exec, brightnessctl s +10%"
       ];
 
-      workspace = [
-        "name:1, persistent:true"
-        "name:2, persistent:true"
-        "name:3, persistent:true"
-        "name:4, persistent:true"
-      ];
-
       monitor = [
         "DP-1,preferred,0x0,1"
         "HDMI-A-1,preferred,auto,1"
