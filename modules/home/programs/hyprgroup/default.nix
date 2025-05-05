@@ -8,7 +8,8 @@
     ./waybar.nix
     ./hyprlock.nix
     ./dunst.nix
-    ./thunar.nix
+    #./thunar.nix
+    ./dolphin.nix
     ./scripts.nix
   ];
 }

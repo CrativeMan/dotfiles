@@ -22,8 +22,8 @@
     pavucontrol
     playerctl
     blueman
-    kdePackages.polkit-kde-agent-1
     brightnessctl
+    hyprpolkitagent
   ];
 
   wayland.windowManager.hyprland = {
@@ -34,7 +34,7 @@
       exec-once = [
         "mkdir -p ~/Pictures/Screenshots/hypr"
         "blueman-applet"
-        "polkit-kde-authentication-agent-1"
+        "systemctl --user start hyprpolkitagent"
       ];
 
       "$mod" = "SUPER";
