@@ -52,65 +52,65 @@
 
   # ============================================================================================
   # Waybar
-  home.file."/home/${vars.user}/.config/waybar/scripts/workspaces_left.sh" = {
-    executable = true;
-    text = ''
-      #!/usr/bin/env bash
+  # home.file."/home/${vars.user}/.config/waybar/scripts/workspaces_left.sh" = {
+  #   executable = true;
+  #   text = ''
+  #     #!/usr/bin/env bash
 
-      workspaces=$(hyprctl workspaces -j)
-      active_id=$(hyprctl activeworkspace -j | jq -r ".id")
-      output=""
+  #     workspaces=$(hyprctl workspaces -j)
+  #     active_id=$(hyprctl activeworkspace -j | jq -r ".id")
+  #     output=""
 
-      for id in 1 2; do
-        ws=$(echo "$workspaces" | jq ".[] | select(.id == $id)")
+  #     for id in 1 2; do
+  #       ws=$(echo "$workspaces" | jq ".[] | select(.id == $id)")
 
-        if [ -n "$ws" ]; then
-          name=$(echo "$ws" | jq -r '.name')
-          id=$(echo "$ws" | jq -r '.id')
+  #       if [ -n "$ws" ]; then
+  #         name=$(echo "$ws" | jq -r '.name')
+  #         id=$(echo "$ws" | jq -r '.id')
 
-          if [ "$id" == "$active_id" ]; then
-            color="#89b4fa"
-          else
-            color="#cdd6f4"
-          fi
+  #         if [ "$id" == "$active_id" ]; then
+  #           color="#89b4fa"
+  #         else
+  #           color="#cdd6f4"
+  #         fi
 
-          output+="<span color='$color'>[$name]</span> "
-        fi
-      done
+  #         output+="<span color='$color'>[$name]</span> "
+  #       fi
+  #     done
 
-      echo "{\"text\":\"''${output% }\"}"
-    '';
-  };
+  #     echo "{\"text\":\"''${output% }\"}"
+  #   '';
+  # };
 
-  home.file."/home/${vars.user}/.config/waybar/scripts/workspaces_right.sh" = {
-    executable = true;
-    text = ''
-      #!/usr/bin/env bash
+  # home.file."/home/${vars.user}/.config/waybar/scripts/workspaces_right.sh" = {
+  #   executable = true;
+  #   text = ''
+  #     #!/usr/bin/env bash
 
-      workspaces=$(hyprctl workspaces -j)
-      active_id=$(hyprctl activeworkspace -j | jq -r ".id")
-      output=""
+  #     workspaces=$(hyprctl workspaces -j)
+  #     active_id=$(hyprctl activeworkspace -j | jq -r ".id")
+  #     output=""
 
-      for id in 3 4; do
-        ws=$(echo "$workspaces" | jq ".[] | select(.id == $id)")
+  #     for id in 3 4; do
+  #       ws=$(echo "$workspaces" | jq ".[] | select(.id == $id)")
 
-        if [ -n "$ws" ]; then
-          name=$(echo "$ws" | jq -r '.name')
-          id=$(echo "$ws" | jq -r '.id')
+  #       if [ -n "$ws" ]; then
+  #         name=$(echo "$ws" | jq -r '.name')
+  #         id=$(echo "$ws" | jq -r '.id')
 
-          if [ "$id" == "$active_id" ]; then
-            color="#89b4fa"
-          else
-            color="#cdd6f4"
-          fi
+  #         if [ "$id" == "$active_id" ]; then
+  #           color="#89b4fa"
+  #         else
+  #           color="#cdd6f4"
+  #         fi
 
-          output+="<span color='$color'>[$name]</span> "
-        fi
-      done
+  #         output+="<span color='$color'>[$name]</span> "
+  #       fi
+  #     done
 
-      echo "{\"text\":\"''${output% }\"}"
-    '';
-  };
+  #     echo "{\"text\":\"''${output% }\"}"
+  #   '';
+  # };
 
   home.file."/home/${vars.user}/.config/waybar/scripts/powermode.sh" = {
     executable = true;

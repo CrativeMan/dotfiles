@@ -29,8 +29,8 @@
 
         output = ["*"];
 
-        modules-left = ["custom/launcher" "clock" "cpu" "memory" "network"];
-        modules-center = ["custom/workspaces-left" "custom/power" "custom/workspaces-right"];
+        modules-left = ["custom/launcher" "custom/power" "cpu" "memory" "network"];
+        modules-center = ["hyprland/workspaces" "clock"];
         modules-right = ["tray" "battery" "bluetooth" "pulseaudio" "custom/shutdown"];
 
         "custom/launcher" = {
@@ -40,28 +40,12 @@
           tooltip = false;
         };
 
-        "custom/workspaces-left" = {
-          format = "{}";
-          exec = "/home/${vars.user}/.config/waybar/scripts/workspaces_left.sh";
-          on-click = "activate";
-          interval = 2;
-          return-type = "json";
-        };
-
         "custom/power" = {
-          format = "[PWR]";
+          format = "[PWR:{}]";
           tooltip = false;
           interval = 10;
-          exec = "powerprofilesctl | awk '/\\* / {print \"[PWR: \"$2\"]\"}'";
+          exec = "powerprofilesctl get";
           on-click = "/home/${vars.user}/.config/waybar/scripts/powermode.sh";
-        };
-
-        "custom/workspaces-right" = {
-          format = "{}";
-          exec = "/home/${vars.user}/.config/waybar/scripts/workspaces_right.sh";
-          on-click = "activate";
-          interval = 2;
-          return-type = "json";
         };
 
         "clock" = {
