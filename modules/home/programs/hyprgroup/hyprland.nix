@@ -47,7 +47,7 @@
         "$mod, D, exec, rofi -show drun"
         "$mod, V, togglefloating,"
         "$mod, F, fullscreen,"
-        "$mod, ß, exec, hyprlock"
+        "$mod, Ö, exec, ${pkgs.hyprlock}/bin/hyprlock"
 
         # Screenshot
         "$mod, P, exec, ~/.config/hypr/scripts/screenshot_full.sh"
