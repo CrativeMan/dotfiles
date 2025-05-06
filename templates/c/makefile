@@ -1,31 +1,30 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -pedantic -std=c99
+CC := gcc
+CFLAGS = -Wall -Wextra -pedantic
 LDFLAGS =
-SRCDIR = src
-OBJDIR = obj
-TARGETDIR = bin
-SRCS = $(wildcard $(SRCDIR)/*.c)
-OBJS = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
-TARGETMAIN = $(TARGETDIR)/main
 
-all: $(TARGETMAIN)
+SRC_DIR := src
+OBJ_DIR := obj
+BIN_DIR := bin
+TARGET := $(BIN_DIR)/main
 
-$(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+SRCS := $(shell find $(SRC_DIR) -name '*.c')
 
-$(TARGETDIR):
-	mkdir -p $(TARGETDIR)
+OBJS := $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRCS))
 
-$(OBJDIR):
-	mkdir -p $(OBJDIR)
+all: $(TARGET)
 
-$(TARGETMAIN): $(OBJS) | $(TARGETDIR)
+$(TARGET): $(OBJS)
+	@mkdir -p $(BIN_DIR)
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
-	rm -f $(OBJS) $(TARGET)
-	rm -rf $(OBJDIR)
-	rm -rf $(TARGETDIR)
+	rm -rf $(OBJ_DIR) $(BIN_DIR)
 
 run:
-	./bin/main
+	./$(TARGET)
+
+.PHONY: all clean run
