@@ -15,6 +15,7 @@
           format = "*.·:·.✧ ✦  crative@nixos  ✧.·:·.*";
           outputColor = "34";
         }
+        "break"
         {
           type = "os";
           key = "󱄅 ";
