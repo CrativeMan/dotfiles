@@ -17,6 +17,7 @@
       "catppuccin-icons"
       "rose-pine-theme"
       "scss"
+      "golangci-lint"
     ];
     extraPackages = with pkgs; [
       nil
@@ -83,6 +84,19 @@
         nil = {
           initialization_options = {
             formatting.command = ["alejandra" "--quiet" "--"];
+          };
+        };
+        gopls = {
+          initialization_options = {
+            hints = {
+              assignVariableTypes = true;
+              compositeLiteralFields = true;
+              compositeLiteralTypes = true;
+              constantValues = true;
+              functionTypeParameters = true;
+              parameterNames = true;
+              rangeVariableTypes = true;
+            };
           };
         };
       };

@@ -17,6 +17,7 @@
             pkgs.go_1_24
             pkgs.gotools
             pkgs.golangci-lint
+            pkgs.gopls
           ];
         };
       };

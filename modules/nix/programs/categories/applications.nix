@@ -53,6 +53,7 @@
     ladybird
     siyuan
     inputs.zen-browser.packages."${pkgs.system}".default
+    obs-studio
 
     #sonst
     junction
