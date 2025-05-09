@@ -8,4 +8,9 @@
     path = ./c;
     description = "A flake for C development";
   };
+
+  golang = {
+    path = ./golang;
+    description = "A flake for golang development";
+  };
 }
