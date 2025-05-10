@@ -15,6 +15,6 @@
 
   wallpaper = {
     enable = true;
-    path = "${vars.self}/assets/wallpapers/a_pixel_art_of_a_person_walking_by_a_building.jpg";
+    path = "${vars.self}/assets/wallpapers/nix-wallpaper-binary-black.png";
   };
 }
