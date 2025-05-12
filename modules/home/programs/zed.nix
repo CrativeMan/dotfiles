@@ -26,6 +26,8 @@
     userSettings.auto_install_extensions = true;
 
     userSettings = {
+      vim_mode = true;
+
       tab_size = 4;
       hard_tabs = true;
       autosave = "off";
