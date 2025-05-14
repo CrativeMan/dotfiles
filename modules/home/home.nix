@@ -15,6 +15,6 @@
 
   wallpaper = {
     enable = true;
-    path = "${vars.self}/assets/wallpapers/nix-wallpaper-binary-black.png";
+    path = "${vars.self}/assets/wallpapers/wallhaven-yx6e9l_1920x1080.png";
   };
 }
