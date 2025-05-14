@@ -46,7 +46,7 @@
       formatter = "language_server";
 
       # Styling
-      theme = "Barbie";
+      theme = "Ayu Dark";
       icon_theme = {
         mode = "system";
         dark = "Catppuccin Frappé";
