@@ -29,6 +29,7 @@
     unstable.aseprite
     gnome-obfuscate
     unstable.sly
+    audacity
     rnote
 
     # communication
