@@ -26,13 +26,13 @@
         terminal = true;
         categories = ["Development" "X-Custom"];
       };
-      "planify-quick-add" = {
-        name = "Add Todo";
-        genericName = "Planify Quick Add";
-        exec = "io.github.alainm23.planify.quick-add";
-        icon = "${vars.self}/assets/icons/todoist.svg";
-        terminal = false;
-      };
+      # "planify-quick-add" = {
+      #   name = "Add Todo";
+      #   genericName = "Planify Quick Add";
+      #   exec = "io.github.alainm23.planify.quick-add";
+      #   icon = "${vars.self}/assets/icons/todoist.svg";
+      #   terminal = false;
+      # };
     };
   };
 }

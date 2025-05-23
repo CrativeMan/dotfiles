@@ -48,7 +48,7 @@
     libreoffice
     texlive.combined.scheme-full
     zotero
-    planify
+    # planify
     setzer
     geogebra6
     ladybird
