@@ -48,7 +48,8 @@
     libreoffice
     texlive.combined.scheme-full
     zotero
-    # planify
+    tor-browser
+    # planify broken in unstable
     setzer
     geogebra6
     ladybird
