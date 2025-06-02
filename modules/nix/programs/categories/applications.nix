@@ -18,6 +18,7 @@
     github-desktop
     jetbrains-toolbox
     android-studio
+    scrcpy
 
     # art
     inkscape
