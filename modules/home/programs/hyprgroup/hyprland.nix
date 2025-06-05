@@ -114,6 +114,10 @@
         ",preferred,auto,1"
       ];
 
+      windowrule = [
+        "float,title:engine"
+      ];
+
       input = {
         kb_layout = "de";
         touchpad = {
