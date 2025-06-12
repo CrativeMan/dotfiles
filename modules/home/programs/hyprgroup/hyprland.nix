@@ -44,7 +44,7 @@
         "$mod, B, exec, zen"
         "$mod, C, killactive,"
         "$mod, M, exit,"
-        "$mod, D, exec, rofi -show drun"
+        "$mod, D, exec, pgrep wofi >/dev/null 2>&1 && killall wofi || ${pkgs.wofi}/bin/wofi --show drun --location=top -y 15"
         "$mod, V, togglefloating,"
         "$mod, F, fullscreen,"
         "$mod, Ö, exec, ${pkgs.hyprlock}/bin/hyprlock"
@@ -126,11 +126,11 @@
       };
 
       general = {
-        gaps_in = 2;
-        gaps_out = 2;
-        border_size = 3;
-        "col.active_border" = "rgba(fab38766)";
-        "col.inactive_border" = "rgba(282828aa)";
+        gaps_in = 8;
+        gaps_out = 8;
+        border_size = 1;
+        "col.active_border" = "0xd8cab8ff";
+        "col.inactive_border" = "0xac82e9ff";
       };
 
       decoration = {

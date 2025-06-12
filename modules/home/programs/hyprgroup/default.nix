@@ -11,5 +11,6 @@
     #./thunar.nix
     ./dolphin.nix
     ./scripts.nix
+    ./wofi.nix
   ];
 }
