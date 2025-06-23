@@ -26,7 +26,6 @@
     # STUPID FIXES
     zed = "zeditor";
     rrip = "sudo docker run --rm -v $PWD:/app/ -u $(id -u):$(id -g) ghcr.io/mahesh-hegde/rrip:latest";
-    ga = "echo 'uh uh uhh'";
   };
 in {
   programs.zsh = {
