@@ -16,7 +16,6 @@
     # coding
     unstable.vscode
     github-desktop
-    jetbrains.idea-ultimate
     scrcpy
 
     # art
