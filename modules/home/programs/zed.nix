@@ -5,18 +5,14 @@
 }: {
   programs.zed-editor = {
     enable = true;
-    package = pkgs.zed-editor;
 
     extensions = [
-      "csv"
-      "env"
-      "make"
       "nix"
       "git-firefly"
       "log"
       "catppuccin-icons"
       "golangci-lint"
-      "go-snippets"
+      "java"
     ];
 
     extraPackages = with pkgs; [
@@ -24,9 +20,8 @@
       alejandra
     ];
 
-    userSettings.auto_install_extensions = true;
-
     userSettings = {
+      auto_install_extensions = true;
       vim_mode = true;
 
       tab_size = 4;
@@ -86,7 +81,11 @@
         };
         nil = {
           initialization_options = {
-            formatting.command = ["alejandra" "--quiet" "--"];
+            formatting.command = [
+              "alejandra"
+              "--quiet"
+              "--"
+            ];
           };
         };
         gopls = {
