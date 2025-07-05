@@ -18,7 +18,7 @@
 
     settings = {
       mainBar = {
-        output = ["DP-1"];
+        output = ["DP-1" "eDP-1"];
         layer = "bottom";
         spacing = 0;
         height = 0;
