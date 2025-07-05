@@ -13,6 +13,7 @@
       "catppuccin-icons"
       "golangci-lint"
       "java"
+      "kotlin"
     ];
 
     extraPackages = with pkgs; [
@@ -51,6 +52,7 @@
       # Panels
       project_panel = {
         dock = "right";
+        auto_fold_dirs = false;
       };
       outline_panel = {
         dock = "left";

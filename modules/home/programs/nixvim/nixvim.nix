@@ -1,7 +1,5 @@
-{ inputs, ... }:
-
-{
-  imports = [ inputs.nixvim.homeManagerModules.nixvim ./keymaps.nix ./plugins.nix ];
+{inputs, ...}: {
+  imports = [inputs.nixvim.homeManagerModules.nixvim ./keymaps.nix ./plugins.nix];
 
   programs.nixvim = {
     enable = false;

@@ -18,6 +18,7 @@
 
     settings = {
       mainBar = {
+        output = ["DP-1"];
         layer = "bottom";
         spacing = 0;
         height = 0;
