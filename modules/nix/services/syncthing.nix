@@ -32,10 +32,10 @@
       devices = lib.attrNames devices;
       path = "/home/crative/Documents/Personal Obsidian";
     };
-    Keepass = {
-      id = "keepass";
+    Notes = {
+      id = "notes";
       devices = lib.attrNames devices;
-      path = "/home/crative/Documents/keepass";
+      path = "/home/crative/Documents/Notes";
     };
     JugendRotKreuz = {
       id = "jrk";
