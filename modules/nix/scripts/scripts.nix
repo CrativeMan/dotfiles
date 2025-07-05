@@ -1,13 +1,4 @@
 {pkgs, ...}: let
-  test = pkgs.writeShellApplication {
-    name = "asd-test";
-    runtimeInputs = [pkgs.hyprland];
-    text = ''
-      hyprctl activeworkspace
-      echo "Hello, World!"
-    '';
-  };
-
   proj = pkgs.writeShellApplication {
     name = "proj";
     runtimeInputs = [pkgs.gum pkgs.jq];
@@ -57,7 +48,6 @@
   };
 in {
   environment.systemPackages = [
-    test
     proj
   ];
 }

@@ -13,4 +13,9 @@
     path = ./golang;
     description = "A flake for golang development";
   };
+
+  java = {
+    path = ./java;
+    description = "A flake for java development";
+  };
 }

@@ -101,6 +101,10 @@
             };
           };
         };
+
+        jdtls = {
+          initialization_options = {};
+        };
       };
 
       languages = {
