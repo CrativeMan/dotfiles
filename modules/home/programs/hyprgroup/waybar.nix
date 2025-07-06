@@ -77,9 +77,9 @@
           format = "{icon} {volume}%";
           format-bluetooth = "{icon} {volume}%";
           format-icons = [
-            ""
-            ""
-            ""
+            " "
+            " "
+            " "
           ];
           nospacing = 1;
           format-muted = "婢";
@@ -209,12 +209,10 @@
       }
 
       #battery {
-        background-color: #222222;
-        color: #1d2021;
+        color: #d8cab8;
       }
       #battery.warning,
-      #battery.critical,
-      #battery.urgent {
+      #battery.critical {
         color: #1d2021;
         background-color: #fc4649;
       }
