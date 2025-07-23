@@ -2,8 +2,7 @@
   pkgs,
   inputs,
   ...
-}:
-{
+}: {
   nixpkgs.overlays = [
     (final: prev: {
       unstable = import inputs.nixpkgs-unstable {
@@ -23,8 +22,8 @@
     inkscape
     libresprite
     blender
-    darktable
-    gimp
+    # darktable broken in unstable
+    # gimp Not working in unstable
     video-trimmer
     unstable.aseprite
     gnome-obfuscate
@@ -52,7 +51,7 @@
     # planify broken in unstable
     setzer
     geogebra6
-    ladybird
+    # ladybird broken in unstable
     siyuan
     inputs.zen-browser.packages."${pkgs.system}".default
     obs-studio
