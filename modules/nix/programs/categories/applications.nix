@@ -67,6 +67,5 @@
     gnome-frog
     spotify
     warp
-    vlc
   ];
 }
