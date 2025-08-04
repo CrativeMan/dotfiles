@@ -3,7 +3,7 @@
     enable = true;
 
     settings = {
-      color_theme = "${vars.flakeDir}/assets/themes/btop_theme.theme";
+      color_theme = "${vars.dir.flake}/assets/themes/btop_theme.theme";
       theme_background = true;
       truecolor = true;
       force_tty = false;

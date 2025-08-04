@@ -1,4 +1,4 @@
-{vars, ...}: {
+{...}: {
   imports = [
     ./programs/default.nix
     ./config/default.nix
@@ -15,6 +15,5 @@
 
   wallpaper = {
     enable = true;
-    path = "${vars.self}/assets/wallpapers/2CB.png";
   };
 }

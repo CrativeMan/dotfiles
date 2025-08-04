@@ -4,7 +4,7 @@
     settings = {
       logo = {
         type = "kitty";
-        source = "${vars.flakeDir}/assets/icons/logo.jpg";
+        source = "${vars.dir.flake}/assets/icons/logo.jpg";
         padding.top = 1;
         width = 30;
       };

@@ -1,5 +1,6 @@
 {
   lib,
+  vars,
   config,
   ...
 }: {
@@ -9,10 +10,6 @@
       default = true;
       description = "Enable wallpaper";
     };
-    wallpaper.path = lib.mkOption {
-      type = lib.types.path;
-      description = "Path to the wallpaper image";
-    };
   };
 
   config = lib.mkIf config.wallpaper.enable {
@@ -20,8 +17,8 @@
       "org/gnome/desktop/background" = {
         color-shading-type = "solid";
         picture-options = "zoom";
-        picture-uri = "file://${config.wallpaper.path}";
-        picture-uri-dark = "file://${config.wallpaper.path}";
+        picture-uri = "file://${vars.wallpaper.path}";
+        picture-uri-dark = "file://${vars.wallpaper.path}";
       };
     };
   };

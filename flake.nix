@@ -4,27 +4,15 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    nixpkgs-unstable.url = "github:/nixos/nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:nixos/nixos-hardware";
+    gogo.url = "github:CrativeMan/gogoproj";
+    clh.url = "github:CrativeMan/clh";
+    kmark.url = "github:CrativeMan/kmark?rev=df762582b1cf78c2a04804e324d636b256e071e6";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nixpkgs-unstable.url = "github:/nixos/nixpkgs/nixos-unstable";
-
-    nixos-hardware = {
-      url = "github:nixos/nixos-hardware";
-    };
-
-    gogo = {
-      url = "github:CrativeMan/gogoproj";
-    };
-
-    clh = {
-      url = "github:CrativeMan/clh";
-    };
-
-    kmark = {
-      url = "github:CrativeMan/kmark?rev=df762582b1cf78c2a04804e324d636b256e071e6";
     };
 
     nix-index-database = {
@@ -59,14 +47,7 @@
     lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
-    vars = {
-      user = "crative";
-      gitUser = "CrativeMan";
-      email = "hannig.sebi@gmail.com";
-      editor = "nvim";
-      flakeDir = "/home/${vars.user}/.dotfiles";
-      self = self;
-    };
+    vars = import ./vars.nix {inherit self;};
   in {
     templates = import ./templates;
     nixosConfigurations = {

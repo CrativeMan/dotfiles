@@ -1,4 +1,4 @@
-{config, ...}: {
+{vars, ...}: {
   services.hyprpaper = {
     enable = true;
     settings = {
@@ -6,14 +6,13 @@
       splash = false;
 
       preload = [
-        config.wallpaper.path
-        config.wallpaper.path
+        vars.wallpaper.path
       ];
 
       wallpaper = [
-        "DP-1,${config.wallpaper.path}"
-        "HDMI-A-1,${config.wallpaper.path}"
-        ",${config.wallpaper.path}"
+        "DP-1,${vars.wallpaper.path}"
+        "HDMI-A-1,${vars.wallpaper.path}"
+        ",${vars.wallpaper.path}"
       ];
     };
   };
