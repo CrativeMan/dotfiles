@@ -11,8 +11,6 @@
       };
     })
   ];
-  #linuxKernel.packages.linux_zen.veikk-linux-driver
-
   environment.systemPackages = with pkgs; [
     nixpkgs-fmt
     man-pages

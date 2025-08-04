@@ -53,7 +53,6 @@
     geogebra6
     # ladybird broken in unstable
     siyuan
-    inputs.zen-browser.packages."${pkgs.system}".default
     obs-studio
 
     #sonst

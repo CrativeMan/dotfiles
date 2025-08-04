@@ -41,7 +41,6 @@
 
       bind = [
         "$mod, Q, exec, ${pkgs.ghostty}/bin/ghostty"
-        "$mod, B, exec, zen"
         "$mod, C, killactive,"
         "$mod, M, exit,"
         "$mod, D, exec, pgrep wofi >/dev/null 2>&1 && killall wofi || ${pkgs.wofi}/bin/wofi --show drun --location=top -y 15"
