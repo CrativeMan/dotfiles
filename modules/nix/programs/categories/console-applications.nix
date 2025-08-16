@@ -16,7 +16,6 @@
     pipes
     cbonsai
     yazi
-    cloc
     unstable.gradle
     clipboard-jh
     unstable.klog-time-tracker
@@ -25,6 +24,7 @@
     imagemagick
     home-manager
     display3d
+    tokei
     inputs.gogo.packages.x86_64-linux.default
     inputs.clh.packages.x86_64-linux.default
     inputs.kmark.packages.x86_64-linux.default

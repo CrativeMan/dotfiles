@@ -54,6 +54,7 @@
     # ladybird broken in unstable
     siyuan
     obs-studio
+    anki
 
     #sonst
     junction

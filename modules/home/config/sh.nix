@@ -25,6 +25,7 @@
     make = "time make";
     # STUPID FIXES
     zed = "zeditor";
+    cloc = "tokei";
     rrip = "sudo docker run --rm -v $PWD:/app/ -u $(id -u):$(id -g) ghcr.io/mahesh-hegde/rrip:latest";
   };
 in {
