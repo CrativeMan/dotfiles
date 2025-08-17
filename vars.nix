@@ -10,7 +10,7 @@ in {
     flake = "/home/${user}/.dotfiles";
   };
   wallpaper = {
-    path = "/home/${user}/.dotfiles/assets/wallpapers/firewatch_bg.jpg";
+    path = "/home/${user}/.dotfiles/assets/wallpapers/wallpaperflarecom_wallpaper(1).jpg";
   };
   self = self;
 }
