@@ -17,6 +17,7 @@
     unstable.vscode
     github-desktop
     scrcpy
+    jetbrains.idea-community
 
     # art
     inkscape
