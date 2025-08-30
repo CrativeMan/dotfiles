@@ -16,6 +16,7 @@
     pipes
     cbonsai
     yazi
+    vitetris
     unstable.gradle
     clipboard-jh
     unstable.klog-time-tracker
