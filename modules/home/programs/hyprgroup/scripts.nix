@@ -3,8 +3,66 @@
   vars,
   ...
 }: {
-  # ============================================================================================
-  # Screenshots
+  #─────────────────────────────────────────────────────────────────────────
+  # Workspaces Management
+  home.file."/home/${vars.user}/.config/waybar/scripts/workspace-1.sh" = {
+    executable = true;
+    text = ''
+      #!/usr/bin/env bash
+
+      active=$(hyprctl activeworkspace -j | jq '.id')
+
+      if [ "$active" -eq 1 ]; then
+        echo "[<span foreground='#ac82e9'>●</span>]"
+      else
+        echo "[А]"
+      fi
+    '';
+  };
+  home.file."/home/${vars.user}/.config/waybar/scripts/workspace-2.sh" = {
+    executable = true;
+    text = ''
+      #!/usr/bin/env bash
+
+      active=$(hyprctl activeworkspace -j | jq '.id')
+
+      if [ "$active" -eq 2 ]; then
+        echo "[<span foreground='#ac82e9'>●</span>]"
+      else
+        echo "[B]"
+      fi
+    '';
+  };
+  home.file."/home/${vars.user}/.config/waybar/scripts/workspace-3.sh" = {
+    executable = true;
+    text = ''
+      #!/usr/bin/env bash
+
+      active=$(hyprctl activeworkspace -j | jq '.id')
+
+      if [ "$active" -eq 3 ]; then
+        echo "[<span foreground='#ac82e9'>●</span>]"
+      else
+        echo "[C]"
+      fi
+    '';
+  };
+  home.file."/home/${vars.user}/.config/waybar/scripts/workspace-4.sh" = {
+    executable = true;
+    text = ''
+      #!/usr/bin/env bash
+
+      active=$(hyprctl activeworkspace -j | jq '.id')
+
+      if [ "$active" -eq 4 ]; then
+        echo "[<span foreground='#ac82e9'>●</span>]"
+      else
+        echo "[D]"
+      fi
+    '';
+  };
+  #─────────────────────────────────────────────────────────────────────────
+  #Screenshots
   home.file."/home/${vars.user}/.config/hypr/scripts/screenshot_full.sh" = {
     executable = true;
     text = ''
@@ -37,8 +95,8 @@
     '';
   };
 
-  # ============================================================================================
-  # Shutdown
+  #─────────────────────────────────────────────────────────────────────────
+  #Power
   home.file."/home/${vars.user}/.config/waybar/scripts/shutdown_prompt.sh" = {
     executable = true;
     text = ''
@@ -51,68 +109,6 @@
       fi
     '';
   };
-
-  # ============================================================================================
-  # Waybar
-  # home.file."/home/${vars.user}/.config/waybar/scripts/workspaces_left.sh" = {
-  #   executable = true;
-  #   text = ''
-  #     #!/usr/bin/env bash
-
-  #     workspaces=$(hyprctl workspaces -j)
-  #     active_id=$(hyprctl activeworkspace -j | jq -r ".id")
-  #     output=""
-
-  #     for id in 1 2; do
-  #       ws=$(echo "$workspaces" | jq ".[] | select(.id == $id)")
-
-  #       if [ -n "$ws" ]; then
-  #         name=$(echo "$ws" | jq -r '.name')
-  #         id=$(echo "$ws" | jq -r '.id')
-
-  #         if [ "$id" == "$active_id" ]; then
-  #           color="#89b4fa"
-  #         else
-  #           color="#cdd6f4"
-  #         fi
-
-  #         output+="<span color='$color'>[$name]</span> "
-  #       fi
-  #     done
-
-  #     echo "{\"text\":\"''${output% }\"}"
-  #   '';
-  # };
-
-  # home.file."/home/${vars.user}/.config/waybar/scripts/workspaces_right.sh" = {
-  #   executable = true;
-  #   text = ''
-  #     #!/usr/bin/env bash
-
-  #     workspaces=$(hyprctl workspaces -j)
-  #     active_id=$(hyprctl activeworkspace -j | jq -r ".id")
-  #     output=""
-
-  #     for id in 3 4; do
-  #       ws=$(echo "$workspaces" | jq ".[] | select(.id == $id)")
-
-  #       if [ -n "$ws" ]; then
-  #         name=$(echo "$ws" | jq -r '.name')
-  #         id=$(echo "$ws" | jq -r '.id')
-
-  #         if [ "$id" == "$active_id" ]; then
-  #           color="#89b4fa"
-  #         else
-  #           color="#cdd6f4"
-  #         fi
-
-  #         output+="<span color='$color'>[$name]</span> "
-  #       fi
-  #     done
-
-  #     echo "{\"text\":\"''${output% }\"}"
-  #   '';
-  # };
 
   home.file."/home/${vars.user}/.config/waybar/scripts/powermode.sh" = {
     executable = true;
