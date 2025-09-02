@@ -19,9 +19,7 @@
 
   environment.systemPackages = with pkgs; [
     joycond
-    jdk21_headless
     corretto21
-    jdk8_headless
     python3
     libaacs
     libbluray

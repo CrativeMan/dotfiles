@@ -10,7 +10,7 @@
   home.packages = with pkgs; [
     libnotify
     swww
-    nwg-displays
+    # nwg-displays broken in unstable
     wlr-randr
     grim
     slurp

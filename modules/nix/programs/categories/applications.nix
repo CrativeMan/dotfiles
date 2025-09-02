@@ -50,7 +50,7 @@
     texlive.combined.scheme-full
     zotero
     tor-browser
-    # planify broken in unstable
+    planify
     setzer
     geogebra6
     # ladybird broken in unstable
