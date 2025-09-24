@@ -9,7 +9,7 @@
     nixr = "cd ~/.dotfiles && ga . && sudo nixos-rebuild switch --flake ~/.dotfiles/";
     homer = "cd ~/.dotfiles && ga . && home-manager switch --flake ~/.dotfiles/";
     nixup = "cd ~/.dotfiles && sudo nix flake update";
-    # nixgc = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
+    nixgc-old = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && nix-collect-garbage && nix-collect-garbage -d";
     nixgc = "nh clean all";
     # misc
     blahaj = "${pkgs.display3d}/bin/display3d ${vars.dir.flake}/assets/blahaj/blahaj.obj";
@@ -35,9 +35,6 @@ in {
     enableCompletion = true;
     history.size = 20000;
 
-    #initContent = ''
-    #  hyfetch
-    #'';
 
     envExtra = ''
       global_search() {
@@ -50,7 +47,7 @@ in {
     oh-my-zsh = {
       enable = true;
       plugins = ["git"];
-      theme = "awesomepanda";
+      # theme = "awesomepanda";
     };
     shellAliases = myAliases;
   };

@@ -11,6 +11,7 @@
         fore_back = null;
       };
       backend = "neofetch";
+      pride_month_disable = false;
     };
   };
 }
