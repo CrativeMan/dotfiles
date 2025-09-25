@@ -6,5 +6,6 @@
     ./console-applications.nix
     ./other.nix
     ./games.nix
+    ./pentesting.nix
   ];
 }
