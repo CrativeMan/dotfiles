@@ -25,7 +25,7 @@
     libresprite
     blender
     # darktable broken in unstable
-    # gimp Not working in unstable
+    gimp
     video-trimmer
     unstable.aseprite
     gnome-obfuscate
