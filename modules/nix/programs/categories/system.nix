@@ -36,5 +36,6 @@
     xclip
     nil
     tlp
+    nodejs
   ];
 }

@@ -27,7 +27,7 @@
     # darktable broken in unstable
     gimp
     video-trimmer
-    unstable.aseprite
+    # aseprite broken in unstable
     gnome-obfuscate
     unstable.sly
     audacity
@@ -36,7 +36,7 @@
     # communication
     signal-desktop-bin
     discord
-    # vesktop
+    vesktop
     whatsapp-for-linux
     teams-for-linux
     thunderbird
@@ -62,10 +62,10 @@
     keepassxc
     pika-backup
     newsflash
-    gradience
+    # gradience archived upstream
     parabolic
     eyedropper
-    gnome-frog
+    # gnome-frog broken in unstable
     spotify
     warp
   ];
