@@ -37,7 +37,7 @@
     signal-desktop-bin
     discord
     vesktop
-    whatsapp-for-linux
+    wasistlos
     teams-for-linux
     thunderbird
     telegram-desktop
