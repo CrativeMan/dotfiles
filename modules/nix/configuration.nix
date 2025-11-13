@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./programs/default.nix
     ./services/default.nix
@@ -31,13 +32,13 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-gtk];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   security.polkit.enable = true;
 
   # ZSH activation
-  environment.shells = with pkgs; [zsh];
+  environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh = {
     enable = true;
@@ -49,6 +50,7 @@
   nixpkgs.config.permittedInsecurePackages = [
     "nix-2.15.3"
     "python-2.7.18.7"
+    "gradle-7.6.6"
     "openssl-1.1.1w"
   ];
 
@@ -133,7 +135,10 @@
   users.users.crative = {
     isNormalUser = true;
     description = "crative";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
   };
 
   nix = {

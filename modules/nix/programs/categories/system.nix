@@ -2,7 +2,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   nixpkgs.overlays = [
     (final: prev: {
       unstable = import inputs.nixpkgs-unstable {
@@ -37,5 +38,6 @@
     nil
     tlp
     nodejs
+    openrgb
   ];
 }

@@ -2,7 +2,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   nixpkgs.overlays = [
     (final: prev: {
       unstable = import inputs.nixpkgs-unstable {
@@ -19,6 +20,6 @@
     prismlauncher
     gnome-2048
     raylib-games
-    modrinth-app
+    # modrinth-app broken on unstable
   ];
 }

@@ -2,7 +2,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   programs.zed-editor = {
     enable = true;
 
@@ -38,8 +39,6 @@
         enabled = true;
         coloring = "indent_aware";
       };
-
-      formatter = "language_server";
 
       # Styling
       theme = "Ayu Dark";
@@ -105,7 +104,7 @@
         };
 
         jdtls = {
-          initialization_options = {};
+          initialization_options = { };
         };
       };
 
@@ -115,9 +114,6 @@
         };
         JSON = {
           formatter = "prettier";
-        };
-        TOML = {
-          formatter = "taplo";
         };
       };
     };

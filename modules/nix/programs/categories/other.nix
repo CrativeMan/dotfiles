@@ -2,7 +2,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   nixpkgs.overlays = [
     (final: prev: {
       unstable = import inputs.nixpkgs-unstable {
@@ -14,7 +15,7 @@
 
   programs.java = {
     enable = true;
-    package = pkgs.temurin-bin-23;
+    package = pkgs.temurin-bin;
   };
 
   environment.systemPackages = with pkgs; [

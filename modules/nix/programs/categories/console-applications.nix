@@ -2,7 +2,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   nixpkgs.overlays = [
     (final: prev: {
       unstable = import inputs.nixpkgs-unstable {
@@ -17,7 +18,7 @@
     cbonsai
     yazi
     vitetris
-    unstable.gradle
+    gradle_9
     clipboard-jh
     unstable.klog-time-tracker
     vim
