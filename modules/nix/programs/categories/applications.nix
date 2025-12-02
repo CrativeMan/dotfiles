@@ -1,20 +1,7 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
-  nixpkgs.overlays = [
-    (final: prev: {
-      unstable = import inputs.nixpkgs-unstable {
-        system = "x86_64-linux";
-        config.allowUnfree = true;
-      };
-    })
-  ];
-
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     # coding
-    unstable.vscode
+    vscode
     github-desktop
     scrcpy
     jetbrains.idea-community
@@ -24,12 +11,12 @@
     inkscape
     libresprite
     blender
-    # darktable broken in unstable
+    darktable
     gimp
     video-trimmer
-    # aseprite broken in unstable
+    aseprite
     gnome-obfuscate
-    unstable.sly
+    sly
     audacity
     rnote
 
@@ -53,7 +40,7 @@
     planify
     setzer
     geogebra6
-    # ladybird broken in unstable
+    ladybird
     obs-studio
     anki
 
@@ -62,10 +49,9 @@
     keepassxc
     pika-backup
     newsflash
-    # gradience archived upstream
     parabolic
     eyedropper
-    # gnome-frog broken in unstable
+    gnome-frog
     spotify
     warp
   ];

@@ -2,17 +2,7 @@
   pkgs,
   inputs,
   ...
-}:
-{
-  nixpkgs.overlays = [
-    (final: prev: {
-      unstable = import inputs.nixpkgs-unstable {
-        system = "x86_64-linux";
-        config.allowUnfree = true;
-      };
-    })
-  ];
-
+}: {
   environment.systemPackages = with pkgs; [
     pipes
     cbonsai
@@ -20,7 +10,7 @@
     vitetris
     gradle_9
     clipboard-jh
-    unstable.klog-time-tracker
+    klog-time-tracker
     vim
     bc
     imagemagick

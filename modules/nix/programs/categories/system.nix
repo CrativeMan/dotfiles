@@ -1,17 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}:
-{
-  nixpkgs.overlays = [
-    (final: prev: {
-      unstable = import inputs.nixpkgs-unstable {
-        system = "x86_64-linux";
-        config.allowUnfree = true;
-      };
-    })
-  ];
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     nixpkgs-fmt
     man-pages

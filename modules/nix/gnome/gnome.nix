@@ -16,6 +16,6 @@
     gnome-tweaks
     gnome-software
     adw-gtk3
-    unstable.resources
+    resources
   ];
 }

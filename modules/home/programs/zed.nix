@@ -1,9 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}:
-{
+{pkgs, ...}: {
   programs.zed-editor = {
     enable = true;
 
@@ -15,25 +10,45 @@
       "golangci-lint"
       "java"
       "kotlin"
+      "toml"
+      "csv"
+      "env"
+      "go-snippets"
+      "make"
     ];
 
     extraPackages = with pkgs; [
       nil
       alejandra
+      taplo # TOML formatter
     ];
 
     userSettings = {
-      auto_install_extensions = true;
-      vim_mode = true;
+      auto_install_extensions = {
+        catppuccin-icons = true;
+        csv = true;
+        env = true;
+        git-firefly = true;
+        go-snippets = true;
+        golangci-lint = true;
+        log = true;
+        make = true;
+        nix = true;
+        java = true;
+        kotlin = true;
+        toml = true;
+      };
 
+      vim_mode = true;
       tab_size = 4;
       hard_tabs = true;
       autosave = "off";
       confirm_quit = true;
       relative_line_numbers = false;
       load_direnv = "shell_hook";
-      ui_font_size = lib.mkForce 15;
-      font_size = lib.mkForce 14;
+      ui_font_size = 15;
+      buffer_font_size = 14;
+      formatter = "language_server";
 
       indent_guides = {
         enabled = true;
@@ -62,9 +77,6 @@
       notification_panel = {
         dock = "left";
       };
-      chat_panel = {
-        dock = "left";
-      };
 
       terminal = {
         copy_on_select = false;
@@ -75,18 +87,15 @@
       };
 
       lsp = {
-        nix = {
-          binary = {
-            path_lookup = true;
-          };
-        };
         nil = {
           initialization_options = {
-            formatting.command = [
-              "alejandra"
-              "--quiet"
-              "--"
-            ];
+            formatting = {
+              command = [
+                "alejandra"
+                "--quiet"
+                "--"
+              ];
+            };
           };
         };
         gopls = {
@@ -102,9 +111,8 @@
             };
           };
         };
-
         jdtls = {
-          initialization_options = { };
+          initialization_options = {};
         };
       };
 
