@@ -2,9 +2,9 @@
   imports = [inputs.nixvim.homeManagerModules.nixvim ./keymaps.nix ./plugins.nix];
 
   programs.nixvim = {
-    enable = false;
-    defaultEditor = false;
-    enableMan = true;
+    enable = true;
+    defaultEditor = true;
+    enableMan = false;
     viAlias = true;
     vimAlias = true;
 

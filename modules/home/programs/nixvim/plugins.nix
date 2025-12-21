@@ -1,8 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.nixvim = {
     plugins = {
       lualine.enable = true;
@@ -117,7 +113,6 @@
         enable = true;
         grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
           bash
-          json
           lua
           make
           markdown

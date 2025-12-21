@@ -120,9 +120,6 @@
         Markdown = {
           formatter = "prettier";
         };
-        JSON = {
-          formatter = "prettier";
-        };
       };
     };
   };
