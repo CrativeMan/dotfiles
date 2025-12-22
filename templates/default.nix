@@ -18,4 +18,9 @@
     path = ./java;
     description = "A flake for java development";
   };
+
+  rust-bevy = {
+    path = ./rust-bevy;
+    description = "A flake using Oxalica's rust-overlay wrapped with bevy-flake and sccache.";
+  };
 }
