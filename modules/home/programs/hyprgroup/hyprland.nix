@@ -85,6 +85,11 @@
         "$mod SHIFT, 8, movetoworkspace, 8"
         "$mod SHIFT, 9, movetoworkspace, 9"
         "$mod SHIFT, 0, movetoworkspace, 10"
+
+        "$mod SHIFT, right, resizeactive, 10 0"
+        "$mod SHIFT, left, resizeactive, -10 0"
+        "$mod SHIFT, up, resizeactive, 0 -10"
+        "$mod SHIFT, down, resizeactive, 0 10"
       ];
 
       bindm = [
@@ -124,8 +129,8 @@
       };
 
       general = {
-        gaps_in = 8;
-        gaps_out = 8;
+        gaps_in = 5;
+        gaps_out = 5;
         border_size = 1;
         "col.active_border" = "0xd8cab8ff";
         "col.inactive_border" = "0xac82e9ff";
@@ -135,7 +140,7 @@
         rounding = 0;
         rounding_power = 2;
 
-        active_opacity = 0.9;
+        active_opacity = 1;
         inactive_opacity = 0.8;
       };
 
