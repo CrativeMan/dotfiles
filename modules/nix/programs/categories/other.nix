@@ -5,7 +5,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    joycond
     corretto21
     python3
     libaacs

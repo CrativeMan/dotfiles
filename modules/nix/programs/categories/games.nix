@@ -5,7 +5,6 @@
     heroic
     prismlauncher
     gnome-2048
-    raylib-games
     # modrinth-app broken in unstable
   ];
 }

@@ -10,7 +10,6 @@
     vitetris
     gradle_9
     clipboard-jh
-    klog-time-tracker
     vim
     bc
     imagemagick
