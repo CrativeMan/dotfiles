@@ -24,6 +24,7 @@
     blueman
     brightnessctl
     hyprpolkitagent
+    wlogout
   ];
 
   wayland.windowManager.hyprland = {
@@ -46,7 +47,6 @@
         "$mod, D, exec, pgrep wofi >/dev/null 2>&1 && killall wofi || ${pkgs.wofi}/bin/wofi --show drun --location=top -y 15"
         "$mod, V, togglefloating,"
         "$mod, F, fullscreen,"
-        "$mod, Ö, exec, ${pkgs.hyprlock}/bin/hyprlock"
 
         # Screenshot
         "$mod, P, exec, ~/.config/hypr/scripts/screenshot_full.sh"

@@ -241,10 +241,11 @@
       #battery {
         color: #d8cab8;
       }
-      #battery.warning,
+      #battery.warning {
+      	color: #00ffff;
+      }
       #battery.critical {
-        color: #1d2021;
-        background-color: #fc4649;
+        color: #ff0000;
       }
     '';
   };
