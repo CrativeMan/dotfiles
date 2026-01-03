@@ -3,6 +3,7 @@
     # coding
     vscode
     scrcpy
+    jetbrains.idea-oss
 
     # art
     inkscape

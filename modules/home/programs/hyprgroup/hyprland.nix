@@ -140,8 +140,13 @@
         rounding = 0;
         rounding_power = 2;
 
-        active_opacity = 1;
-        inactive_opacity = 0.8;
+        active_opacity = 0.85;
+        inactive_opacity = 0.75;
+
+        blur = {
+          enabled = true;
+          size = 16;
+        };
       };
 
       animations = {

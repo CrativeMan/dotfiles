@@ -15,6 +15,7 @@
       "env"
       "go-snippets"
       "make"
+      "slint"
     ];
 
     extraPackages = with pkgs; [
@@ -37,6 +38,7 @@
         java = true;
         kotlin = true;
         toml = true;
+        slint = true;
       };
 
       vim_mode = true;
@@ -44,7 +46,7 @@
       hard_tabs = true;
       autosave = "off";
       confirm_quit = true;
-      relative_line_numbers = false;
+      relative_line_numbers = "enabled";
       load_direnv = "shell_hook";
       ui_font_size = 15;
       buffer_font_size = 14;
@@ -56,7 +58,7 @@
       };
 
       # Styling
-      theme = "Ayu Dark";
+      theme = "gruvbox-crisp-themes";
       icon_theme = {
         mode = "system";
         dark = "Catppuccin Frappé";
