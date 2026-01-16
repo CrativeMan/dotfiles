@@ -4,6 +4,8 @@
     vscode
     scrcpy
     jetbrains.idea-oss
+    godot
+    code-cursor
 
     # art
     inkscape
