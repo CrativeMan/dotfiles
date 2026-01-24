@@ -41,6 +41,7 @@
       custom-keybindings = [
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
       ];
     };
 
@@ -54,6 +55,12 @@
       binding = "<Super>q";
       command = "${pkgs.ghostty}/bin/ghostty";
       name = "Terminal";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
+      binding = "<Super><Shift>period";
+      command = "${pkgs.gnome-characters}/bin/gnome-characters";
+      name = "Characters";
     };
 
     "org/gnome/shell" = {
