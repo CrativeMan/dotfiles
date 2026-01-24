@@ -4,7 +4,6 @@
     ./steam.nix
     ./docker.nix
     ./flatpak.nix
-    ./vlc.nix
   ];
 
   programs.nautilus-open-any-terminal = {
