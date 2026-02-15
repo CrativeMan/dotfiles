@@ -16,6 +16,7 @@
       "go-snippets"
       "make"
       "slint"
+      "gruvbox-material"
     ];
 
     extraPackages = with pkgs; [
@@ -58,7 +59,7 @@
       };
 
       # Styling
-      theme = "gruvbox-crisp-themes";
+      theme = "gruvbox-material";
       icon_theme = {
         mode = "system";
         dark = "Catppuccin Frappé";

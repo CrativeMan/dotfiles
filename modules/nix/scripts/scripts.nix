@@ -46,8 +46,52 @@
       fi
     '';
   };
+
+  pixilate = pkgs.writeShellApplication {
+  	name = "pixilate";
+   	runtimeInputs = [pkgs.imagemagick];
+    text = ''
+	    set -euo pipefail
+
+	    if [ $# -lt 2 ]; then
+	        echo "Usage: $0 <image_or_folder> <scale_percent>"
+	        exit 1
+	    fi
+
+	    target="$1"
+	    scale="$2"
+
+	    process_file() {
+	        input="$1"
+
+	        filename="$(basename -- "$input")"
+	        extension="''${filename##*.}"
+	        name="''${filename%.*}"
+	        dir="$(dirname -- "$input")"
+
+	        output="''${dir}/''${name}_pixilated.''${extension}"
+
+	        echo "Processing: $input"
+	        magick "$input" -scale "''${scale}%" -scale 2000% "$output"
+	    }
+
+	    # If input is a directory → batch process
+	    if [ -d "$target" ]; then
+	        echo "Batch processing folder: $target"
+	        shopt -s nullglob nocaseglob
+	        for file in "$target"/*.{jpg,jpeg,png,webp,bmp,tiff,gif}; do
+	            process_file "$file"
+	        done
+	    else
+	        process_file "$target"
+	    fi
+
+	    echo "Done."
+    '';
+  };
 in {
   environment.systemPackages = [
     proj
+    pixilate
   ];
 }

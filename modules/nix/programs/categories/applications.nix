@@ -37,7 +37,7 @@
     anki
 
     #sonst
-    pika-backup
+    # pika-backup
     newsflash
     parabolic
     eyedropper
