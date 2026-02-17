@@ -17,12 +17,16 @@
       "make"
       "slint"
       "gruvbox-material"
+      "zig"
+      "dockerfile"
+      "sql"
     ];
 
     extraPackages = with pkgs; [
       nil
       alejandra
-      taplo # TOML formatter
+      taplo
+      nodePackages.prettier
     ];
 
     userSettings = {
@@ -40,6 +44,9 @@
         kotlin = true;
         toml = true;
         slint = true;
+        zig = true;
+        dockerfile = true;
+        sql = true;
       };
 
       vim_mode = true;
@@ -53,9 +60,26 @@
       buffer_font_size = 14;
       formatter = "language_server";
 
+      scroll_beyond_last_line = "one_page";
+      vertical_scroll_margin = 5;
+
+      git = {
+        inline_blame = {
+          enabled = true;
+          delay_ms = 600;
+        };
+      };
+
       indent_guides = {
         enabled = true;
         coloring = "indent_aware";
+      };
+
+      inlay_hints = {
+        enabled = true;
+        show_type_hints = true;
+        show_parameter_hints = true;
+        show_other_hints = true;
       };
 
       # Styling
@@ -93,14 +117,11 @@
         nil = {
           initialization_options = {
             formatting = {
-              command = [
-                "alejandra"
-                "--quiet"
-                "--"
-              ];
+              command = ["alejandra" "--quiet" "--"];
             };
           };
         };
+
         gopls = {
           initialization_options = {
             hints = {
@@ -114,14 +135,49 @@
             };
           };
         };
+
         jdtls = {
           initialization_options = {};
+        };
+
+        # Zig Language Server
+        zls = {
+          initialization_options = {
+            enable_snippets = true;
+            enable_argument_placeholders = true;
+            enable_build_on_save = true;
+            enable_autofix = true;
+            warn_style = true;
+            highlight_global_var_declarations = true;
+          };
         };
       };
 
       languages = {
         Markdown = {
           formatter = "prettier";
+          soft_wrap = "editor_width";
+        };
+        Zig = {
+          tab_size = 4;
+          hard_tabs = false; # Zig uses spaces by convention
+          formatter = "language_server";
+        };
+        Go = {
+          hard_tabs = true; # gofmt uses tabs
+          formatter = "language_server";
+        };
+        Nix = {
+          tab_size = 2;
+          hard_tabs = false;
+          formatter = "language_server";
+        };
+        TOML = {
+          formatter = "language_server";
+        };
+        JSON = {
+          tab_size = 2;
+          hard_tabs = false;
         };
       };
     };

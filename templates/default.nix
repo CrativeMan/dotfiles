@@ -23,4 +23,9 @@
     path = ./rust-bevy;
     description = "A flake using Oxalica's rust-overlay wrapped with bevy-flake and sccache.";
   };
+
+  zig = {
+    path = ./zig;
+    description = "A flake for zig development";
+  };
 }

@@ -4,7 +4,7 @@
     man-pages
     man-pages-posix
     clang-manpages
-    linux-manual
+    # linux-manual lol broken in unstable
     lxappearance
     ffmpeg
     gnupg
