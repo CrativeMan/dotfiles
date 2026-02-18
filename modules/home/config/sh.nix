@@ -35,6 +35,9 @@ in {
     enableCompletion = true;
     history.size = 20000;
 
+    localVariables = {
+      editor = "nvim";
+    };
 
     envExtra = ''
       global_search() {

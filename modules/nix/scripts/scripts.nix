@@ -60,6 +60,7 @@
 
 	    target="$1"
 	    scale="$2"
+			safe_scale="''${scale//./_}"
 
 	    process_file() {
 	        input="$1"
@@ -69,7 +70,7 @@
 	        name="''${filename%.*}"
 	        dir="$(dirname -- "$input")"
 
-	        output="''${dir}/''${name}_pixilated.''${extension}"
+	        output="''${dir}/''${name}_pixilated_''${safe_scale}x.''${extension}"
 
 	        echo "Processing: $input"
 	        magick "$input" -scale "''${scale}%" -scale 2000% "$output"
