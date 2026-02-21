@@ -4,6 +4,7 @@
     vscode
     scrcpy
     jetbrains.idea-oss
+    jetbrains.rust-rover
     godot
     code-cursor
 
