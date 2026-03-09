@@ -36,6 +36,7 @@
     geogebra6
     obs-studio
     anki
+    element-desktop
 
     #sonst
     # pika-backup
