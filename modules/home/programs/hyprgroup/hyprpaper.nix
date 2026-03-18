@@ -10,9 +10,18 @@
       ];
 
       wallpaper = [
-        "DP-1,${vars.wallpaper.path}"
-        "HDMI-A-1,${vars.wallpaper.path}"
-        ",${vars.wallpaper.path}"
+        {
+          monitor = "DP-1";
+          path = vars.wallpaper.path;
+        }
+        {
+          monitor = "HDMI-A-1";
+          path = vars.wallpaper.path;
+        }
+        {
+          monitor = "";
+          path = vars.wallpaper.path;
+        }
       ];
     };
   };

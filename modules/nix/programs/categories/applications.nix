@@ -20,7 +20,7 @@
     rnote
 
     # communication
-    signal-desktop-bin
+    signal-desktop
     discord
     vesktop
     wasistlos

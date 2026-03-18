@@ -38,6 +38,10 @@
         "systemctl --user start hyprpolkitagent"
       ];
 
+      windowrule = [
+        "match:title engine, float on"
+      ];
+
       "$mod" = "SUPER";
 
       bind = [
@@ -117,10 +121,6 @@
         ", preferred, auto, 1"
       ];
 
-      windowrule = [
-        "float,title:engine"
-      ];
-
       input = {
         kb_layout = "de";
         touchpad = {
@@ -140,8 +140,8 @@
         rounding = 0;
         rounding_power = 2;
 
-        active_opacity = 0.85;
-        inactive_opacity = 0.75;
+        active_opacity = 0.95;
+        inactive_opacity = 0.85;
 
         blur = {
           enabled = true;
