@@ -35,11 +35,9 @@ in {
     enableCompletion = true;
     history.size = 20000;
 
-    localVariables = {
-      editor = "nvim";
-    };
-
     envExtra = ''
+      export EDITOR=nvim
+
       global_search() {
           find . -type f | grep -v '.git\|node_modules' | xargs grep -Hn "$1" 2>/dev/null | fzf
       }

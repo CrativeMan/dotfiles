@@ -1,6 +1,8 @@
 {...}: {
   programs.neovim = {
-    enable = false;
-    defaultEditor = false;
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
   };
 }

@@ -5,6 +5,7 @@
     scrcpy
     jetbrains.idea-oss
     jetbrains.rust-rover
+    android-studio
     godot
     code-cursor
 

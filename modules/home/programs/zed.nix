@@ -26,7 +26,6 @@
       nil
       alejandra
       taplo
-      nodePackages.prettier
     ];
 
     userSettings = {
