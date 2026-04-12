@@ -9,7 +9,7 @@
 
   home.packages = with pkgs; [
     libnotify
-    swww
+    awww
     nwg-displays
     wlr-randr
     grim

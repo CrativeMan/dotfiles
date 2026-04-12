@@ -55,8 +55,8 @@
       confirm_quit = true;
       relative_line_numbers = "enabled";
       load_direnv = "shell_hook";
-      ui_font_size = 15;
-      buffer_font_size = 14;
+      ui_font_size = 13;
+      buffer_font_size = 11;
       formatter = "language_server";
 
       scroll_beyond_last_line = "one_page";
@@ -82,7 +82,7 @@
       };
 
       # Styling
-      theme = "gruvbox-material";
+      theme = "Rosé Pine Dawn";
       icon_theme = {
         mode = "system";
         dark = "Catppuccin Frappé";
