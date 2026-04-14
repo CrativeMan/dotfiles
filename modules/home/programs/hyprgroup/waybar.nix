@@ -10,7 +10,7 @@
 
     settings = {
       mainBar = {
-        output = ["DP-1" "eDP-1"];
+        output = ["*"];
         layer = "top";
         position = "top";
         height = 32;

@@ -121,6 +121,22 @@
         ", preferred, auto, 1"
       ];
 
+      workspace = [
+        # DP-1 gets 1–4
+        "1, monitor:DP-1, default:true, persistent:true"
+        "2, monitor:DP-1, persistent:true"
+        "3, monitor:DP-1, persistent:true"
+        "4, monitor:DP-1, persistent:true"
+        "5, monitor:DP-1, persistent:true"
+        "6, monitor:DP-1, persistent:true"
+        "7, monitor:DP-1, persistent:true"
+        "8, monitor:DP-1, persistent:true"
+        "9, monitor:DP-1, persistent:true"
+
+        # HDMI-A-1 gets workspace 10 (your “0” key)
+        "10, monitor:HDMI-A-1, default:true, persistent:true"
+      ];
+
       input = {
         kb_layout = "de";
         touchpad = {

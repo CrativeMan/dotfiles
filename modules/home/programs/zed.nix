@@ -82,7 +82,7 @@
       };
 
       # Styling
-      theme = "Rosé Pine Dawn";
+      theme = "Catppuccin Latte";
       icon_theme = {
         mode = "system";
         dark = "Catppuccin Frappé";
