@@ -20,12 +20,14 @@
       "zig"
       "dockerfile"
       "sql"
+      "rust"
     ];
 
     extraPackages = with pkgs; [
       nil
       alejandra
       taplo
+      rust-analyzer
     ];
 
     userSettings = {
@@ -46,6 +48,7 @@
         zig = true;
         dockerfile = true;
         sql = true;
+        rust = true;
       };
 
       vim_mode = true;
@@ -117,6 +120,21 @@
           initialization_options = {
             formatting = {
               command = ["alejandra" "--quiet" "--"];
+            };
+          };
+        };
+
+        rust-analyzer = {
+          initialization_options = {
+            check = {
+              command = "clippy";
+              features = "all";
+            };
+            cargo = {
+              allFeatures = true;
+            };
+            procMacro = {
+              enable = true;
             };
           };
         };
