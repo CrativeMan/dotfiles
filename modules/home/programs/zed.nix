@@ -28,29 +28,13 @@
       alejandra
       taplo
       rust-analyzer
+      gopls
+      zls
+      prettier
+      clang-tools # clangd + clang-format
     ];
 
     userSettings = {
-      auto_install_extensions = {
-        catppuccin-icons = true;
-        csv = true;
-        env = true;
-        git-firefly = true;
-        go-snippets = true;
-        golangci-lint = true;
-        log = true;
-        make = true;
-        nix = true;
-        java = true;
-        kotlin = true;
-        toml = true;
-        slint = true;
-        zig = true;
-        dockerfile = true;
-        sql = true;
-        rust = true;
-      };
-
       vim_mode = true;
       tab_size = 4;
       hard_tabs = true;
@@ -60,7 +44,42 @@
       load_direnv = "shell_hook";
       ui_font_size = 13;
       buffer_font_size = 11;
+      buffer_font_family = "JetBrains Mono";
+      buffer_font_features = {
+        calt = true; # contextual alternates / ligatures
+        liga = true;
+      };
+      ui_font_family = "JetBrains Mono";
       formatter = "language_server";
+
+      cursor_blink = false;
+      show_edit_predictions = false;
+
+      wrap_guides = [100];
+      seed_search_query_from_cursor = "always";
+
+      file_scan_exclusions = [
+        "**/.git"
+        "**/.direnv"
+        "**/target"
+        "**/result"
+        "**/.cache"
+        "**/build"
+        "**/.build"
+      ];
+
+      telemetry = {
+        diagnostics = false;
+        metrics = false;
+      };
+
+      scrollbar = {
+        show = "auto";
+        git_diff = true;
+        search_results = true;
+        selected_symbol = true;
+        diagnostics = "all";
+      };
 
       scroll_beyond_last_line = "one_page";
       vertical_scroll_margin = 5;
@@ -85,7 +104,11 @@
       };
 
       # Styling
-      theme = "Catppuccin Latte";
+      theme = {
+        mode = "system";
+        dark = "Catppuccin Frappé";
+        light = "Catppuccin Latte";
+      };
       icon_theme = {
         mode = "system";
         dark = "Catppuccin Frappé";
@@ -110,6 +133,8 @@
       terminal = {
         copy_on_select = false;
         dock = "bottom";
+        font_family = "JetBrains Mono";
+        font_size = 11;
         env = {
           TERM = "ghostty";
         };
@@ -154,7 +179,42 @@
         };
 
         jdtls = {
-          initialization_options = {};
+          initialization_options = {
+            settings = {
+              java = {
+                format = {
+                  enabled = true;
+                };
+                saveActions = {
+                  organizeImports = true;
+                };
+                completion = {
+                  importOrder = ["java" "javax" "org" "com"];
+                  filteredTypes = ["com.sun.*" "sun.*" "jdk.*"];
+                };
+                import = {
+                  gradle.enabled = true;
+                  maven.enabled = true;
+                };
+                inlayHints = {
+                  parameterNames.enabled = "all";
+                };
+                referencesCodeLens.enabled = true;
+                implementationsCodeLens.enabled = true;
+                signatureHelp.enabled = true;
+              };
+            };
+          };
+        };
+
+        clangd = {
+          initialization_options = {
+            clangdFileStatus = true;
+            usePlaceholders = true;
+            completeUnimported = true;
+            semanticHighlighting = true;
+            fallbackFlags = ["-std=c++23"];
+          };
         };
 
         # Zig Language Server
@@ -195,6 +255,22 @@
         JSON = {
           tab_size = 2;
           hard_tabs = false;
+        };
+        C = {
+          tab_size = 4;
+          hard_tabs = false;
+          formatter = "language_server";
+          wrap_guides = [100];
+        };
+        "C++" = {
+          tab_size = 4;
+          hard_tabs = false;
+          formatter = "language_server";
+          wrap_guides = [100];
+        };
+        Rust = {
+          wrap_guides = [100];
+          formatter = "language_server";
         };
       };
     };
