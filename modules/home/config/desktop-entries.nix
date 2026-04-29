@@ -33,6 +33,13 @@
         icon = "${vars.self}/assets/icons/todoist.svg";
         terminal = false;
       };
+      "tracker" = {
+        name = "Personal Tracker";
+        genericName = "Open Personal Tracker";
+        exec = "personal-tracker";
+        icon = "${vars.self}/assets/icons/tracker.svg";
+        terminal = false;
+      };
     };
   };
 }

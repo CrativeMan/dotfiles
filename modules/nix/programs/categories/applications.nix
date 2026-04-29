@@ -1,13 +1,13 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     # coding
     vscode
     scrcpy
     jetbrains.idea-oss
-    jetbrains.rust-rover
-    android-studio
-    godot
-    code-cursor
 
     # art
     inkscape
@@ -38,6 +38,7 @@
     obs-studio
     anki
     element-desktop
+    inputs.personal-tracker.packages.x86_64-linux.default
 
     #sonst
     # pika-backup

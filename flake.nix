@@ -8,6 +8,7 @@
     nixos-hardware.url = "github:nixos/nixos-hardware";
     gogo.url = "github:CrativeMan/gogoproj";
     clh.url = "github:CrativeMan/clh";
+    personal-tracker.url = "github:CrativeMan/personal-tracker";
     kmark.url = "github:CrativeMan/kmark?rev=df762582b1cf78c2a04804e324d636b256e071e6";
 
     home-manager = {
