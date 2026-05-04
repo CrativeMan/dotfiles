@@ -24,7 +24,7 @@
     signal-desktop
     discord
     vesktop
-    wasistlos
+    karere
     teams-for-linux
     thunderbird
     telegram-desktop

@@ -21,5 +21,6 @@
     inputs.clh.packages.x86_64-linux.default
     inputs.kmark.packages.x86_64-linux.default
     claude-code
+    poppler-utils
   ];
 }
