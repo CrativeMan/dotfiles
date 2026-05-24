@@ -56,7 +56,6 @@
         "$mod, P, exec, ~/.config/hypr/scripts/screenshot_full.sh"
         "$mod SHIFT, P, exec, ~/.config/hypr/scripts/screenshot_area.sh"
         "$mod CTRL, P, exec, ~/.config/hypr/scripts/screenshot_edit.sh"
-        "$mod, S, togglesplit,"
 
         "$mod, h, movefocus, l"
         "$mod, l, movefocus, r"
@@ -196,7 +195,6 @@
         ];
       };
       dwindle = {
-        pseudotile = true;
         preserve_split = true;
       };
 

@@ -6,6 +6,6 @@
     prismlauncher
     gnome-2048
     vintagestory
-    # modrinth-app broken in unstable
+    modrinth-app
   ];
 }

@@ -13,7 +13,6 @@
 
         markup = "full";
         format = "<b>%s</b>\n%b";
-        icon_path = "";
         icon_position = "left";
         max_icon_size = 64;
         show_indicators = false;
