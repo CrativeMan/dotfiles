@@ -8,6 +8,7 @@
     vscode
     scrcpy
     jetbrains.idea-oss
+    android-studio
 
     # art
     inkscape

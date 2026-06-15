@@ -58,6 +58,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.firewall.allowedTCPPorts = [9001];
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
