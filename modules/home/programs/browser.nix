@@ -5,6 +5,7 @@
     programs.firefox = {
       enable = true;
       nativeMessagingHosts = [ pkgs.gnomeExtensions.gsconnect ];
+      configPath = ".mozilla/firefox";
     };
 
     programs.chromium = {
