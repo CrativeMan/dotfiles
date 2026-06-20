@@ -4,8 +4,8 @@
     ./starship.nix
     ./browser.nix
     ./ghostty.nix
-    ./nvim.nix
-    # ./nixvim/default.nix
+    #./nvim.nix
+    ./nixvim/default.nix
     ./direnv.nix
     ./fastfetch.nix
     ./git.nix

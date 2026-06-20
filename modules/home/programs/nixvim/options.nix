@@ -23,9 +23,6 @@
 
     expandtab = true;
 
-    clipboard = {
-      providers.xclip.enable = true;
-      register = "xclip";
-    };
+    clipboard = "unnamedplus";
   };
 }

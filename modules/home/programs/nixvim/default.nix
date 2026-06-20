@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  imports = [inputs.nixvim.homeManagerModules.nixvim];
+  imports = [inputs.nixvim.homeModules.nixvim];
   programs.nixvim = lib.mkMerge [
     (import ./nixvim.nix)
     (import ./keymap.nix)
@@ -14,5 +14,6 @@
     (import ./plugins/lsp.nix)
     (import ./plugins/cmp.nix)
     (import ./plugins/treesitter.nix)
+    (import ./plugins/which-key.nix)
   ];
 }
