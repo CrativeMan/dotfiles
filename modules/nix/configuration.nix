@@ -60,6 +60,11 @@
   networking.networkmanager.enable = true;
   networking.firewall.allowedTCPPorts = [9001];
 
+  programs.kdeconnect = {
+    enable = true;
+    package = pkgs.gnomeExtensions.gsconnect;
+  };
+
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
