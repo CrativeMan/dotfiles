@@ -17,7 +17,7 @@
 
     Tablet = {
       addresses = ["tcp://192.168.178.70:22000"];
-      id = "COH7MCE-Q442VEJ-LIZYSI5-RLLGPX5-QIV23AI-P3AXCZG-LKV6EFC-MOGQOAB";
+      id = "S3427BD-VD2GUW2-VVJRVWG-7PFTYHJ-5GAC6RO-RGBUVLP-BQHIWHV-435JZQT";
     };
 
     Nixos-Framework = {
