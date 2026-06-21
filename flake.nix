@@ -26,11 +26,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    firefox-gnome-theme = {
-      url = "github:rafaelmardojai/firefox-gnome-theme";
-      flake = false;
-    };
-
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";

@@ -7,6 +7,4 @@ These are my config files for NixOs.
 
 - home-manager
 - nixvim
-- firefox-gnome-theme
 - hyprland and hyprland-plugins
-

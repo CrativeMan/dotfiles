@@ -2,7 +2,7 @@
   dconf.settings = {
     "org/gnome/mutter" = {
       experimental-features = ["scale-monitor-framebuffer"];
-      workspaces-only-on-primary = false;
+      workspaces-only-on-primary = true;
     };
 
     "org/gnome/shell/app-switcher" = {
