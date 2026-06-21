@@ -81,6 +81,14 @@
       options.desc = "Close split";
     }
 
+    # Telescope extras
+    {
+      mode = "n";
+      key = "<leader>ft";
+      action = "<cmd>TodoTelescope<CR>";
+      options.desc = "Find TODOs";
+    }
+
     # Trouble
     {
       mode = "n";

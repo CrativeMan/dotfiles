@@ -14,6 +14,7 @@
     (import ./plugins/lsp.nix)
     (import ./plugins/cmp.nix)
     (import ./plugins/treesitter.nix)
+    (import ./plugins/rust.nix)
     (import ./plugins/which-key.nix)
   ];
 }

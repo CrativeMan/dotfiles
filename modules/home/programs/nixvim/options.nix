@@ -11,9 +11,9 @@
 
     termguicolors = true;
 
-    tabstop = 4;
-    # shiftwidth = 4;
-    # softtabstop = 4;
+    tabstop = 2;
+    shiftwidth = 2;
+    softtabstop = 2;
 
     splitright = true;
     splitbelow = true;
@@ -24,5 +24,8 @@
     expandtab = true;
 
     clipboard = "unnamedplus";
+
+    scrolloff = 8;
+    cursorline = true;
   };
 }
