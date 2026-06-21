@@ -37,11 +37,6 @@
       devices = lib.attrNames devices;
       path = "/home/crative/Documents/Notes";
     };
-    JugendRotKreuz = {
-      id = "jrk";
-      devices = lib.attrNames devices;
-      path = "/home/crative/Documents/Jrk";
-    };
   };
 in {
   options = {
